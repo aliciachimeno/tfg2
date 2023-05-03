@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99d (TeX Live 2022)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: abbrvnat.bst
+Database file #1: biblio.bib
+Warning--I didn't find a database entry for "adams2009hitchhiker"
+You've used 1 entry,
+            2773 wiz_defined-function locations,
+            601 strings with 4790 characters,
+and the built_in function-call counts, 589 in all, are:
+= -- 49
+> -- 39
+< -- 0
++ -- 13
+- -- 12
+* -- 56
+:= -- 96
+add.period$ -- 3
+call.type$ -- 1
+change.case$ -- 7
+chr.to.int$ -- 1
+cite$ -- 2
+duplicate$ -- 21
+empty$ -- 42
+format.name$ -- 13
+if$ -- 114
+int.to.chr$ -- 1
+int.to.str$ -- 1
+missing$ -- 1
+newline$ -- 13
+num.names$ -- 4
+pop$ -- 12
+preamble$ -- 1
+purify$ -- 6
+quote$ -- 0
+skip$ -- 17
+stack$ -- 0
+substring$ -- 27
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 11
+warning$ -- 0
+while$ -- 5
+width$ -- 0
+write$ -- 20
+(There was 1 warning)

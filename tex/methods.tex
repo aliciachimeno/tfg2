@@ -1,0 +1,83 @@
+\documentclass[../main.tex]{subfiles}
+\begin{document}
+\chapter{Artificial Neural Networks} \label{ch:methods}
+
+
+
+
+\begin{definition} (Essentially bounded).
+	A function $u$ defined almost everywhere with respect to Lebesgue measure $v$ on a measurable set $\Omega \in \mathbb{R}^n$ is said to be \textbf{essentially bounded} on $\Omega$ if $|u(x)|$ is bounded almost everywhere on $\Omega$. We denote $u\in L^{\infty}(\Omega)$ with the norm $\|u\|_{L^{\infty}(\Omega)}= inf(\lambda | \{ x : |u(x)| \geq \lambda \} = 0 ) = ess \sup_{x\in \Omega} |u(x)|$ 
+\end{definition}
+
+We have that $L^{\infty}(\mathbb{R})$ is the space of essentially bounded functions.
+\\ \\ 
+Examples and counterexamples of functions essentially bounded. 
+\begin{itemize}
+\item $f:\Omega \rightarrow $
+\end{itemize}
+
+\begin{definition} (Locally essentially bounded).
+	A function u defined almost everywhere with respect to Lebesgue measure on a domain $\Omega$ (a domain is an open set in $\mathbb{R}^n$) is said to be\textbf{ locally essentially bounded }on $\Omega$ if for every compact set $K\subset \Omega$, $u\in L^{\infty}(K)$. We denote $u\in L_{loc}^{\infty}(K)$
+\end{definition}
+
+\begin{definition}We say that a set of functions $F\subset L_{loc}^{\infty}(\mathbb{R})$ is dense in $C(\mathbb{R}^n)$ if for every function $g\in C(\mathbb{R}^n)$ and for every compact $K\subset \mathbb{R}^n$, there exist a sequence of functions $f_j\in F$ such that $lim_{j\rightarrow\infty} \|g-f_j\|_{L^\infty(K)}$ 
+\end{definition}
+
+\begin{definition} Let M denote the set of functions which are in $L_{loc}^{\infty}(\mathbb{R})$ and have the following property. The closure of the set of points of discontinuity of any function in M is of zero Lebesgue measure. 
+\begin{proposition}
+This implies that for any $\sigma \in$ M, interval $[a,b] .$ and $\delta >0$, there exists a finite number of open intervals, the union of which we denote by U, of measure $\delta$, such that $\sigma$ is uniformly continuous on $[a,b]/U$. 
+\end{proposition}
+\end{definition}
+
+\begin{definition} suport
+	
+\end{definition}
+\begin{definition} (Multilayer feedforward networks) 
+The general architecture of a multilayer feedforward network, MFN, consist of: 
+\begin{itemize}
+	\item input layer: n-input units, $x$
+	\item one/more hidden layers : intermediate processing units 
+	\item output layer: m output-units	 $f(x)$
+\end{itemize} 
+
+	
+	function that a MFN compute is: 
+	$$f(x)=\sum_{j=1}^k \beta_j \cdot \sigma(w_j \cdot x - \theta_j)$$
+	
+	\begin{itemize}
+		\item $x = (x_1,...,x_n)$ input-vector
+		\item k: $\#$ of processing-units in the hidden layer
+		\item $w=(w_1,...,w_n)$:  weights vector
+		\item $\sigma : \mathbb{R} \rightarrow \mathbb{R}$ activation function
+		\item $\theta$ treshold value: ??? 
+		\item $\beta$ 
+	\end{itemize}
+	
+\end{definition}
+
+
+We take $C(\mathbb{R}^n)$ to be the family of real world functions that one may wish to approximate with feedforward network architectures \\ 
+
+	\begin{definition} 
+	$ \mathcal{C}^\infty_0$ functions $\mathcal{C}^\infty$ with compact support.  
+\end{definition}
+
+\begin{definition} Convergència uniforme) 
+\end{definition}
+
+\begin{definition} 
+	$\varphi$ : $I \rightarrow \mathbb{R}$ is uniformly continuous on $I$ if $\forall \epsilon > 0 \exists \delta >0 $ such that $|\varphi(x)- \varphi(y)| < \epsilon$ whenever $|x-y|< \delta$
+\end{definition}
+
+\begin{definition}
+	Let $f,g$ be real-valued functions with compact support. We define the \emph{convolution} of $f$ with $g$ as $$(f\ast g)(x)=\int f(x-t)g(t) \, dt$$
+\end{definition}
+
+\begin{theorem} Let $ \sigma \in \text{M} $. Set
+	$$ \sum_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$
+	Then $\sum_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not an algebraic polynomial. \\ 
+\end{theorem}
+
+
+
+\end{document}
