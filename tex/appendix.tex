@@ -4,9 +4,44 @@
 
 \appendix
 
-\chapter{Derivation of an integration} \label{apx:purification_with_noise}
+\chapter{algo} \label{apx:purification_with_noise}
+
+\begin{definition} Riemann integral reminder. 
+The Riemann integral is a method for calculating the volume under a curve of a continuous function on a closed, bounded domain in $R^n$. The method involves dividing the domain into smaller subregions and approximating the volume of each subregion with a rectangular solid whose height is the function value at a specific point in the subregion. The Riemann sum is the sum of the volumes of all the rectangular solids, and as the size of the subregions approaches zero, the Riemann sum converges to the Riemann integral. \\ \\
+\end{definition}
+
+\begin{definition}
+	Let $\Sigma$ be a $\sigma$-algebra over a set $\Omega$. A \emph{measure} over $\Omega$ is any function $$\mu:\Sigma\longrightarrow[0,\infty]$$ satisfying the following properties:
+	\begin{enumerate}
+		\item $\mu(\varnothing)=0$.
+		\item\label{RFA:sigmaadditivity} \emph{$\sigma$-additivity}: If $(A_n)\in\Sigma$ are pairwise disjoint, then: $$\mu\left(\bigsqcup_{n=1}^\infty A_n\right)=\sum_{n=1}^\infty \mu(A_n)$$
+	\end{enumerate}
+\end{definition}
+\begin{definition}
+	A \emph{metric} (or \emph{distance}) on a set $X$ is a function $d:X\times X\rightarrow \mathbb{R} $ such that forall $s,t\in X$ the following properties are satisfied:
+	\begin{enumerate}
+		\item $d(s,t) \geq 0$ and $ \, d(s,t)=0$ if and only if $ s=t$.
+		\item $d(s,t)=d(t,s)$.
+		\item $d(s,t)\leq d(s,u)+d(u,t)\quad$(\emph{triangular inequality}).
+	\end{enumerate}
+\end{definition}
+
+\begin{definition}
+	A \emph{metric space} is a pair $(X,d)$, where $X$ is a set and $d$ is a distance in $X$.
+\end{definition}
 
 \begin{definition} (Complete metric space). 
 \end{definition}
 
+\begin{definition}
+We say that a property holds almost everywhere (a.e.) if the set of points that doesn’t hold it is null.
+\end{definition}
+
+
+  \begin{theorem}(Weierstrass  approximation theorem)
+	Let $f:[a,b]\rightarrow \mathbb{R} $ be a continuous function. Then, there exists polynomials $p_n\in \mathcal{R}[x]$ such that the sequence $(p_n)$ converge uniformly to $f$ on $[a,b]$. 
+\end{theorem} 
+\begin{corolari}
+The set $\mathcal{R}^n[x]$ is dense in $\mathcal{C}(\mathbb{R})^n$
+\end{corolari}
 \end{document}

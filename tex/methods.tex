@@ -1,12 +1,24 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\chapter{Artificial Neural Networks} \label{ch:methods}
+\chapter{Multilayer Feedforward Networks} \label{ch:methods}
 
+\section{Lebesgue measure}
+\noindent An essential part of measure theory is the calculation of lengths, areas, volumes, etc. We are already familiar with the Riemann integral, and now we aim to introduce a more general integral, the Lebesgue integral, that comes from the Lebesgue measure. 
 
+\begin{definition} A box in $\mathbb{R}^d$ is a set of the form 
+	$$ Q = [a_1,b_1]  \times ... \times [a_d,b_d] = \prod_{i=1}^d [a_i,b_i]$$
+	The volume of the box is $$ vol(Q)= (b_1,a_1) ... (b_d-a_d)= \prod_{i=1}^d (b_i-a_i)$$
+	The \emph{exterior measure} (or outer measure) of a set $E\subseteq \mathbb{R}^d$ is $$ |E|^* = \inf\{\sum_k vol(Q_k)\} $$ 
+	where the infimum is taken over all finite or countable collection of boxes $Q_k$ such that $E \subseteq \cup_k Q_k$
+\end{definition}
 
+\begin{definition}
+A set $E\subseteq \mathbb{R}^n $ is \emph{Lebesgue mesurable} (or mesurable) if $\forall \epsilon >0$, there exist $U \supseteq E $ open set such that $|U\setminus E|^* < \epsilon $
+\end{definition}
 
-\begin{definition} (Essentially bounded).
-	A function $u$ defined almost everywhere with respect to Lebesgue measure $v$ on a measurable set $\Omega \in \mathbb{R}^n$ is said to be \textbf{essentially bounded} on $\Omega$ if $|u(x)|$ is bounded almost everywhere on $\Omega$. We denote $u\in L^{\infty}(\Omega)$ with the norm $\|u\|_{L^{\infty}(\Omega)}= inf(\lambda | \{ x : |u(x)| \geq \lambda \} = 0 ) = ess \sup_{x\in \Omega} |u(x)|$ 
+\begin{definition}
+	A function $u$ defined almost everywhere with respect to Lebesgue measure $v$ on a measurable set $\Omega \in \mathbb{R}^n$ is said to be \emph{essentially bounded} on $\Omega$ if $|u(x)|$ is bounded almost everywhere on $\Omega$. We denote $u\in L^{\infty}(\Omega)$ with the norm $\|u\|_{L^{\infty}(\Omega)}= inf(\lambda | \{ x : |u(x)| \geq \lambda \} = 0 ) = ess \sup_{x\in \Omega} |u(x)|$ 
+
 \end{definition}
 
 We have that $L^{\infty}(\mathbb{R})$ is the space of essentially bounded functions.
@@ -16,8 +28,8 @@ Examples and counterexamples of functions essentially bounded.
 \item $f:\Omega \rightarrow $
 \end{itemize}
 
-\begin{definition} (Locally essentially bounded).
-	A function u defined almost everywhere with respect to Lebesgue measure on a domain $\Omega$ (a domain is an open set in $\mathbb{R}^n$) is said to be\textbf{ locally essentially bounded }on $\Omega$ if for every compact set $K\subset \Omega$, $u\in L^{\infty}(K)$. We denote $u\in L_{loc}^{\infty}(K)$
+\begin{definition}
+	A function u defined almost everywhere with respect to Lebesgue measure on a domain $\Omega$ (a domain is an open set in $\mathbb{R}^n$) is said to be\emph{ locally essentially bounded }on $\Omega$ if for every compact set $K\subset \Omega$, $u\in L^{\infty}(K)$. We denote $u\in L_{loc}^{\infty}(K)$
 \end{definition}
 
 \begin{definition}We say that a set of functions $F\subset L_{loc}^{\infty}(\mathbb{R})$ is dense in $C(\mathbb{R}^n)$ if for every function $g\in C(\mathbb{R}^n)$ and for every compact $K\subset \mathbb{R}^n$, there exist a sequence of functions $f_j\in F$ such that $lim_{j\rightarrow\infty} \|g-f_j\|_{L^\infty(K)}$ 
@@ -32,6 +44,7 @@ This implies that for any $\sigma \in$ M, interval $[a,b] .$ and $\delta >0$, th
 \begin{definition} suport
 	
 \end{definition}
+\section{Neural Networks}
 \begin{definition} (Multilayer feedforward networks) 
 The general architecture of a multilayer feedforward network, MFN, consist of: 
 \begin{itemize}
@@ -62,9 +75,6 @@ We take $C(\mathbb{R}^n)$ to be the family of real world functions that one may 
 	$ \mathcal{C}^\infty_0$ functions $\mathcal{C}^\infty$ with compact support.  
 \end{definition}
 
-\begin{definition} Convergència uniforme) 
-\end{definition}
-
 \begin{definition} 
 	$\varphi$ : $I \rightarrow \mathbb{R}$ is uniformly continuous on $I$ if $\forall \epsilon > 0 \exists \delta >0 $ such that $|\varphi(x)- \varphi(y)| < \epsilon$ whenever $|x-y|< \delta$
 \end{definition}
@@ -72,12 +82,14 @@ We take $C(\mathbb{R}^n)$ to be the family of real world functions that one may 
 \begin{definition}
 	Let $f,g$ be real-valued functions with compact support. We define the \emph{convolution} of $f$ with $g$ as $$(f\ast g)(x)=\int f(x-t)g(t) \, dt$$
 \end{definition}
-
+\section{Theorem}
 \begin{theorem} Let $ \sigma \in \text{M} $. Set
-	$$ \sum_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$
-	Then $\sum_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not an algebraic polynomial. \\ 
+	$$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$
+	Then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not an algebraic polynomial. 
+	
 \end{theorem}
 
+Why this theorem does not contradict the Stone-Weierstrass theroem ? (Enunciat al apendix)  Com que $\sigma$ té grau fix "k", aleshores $\sigma (wx+\theta) $ grau com a molt k. Per tant el conjunt $\sigma_n$ és un espai vectorial finit i no pot ser dens. 
 
 
 \end{document}
