@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 	\chapter{Lemmas and proof} \label{ch:proof}
-	This chapter/section presents the lemmas that are necessary to prove the main result.	In order to prove the theorem, I will first demonstrate the inverse implication. Specifically, I will show that "  ". \\ \\ 
+	This chapter presents the lemmas that are necessary to prove the main theorem.  
 	\section{Part 1}
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $.  Then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
@@ -9,9 +9,8 @@
 	
 	\begin{proof}
 		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, where $\mathcal{C}^\infty_0[a,b]$ is the set of functions $\mathcal{C}^\infty_0$ with support in $[a,b]$ for any $a<b$. \\ \\ Let $\rho$ be a metric on $\mathcal{C}^\infty_0[a,b]$ defined by
-		$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $,  $\mathcal{C}^\infty_0[a,b]$  is a complete metric space. \\ \\ 
-		By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set (has the property that we want to show). \\ $V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$. This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, then tere exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. Proof ??\\ \\ 
-		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not deppend on the interval $[a,b]$.  Por tanto hemos visto que el conjunto con la propiedad que queriamos es = que el que tenemos. we
+		$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space. By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem (appendix) then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
+		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not deppend on the interval $[a,b]$.  
 
 	\end{proof}
 	\begin{lema} % L2: step 7
@@ -23,16 +22,16 @@
 	\end{proof} 
 \noindent Conclusion: If we have that $\sigma \ast \varphi$ is a polynomial then $\sigma$ is a polynomial. This contradicts the hypothesis. Therefore, $\sigma \ast \varphi$ will not be a polynomial. 
 
-\section{Part 2}
+\section{$\Sigma_1$ dense in $\mathcal{C}(\mathbb{R})$}
 
 	\begin{lema} % L3: step 4
-		For each $\varphi \in  \mathcal{C}^\infty_0$, $ \sigma \ast \varphi \in  \overline{\sum_1}$. 
+		For each $\varphi \in  \mathcal{C}^\infty_0$, $ \sigma \ast \varphi \in  \overline{\Sigma_1}$. 
 		
 	\end{lema}
 	
 	\begin{proof} % proof step 4
 		Consider $$h_m= \sum_{i=1}^m\varphi(y_i)\Delta y_i \sigma(x-y_i)$$ 
-		The sequence $(h_m)$ satisfies $h_j\in \sum_1$ for $j=1,...,m$. ($w_i=1,\theta_i=-y_i, \beta_i=\varphi(y_i)\Delta y_i$).\\ \\ 
+		The sequence $(h_m)$ satisfies $h_j\in \Sigma_1$ for $j=1,...,m$. ($w_i=1,\theta_i=-y_i, \beta_i=\varphi(y_i)\Delta y_i$).\\ \\ 
 		Where $y_i=-\alpha + \frac{2i\alpha}{m}$, $\Delta y_i=\frac{2\alpha}{m}$ for $i=1,...,m$. Partition of the interval $[-\alpha,\alpha]$ \\ \\ We want to show that $h_m \rightrightarrows \sigma \ast \varphi $ in $[-\alpha,\alpha]$.  \\ \\
 		Given $\epsilon >0$, we choose $\delta >0$ such that $10\delta \| \sigma\|_{L^\infty\{-2\alpha,2\alpha\}}\|\varphi \|_{L^\infty} \leq \frac{\epsilon}{3}$. Note that ... \\ \\ 
 		We know that $\sigma \in M$. Hence, for this given $\delta>0$ and $[-\alpha,\alpha]$ interval, there exists $r(\delta)$ finite number of intervals the measure of whose union $\mathscr{U}$ is $\delta$ such that $\sigma$ is uniformly continuous on $[-2\alpha,2\alpha]$. We now choose $m_i$ sufficiently large so that
@@ -83,45 +82,45 @@
 	\end{proof}
 	
 	\begin{lema} % L4: step 3
-		If $\sigma \in \mathcal{C}^{\infty}$, then $ \sum_1$ is dense in  $\mathcal{C}(\mathbb{R})$.
+		If $\sigma \in \mathcal{C}^{\infty}$, then $ \Sigma_1$ is dense in  $\mathcal{C}(\mathbb{R})$.
 	\end{lema}
 	
 	\begin{proof} % proof step 3
-		We recall that set $\sum_1 = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}, \theta \in \mathbb{R} \} $. We can write any function $h\in \sum_1$ as $h=\sum_i \beta_i \sigma_i(w_i x+\theta_i)= \beta_1 \sigma_1(w_1 x+\theta_1)+ ... $ \\ \\ 
-		$\frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h} \in \sum_1$ because is a linear combination, where $\beta_1= \frac{1}{h}, \beta_2=\frac{-1}{h}...$. \\ By hypothesis, we have $\sigma \in \mathcal{C}^{\infty}$. By definition of derivative we have
-		$$ \frac{d}{dw}\sigma(wx+\theta)= \lim_{h \to 0} \frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h}  \in \overline{\sum_1} \footnote{$\overline{\sum_1}$ denotes the clausure of the set $\sum_1$} $$
+		We recall that set $\Sigma_1 = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}, \theta \in \mathbb{R} \} $. We can write any function $h\in \Sigma_1$ as $h=\sum_i \beta_i \sigma_i(w_i x+\theta_i)= \beta_1 \sigma_1(w_1 x+\theta_1)+ ... $ \\ \\ 
+		$\frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h} \in \Sigma_1$ because is a linear combination, where $\beta_1= \frac{1}{h}, \beta_2=\frac{-1}{h}...$. \\ By hypothesis, we have $\sigma \in \mathcal{C}^{\infty}$. By definition of derivative we have
+		$$ \frac{d}{dw}\sigma(wx+\theta)= \lim_{h \to 0} \frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h}  \in \overline{\Sigma_1} \footnote{$\overline{\Sigma_1}$ denotes the clausure of the set $\Sigma_1$} $$
 		Because the limit of a set belongs to the closure of the set. \\ 
-		By the same argument, $\frac{d^k}{dw^k} \sigma(wx+\theta) \in \overline{\sum_1}$ for all $k\in \mathbb{N}, w,\theta \in \mathbb{R}$.\\   
+		By the same argument, $\frac{d^k}{dw^k} \sigma(wx+\theta) \in \overline{\Sigma_1}$ for all $k\in \mathbb{N}, w,\theta \in \mathbb{R}$.\\   
 		We observe that $\frac{d}{dw} \sigma(wx+\theta) = \sigma'(wx+\theta) \cdot x$. If we differentiate this expression k times, we obtain 
 		$$ \frac{d^k}{dw^k}\sigma(wx+\theta) = \sigma^{(k)}(wx+\theta) \cdot x^{k}$$
 		Since $\sigma$ is not a polynomial (theorem hypothesis) then there exists a $\theta_k\in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$ \\  Lets see.**** If $\sigma$ is not a polynomial and $\sigma \in \mathcal{C}^\infty$, lets assume that $ \nexists \theta_k \in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. This means that the k-th derivative at every point is 0, i.e, $\sigma^{(k)}(\theta)=0 $ $\forall \theta \in \mathbb{R} $. If we integrate k times, $\int \sigma^{(k)}= \int 0 \iff \sigma^{(k-1)}=C$, $\int \sigma^{(k-1)}= \int C \iff \sigma^{(k-2)}=Cw$, then we end up $\sigma$ is a polynomial. Contradiction. Therefore, there always exists a point where the derivative does not vanish. \\ 
 		Thus, we evaluate at this point $\theta_k$ where the derivative does not vanish.
-		$$  \sigma^{(k)}(\theta_k) \cdot x^{k}=\frac{d^k}{dw^k}\sigma(wx+\theta) \Bigr|_{w=0, \theta=\theta_k} \in  \overline{\sum_1} $$ 
-		That implies that $\overline{\sum_1}$ contains all polynomials, because the expression $\sigma^{(k)}(\theta_k) x^{k}$ generates all polynomials. By the Weierstrass theorem, it follows that $\sum_1$ contains...  \textcolor{red}{falta mirar}.
+		$$  \sigma^{(k)}(\theta_k) \cdot x^{k}=\frac{d^k}{dw^k}\sigma(wx+\theta) \Bigr|_{w=0, \theta=\theta_k} \in  \overline{\Sigma_1} $$ 
+		That implies that $\overline{\Sigma_1}$ contains all polynomials, because the expression $\sigma^{(k)}(\theta_k) x^{k}$ generates all polynomials. By the Weierstrass theorem, it follows that $\Sigma_1$ contains...  \textcolor{red}{falta mirar}.
 	\end{proof}
 	
 	\begin{lema} % L5: step 5
-		If for some $\varphi \in \mathcal{C}^\infty_0 $ we have that $\sigma \ast \varphi $ is not a polynomial, then $\sum_1$ is dense in $\mathcal{C}(\mathbb{R})$
+		If for some $\varphi \in \mathcal{C}^\infty_0 $ we have that $\sigma \ast \varphi $ is not a polynomial, then $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$
 	\end{lema}
 	 \begin{proof}
 	 From Lemma 3, $\sigma \ast \varphi \in$
 	 \end{proof}
-	 
+	 \section{{$\Sigma_n$ dense in $\mathcal{C}(\mathbb{R}^n)$}}
 	\begin{lema}  % L6: step 2
-			If $\sum_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\sum_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
+			If $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
 		\end{lema}
 	
 	\begin{proof} % proof  step 2
 			Let $V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}$. $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$. \\ 
 			Let $g\in \mathcal{C}(\mathbb{R}) $, for any compact subset $K \subset \mathbb{R}^n  $, $V$ dense in $\mathcal{C}(K)$. That is, given $\epsilon >0$, there exist $f_i\in  \mathcal{C}(\mathbb{R})$ and $a_i \in \mathbb{R}^n $    {\scriptsize $i=1,...,k$}  such that
 		\end{proof}
-		
+	\section{Proof of the theorem}
 	\begin{proof}~ % proof del teorema
 
 	\begin{enumerate}
-		\item[$\Rightarrow$] To prove the implication, we will use proof by contrapositive. We will see the following. If $\sigma$ is a polynomial then $\sum_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. Let $\sigma$ be a polynomial of degree k, then $\sigma(wx+\theta)$ is a polynomial  of degree k for every $w,\theta$. We have $ \sum_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$ that is the set of algebraic polynomials of degree at most k. \\ \\ $\sum_n$ is not dens in $\mathcal{C}(\mathbb{R}^n)$ if for a function $f(x)\in \mathcal{C}(\mathbb{R}^n)$ we can find $\epsilon > 0$ and $K$ such that  $\| p-f \| > \epsilon$ for all $p$ polynomial of degree k. For example, let $f(x)=cos(x)$, and $p(x)= \sigma(wx+\theta)$ that has degree k. This implies has maximum k roots. We can find a interval where there is k+1 roots. 
-		
-		\item[$\Leftarrow$]  
+		\item[$\Rightarrow$] To prove the implication, we will use proof by contrapositive. We will see the following. If $\sigma$ is a polynomial then $\Sigma_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. Let $\sigma$ be a polynomial of degree k, then $\sigma(wx+\theta)$ is a polynomial  of degree k for every $w,\theta$. We have $ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$ that is the set of algebraic polynomials of degree at most k. \\ \\ $\Sigma_n$ is not dens in $\mathcal{C}(\mathbb{R}^n)$ if for a function $f(x)\in \mathcal{C}(\mathbb{R}^n)$ we can find $\epsilon > 0$ and $K$ such that  $\| p-f \| > \epsilon$ for all $p$ polynomial of degree k. For example, let $f(x)=cos(x)$, and $p(x)= \sigma(wx+\theta)$ that has degree k. This implies has maximum k roots. We can find a interval where there are k+1 roots. 
+
+		\item[$\Leftarrow$]  Recapitulem el que hem vist als lemes ..
 	\end{enumerate}
 \end{proof}
 	\cite{leshno1993multilayer}

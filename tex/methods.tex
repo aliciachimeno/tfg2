@@ -1,7 +1,25 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \chapter{Multilayer Feedforward Networks} \label{ch:methods}
+\section{Function Approximation}
+\begin{definition}
+	A \emph{metric} (or \emph{distance}) on a set $X$ is a function $d:X\times X\rightarrow \mathbb{R} $ such that forall $s,t\in X$ the following properties are satisfied:
+	\begin{enumerate}
+		\item $d(s,t) \geq 0$ and $ \, d(s,t)=0$ if and only if $ s=t$.
+		\item $d(s,t)=d(t,s)$.
+		\item $d(s,t)\leq d(s,u)+d(u,t)\quad$(\emph{triangular inequality}).
+	\end{enumerate}
+A \emph{metric space} is a pair $(X,d)$, where $X$ is a set and $d$ is a distance in $X$.
+\end{definition}
 
+\begin{definition}
+If we take $X$ to be a set of functions, the metric $d(f,g)$ will enable us to measure the distance between functions $f,g \in X$.
+\end{definition}
+
+
+\begin{theorem}(Weierstrass  approximation theorem). 
+	Let $f:[a,b]\rightarrow \mathbb{R} $ be a continuous function. Then, there exists polynomials $p_n\in \mathcal{R}[x]$ such that the sequence $(p_n)$ converge uniformly to $f$ on $[a,b]$. 
+\end{theorem} 
 \section{Lebesgue measure}
 \noindent An essential part of measure theory is the calculation of lengths, areas, volumes, etc. We are already familiar with the Riemann integral, and now we aim to introduce a more general integral, the Lebesgue integral, that comes from the Lebesgue measure. 
 
@@ -13,15 +31,15 @@
 \end{definition}
 
 \begin{definition}
-A set $E\subseteq \mathbb{R}^n $ is \emph{Lebesgue mesurable} (or mesurable) if $\forall \epsilon >0$, there exist $U \supseteq E $ open set such that $|U\setminus E|^* < \epsilon $
+A set $E\subseteq \mathbb{R}^n $ is \emph{Lebesgue mesurable} (or mesurable) if $\forall \epsilon >0$, there exist $U$ open set such that $E \subseteq U$ and $|U\setminus E|^* < \epsilon $
 \end{definition}
 
 \begin{definition}
-	A function $u$ defined almost everywhere with respect to Lebesgue measure $v$ on a measurable set $\Omega \in \mathbb{R}^n$ is said to be \emph{essentially bounded} on $\Omega$ if $|u(x)|$ is bounded almost everywhere on $\Omega$. We denote $u\in L^{\infty}(\Omega)$ with the norm $\|u\|_{L^{\infty}(\Omega)}= inf(\lambda | \{ x : |u(x)| \geq \lambda \} = 0 ) = ess \sup_{x\in \Omega} |u(x)|$ 
+	A function $u$ defined almost everywhere on a measurable set $\Omega \in \mathbb{R}^n$ is said to be \emph{essentially bounded} on $\Omega$ if $|u(x)|$ is bounded almost everywhere on $\Omega$. We denote $u\in L^{\infty}(\Omega)$ with the norm $$\|u\|_{L^{\infty}(\Omega)}= inf(\lambda | \{ x : |u(x)| \geq \lambda \} = 0 ) = ess \sup_{x\in \Omega} |u(x)|$$
 
 \end{definition}
 
-We have that $L^{\infty}(\mathbb{R})$ is the space of essentially bounded functions.
+\noindent We have that $L^{\infty}(\mathbb{R})$ is the space of essentially bounded functions.
 \\ \\ 
 Examples and counterexamples of functions essentially bounded. 
 \begin{itemize}
@@ -29,12 +47,14 @@ Examples and counterexamples of functions essentially bounded.
 \end{itemize}
 
 \begin{definition}
-	A function u defined almost everywhere with respect to Lebesgue measure on a domain $\Omega$ (a domain is an open set in $\mathbb{R}^n$) is said to be\emph{ locally essentially bounded }on $\Omega$ if for every compact set $K\subset \Omega$, $u\in L^{\infty}(K)$. We denote $u\in L_{loc}^{\infty}(K)$
+	A function u defined almost everywhere on a domain $\Omega$ (a domain is an open set in $\mathbb{R}^n$) is said to be\emph{ locally essentially bounded }on $\Omega$ if for every compact set $K\subset \Omega$, $u\in L^{\infty}(K)$. We denote $u\in L_{loc}^{\infty}(K)$
 \end{definition}
 
-\begin{definition}We say that a set of functions $F\subset L_{loc}^{\infty}(\mathbb{R})$ is dense in $C(\mathbb{R}^n)$ if for every function $g\in C(\mathbb{R}^n)$ and for every compact $K\subset \mathbb{R}^n$, there exist a sequence of functions $f_j\in F$ such that $lim_{j\rightarrow\infty} \|g-f_j\|_{L^\infty(K)}$ 
+\begin{definition}We say that a set of functions $F\subset L_{loc}^{\infty}(\mathbb{R})$ is \emph{dense} in $C(\mathbb{R}^n)$ if for every function $g\in C(\mathbb{R}^n)$ and for every compact $K\subset \mathbb{R}^n$, there exist a sequence of functions $f_j\in F$ such that $$\lim_{j\rightarrow\infty} \|g-f_j\|_{L^\infty(K)}=0.$$ 
 \end{definition}
+\noindent Improtant: If we can show that a given set of functions $F$ is dense in $C(\mathbb{R}^n)$, we can conclude that for every continuous function $g \in C(\mathbb{R}^n) $ and each compact set $K \subset \mathbb{R}^n$, there is a function $f \in F$ such that $f$ is a good approximation to $g$ on K.
 
+\section{Results}
 \begin{definition} Let M denote the set of functions which are in $L_{loc}^{\infty}(\mathbb{R})$ and have the following property. The closure of the set of points of discontinuity of any function in M is of zero Lebesgue measure. 
 \begin{proposition}
 This implies that for any $\sigma \in$ M, interval $[a,b] .$ and $\delta >0$, there exists a finite number of open intervals, the union of which we denote by U, of measure $\delta$, such that $\sigma$ is uniformly continuous on $[a,b]/U$. 
@@ -45,43 +65,20 @@ This implies that for any $\sigma \in$ M, interval $[a,b] .$ and $\delta >0$, th
 	
 \end{definition}
 \section{Neural Networks}
-\begin{definition} (Multilayer feedforward networks) 
-The general architecture of a multilayer feedforward network, MFN, consist of: 
-\begin{itemize}
-	\item input layer: n-input units, $x$
-	\item one/more hidden layers : intermediate processing units 
-	\item output layer: m output-units	 $f(x)$
-\end{itemize} 
-
-	
-	function that a MFN compute is: 
+intro \\ \\ 
+The general architecture of a multilayer feedforward network, MFN, consist of: input layer: n-input units,  one/more hidden layers : intermediate processing units, output layer: m output-units
+\begin{definition} (Multilayer feedforward networks) The function that a MFN compute is: 
 	$$f(x)=\sum_{j=1}^k \beta_j \cdot \sigma(w_j \cdot x - \theta_j)$$
-	
-	\begin{itemize}
-		\item $x = (x_1,...,x_n)$ input-vector
-		\item k: $\#$ of processing-units in the hidden layer
-		\item $w=(w_1,...,w_n)$:  weights vector
-		\item $\sigma : \mathbb{R} \rightarrow \mathbb{R}$ activation function
-		\item $\theta$ treshold value: ??? 
-		\item $\beta$ 
-	\end{itemize}
-	
+	where $x \in \mathbb{R}^n$ is the input vector, $k \in \mathbb{N}$ is the number of processing units in the hidden layer, $w_j \in \mathbb{R}^n$ is the weight vector that connects the input to processing unit $j$ in the hidden layer, $\sigma : \mathbb{R} \rightarrow \mathbb{R}$ is an activation function applied element-wise to the vector $w_j^T x - \theta_j$, where $\theta_j \in \mathbb{R}$ is the threshold (or bias) associated with processing unit $j$ in the hidden layer, and $\beta_j \in \mathbb{R}$ is the weight that connects processing unit $j$ in the hidden layer to the output of the network.
+
 \end{definition}
 
-
-We take $C(\mathbb{R}^n)$ to be the family of real world functions that one may wish to approximate with feedforward network architectures \\ 
+\noindent We take $C(\mathbb{R}^n)$ to be the family of real world functions that one may wish to approximate with feedforward network architectures \\ 
 
 	\begin{definition} 
 	$ \mathcal{C}^\infty_0$ functions $\mathcal{C}^\infty$ with compact support.  
 \end{definition}
 
-\begin{definition} 
-	$\varphi$ : $I \rightarrow \mathbb{R}$ is uniformly continuous on $I$ if $\forall \epsilon > 0 \exists \delta >0 $ such that $|\varphi(x)- \varphi(y)| < \epsilon$ whenever $|x-y|< \delta$
-\end{definition}
-
-\begin{definition}
-	Let $f,g$ be real-valued functions with compact support. We define the \emph{convolution} of $f$ with $g$ as $$(f\ast g)(x)=\int f(x-t)g(t) \, dt$$
-\end{definition}
 \section{Theorem}
 \begin{theorem} Let $ \sigma \in \text{M} $. Set
 	$$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$
@@ -89,7 +86,7 @@ We take $C(\mathbb{R}^n)$ to be the family of real world functions that one may 
 	
 \end{theorem}
 
-Why this theorem does not contradict the Stone-Weierstrass theroem ? (Enunciat al apendix)  Com que $\sigma$ té grau fix "k", aleshores $\sigma (wx+\theta) $ grau com a molt k. Per tant el conjunt $\sigma_n$ és un espai vectorial finit i no pot ser dens. 
+Why this theorem does not contradict the Stone-Weierstrass theroem ?  Com que $\sigma$ té grau fix "k", aleshores $\sigma (wx+\theta) $ grau com a molt k. Per tant el conjunt $\sigma_n$ és un espai vectorial finit i no pot ser dens. 
 
 
 \end{document}
