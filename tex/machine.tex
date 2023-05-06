@@ -6,24 +6,35 @@
 	\section{What is Machine Learning}
 	\noindent Machine Learning is the science of programming computers so they can learn from data. 
 	
-	(with the aim to solve a problem without being explicitly programmed.) \\ \\ 
+	(with the aim to solve a problem without being explicitly programmed.) \\ 
 	
 	For example, 
 	
+	Classification and regression problem. 
 	
 
 	\section{Types of Learning}
-	We can think about learning as the way we understand it as a human. We can learn . That is how we can classify the Machine Learning problem, based on the degree of feedback.
+	\noindent
+	We can think about learning as the way we understand it as a human. We can classify a learning problem based on the degree of feedback. The three main types are: 
+	\begin{enumerate}
+		\item Supervised learning, where we have immidiate feedback. %involves learning from labeled data.
+		\item Reinforcement learning, where we have indirect feedback. %which involves learning from feedback based on rewards or penalties.
+		 For example when we are playing the game of chess.
+		\item Unsupervised learning, where we have non feedback signal. %which involves discovering patterns in data without any predefined labels or feedback, 
+		For example, deducing which dog belongs to each owner.  
+	\end{enumerate}
+\begin{xmpl}
+Example of a supervised learning task. Recognition of a letter. What we are trying to learn is a probability distribution fuction 
+$$f: \{0,..., 255\}^{28 \times 28} \longrightarrow \text{probability distribution on } \{0,1,...,9\}$$
+\end{xmpl}
+	\section{Function Learning}
+	\noindent
+	\textit{Important principle}: Many supervised learning tasks are about function learning. 
 
-
-
-	\subsection{Supervised Learning}
-	\subsection{Reinforcement Learning}
-	\subsection{Unsupervised Learning}
-	
-	\section{Output}
-	\subsection{Classification Problem}
-	\subsection{Regression Problem}
-	
+\begin{xmpl} Example of a classification problem. We want to classify if an image is a dog or not a dog. We would like to produce a value which is correlated with the probability of this image being a dog or not a dog.  We can approach the problem in the following way. We want to find a function that takes very high values when dog-image and very low val ues when non dog images and takes the value 0 when its uncertain. 
+	$$d: \mathbb{R}^{\# \text{pixels in image}} \rightarrow \mathbb{R} $$
+	such that $\mathbb{P}(d(\text{image})) = \text{probability that the image is a dog.}$ \\ \\  
+	That is what we mean by many problems can be recast as function learning. Note that there is not a god-given reason why this function should exist. We know that certain points in space, and they have certain values associated to them, but we dont know that there is some big function. 
+\end{xmpl}
 	
 \end{document}

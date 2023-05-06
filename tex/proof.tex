@@ -6,7 +6,6 @@
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $.  Then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
-	
 	\begin{proof}
 		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, where $\mathcal{C}^\infty_0[a,b]$ is the set of functions $\mathcal{C}^\infty_0$ with support in $[a,b]$ for any $a<b$. \\ \\ Let $\rho$ be a metric on $\mathcal{C}^\infty_0[a,b]$ defined by
 		$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space. By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem (appendix) then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
@@ -14,11 +13,13 @@
 
 	\end{proof}
 	\begin{lema} % L2: step 7
-		If $\sigma \ast \varphi$ is a polynomial such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$, then $\sigma$ is a polynomial of degree at most m.
+		If $\sigma \ast \varphi$ is a polynomial such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$, then $\sigma$ is a polynomial of degree at most $m$.
 	\end{lema}
-	
-	\begin{proof} For all $\varphi \in \mathcal{C}^\infty_0$, we have that
-	$$\sigma \ast \varphi^{(m+1)} \, (x)=\int \sigma(x-t)\varphi^{(m+1)}(t) \, dt= 0$$  
+	\begin{proof} 
+	If $\sigma \ast \varphi$ is a polynomial of degree $m$.
+	For all $\varphi \in \mathcal{C}^\infty_0$, we have that
+	$$(\sigma \ast \varphi)^{(m+1)} \, (x)=\int \sigma(x-y)\varphi^{(m+1)}(y) \, dy= 0$$  
+	From standard results in Distribution Theory, $\sigma $ is itself a polynomial of degree at most m (a.e.). NO SE PQ
 	\end{proof} 
 \noindent Conclusion: If we have that $\sigma \ast \varphi$ is a polynomial then $\sigma$ is a polynomial. This contradicts the hypothesis. Therefore, $\sigma \ast \varphi$ will not be a polynomial. 
 
@@ -37,12 +38,12 @@
 		We know that $\sigma \in M$. Hence, for this given $\delta>0$ and $[-\alpha,\alpha]$ interval, there exists $r(\delta)$ finite number of intervals the measure of whose union $\mathscr{U}$ is $\delta$ such that $\sigma$ is uniformly continuous on $[-2\alpha,2\alpha]$. We now choose $m_i$ sufficiently large so that
 		\begin{enumerate}
 			\item $m_1 \delta > \alpha r(\delta)$. We can do this by Archimedes' principle.
-			\item From the uniform continuity of $\varphi$
+			\item From the uniform continuity of $\varphi$.
 			\item From the previous, $\sigma$ is uniformly continuous on  $[-2\alpha,2\alpha]$. 
 		\end{enumerate}
 		We choose $m$ such that $m=max\{m_1,m_2,m_3\}$. \\ \\ 
 		Now, fix $x\in [-\alpha,\alpha] $. Set $\Delta_i= [y_{i-1},]$ where .. dibuix. \\ \\
-		First, recall that (fer la integral es igual que sumar per intervals les integrals) \\
+		First, recall that,\\
 		$$\int \sigma(x-y)\varphi(y)dy = \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy$$
 		Consider the following difference 
 		
@@ -105,7 +106,7 @@
 	 \begin{proof}
 	 From Lemma 3, $\sigma \ast \varphi \in$
 	 \end{proof}
-	 \section{{$\Sigma_n$ dense in $\mathcal{C}(\mathbb{R}^n)$}}
+ \section{{$\Sigma_n$ dense in $\mathcal{C}(\mathbb{R}^n)$}}
 	\begin{lema}  % L6: step 2
 			If $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
 		\end{lema}
@@ -114,7 +115,7 @@
 			Let $V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}$. $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$. \\ 
 			Let $g\in \mathcal{C}(\mathbb{R}) $, for any compact subset $K \subset \mathbb{R}^n  $, $V$ dense in $\mathcal{C}(K)$. That is, given $\epsilon >0$, there exist $f_i\in  \mathcal{C}(\mathbb{R})$ and $a_i \in \mathbb{R}^n $    {\scriptsize $i=1,...,k$}  such that
 		\end{proof}
-	\section{Proof of the theorem}
+\section{Proof of the theorem}
 	\begin{proof}~ % proof del teorema
 
 	\begin{enumerate}
