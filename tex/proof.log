@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  25 APR 2023 19:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  8 MAY 2023 15:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -543,20 +543,24 @@ Package: euscript 2009/06/22 v3.00 Euler Script fonts
 LaTeX Font Info:    Overwriting math alphabet `\EuScript' in version `bold'
 (Font)                  U/eus/m/n --> U/eus/b/n on input line 33.
 )
+
+Package amsthm Warning: Unknown theoremstyle `theorem' on input line 29.
+
 \c@theorem=\count303
 \c@definition=\count304
-\c@proposition=\count305
-\c@lema=\count306
-
+\c@xmpl=\count305
+\c@proposition=\count306
+\c@lema=\count307
+\c@corolari=\count308
 (/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count307
-\Gm@cntv=\count308
-\c@Gm@tempcnt=\count309
+\Gm@cnth=\count309
+\Gm@cntv=\count310
+\c@Gm@tempcnt=\count311
 \Gm@bindingoffset=\dimen179
 \Gm@wd@mp=\dimen180
 \Gm@odd@mp=\dimen181
@@ -569,12 +573,12 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 ))
 (/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
-\csq@reset=\count310
-\csq@gtype=\count311
-\csq@glevel=\count312
-\csq@qlevel=\count313
-\csq@maxlvl=\count314
-\csq@tshold=\count315
+\csq@reset=\count312
+\csq@gtype=\count313
+\csq@glevel=\count314
+\csq@qlevel=\count315
+\csq@maxlvl=\count316
+\csq@tshold=\count317
 \csq@ltx@everypar=\toks35
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -614,12 +618,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen194
 \cmidrulekern=\dimen195
 \defaultaddspace=\dimen196
-\@cmidla=\count316
-\@cmidlb=\count317
+\@cmidla=\count318
+\@cmidlb=\count319
 \@aboverulesep=\dimen197
 \@belowrulesep=\dimen198
-\@thisruleclass=\count318
-\@lastruleclass=\count319
+\@thisruleclass=\count320
+\@lastruleclass=\count321
 \@thisrulewidth=\dimen199
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
@@ -649,8 +653,8 @@ Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
 \@linkdim=\dimen256
-\Hy@linkcounter=\count320
-\Hy@pagecounter=\count321
+\Hy@linkcounter=\count322
+\Hy@pagecounter=\count323
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
@@ -660,7 +664,7 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count322
+\Hy@SavedSpaceFactor=\count324
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
@@ -675,7 +679,7 @@ Package hyperref Info: Plain pages OFF on input line 4152.
 Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4390.
-\c@Hy@tempcnt=\count323
+\c@Hy@tempcnt=\count325
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -691,7 +695,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count324
+\Fld@menulength=\count326
 \Field@Width=\dimen258
 \Fld@charsize=\dimen259
 Package hyperref Info: Hyper figures OFF on input line 6027.
@@ -703,9 +707,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6052.
 Package hyperref Info: PDF/A mode OFF on input line 6057.
 LaTeX Info: Redefining \ref on input line 6097.
 LaTeX Info: Redefining \pageref on input line 6101.
-\Hy@abspage=\count325
-\c@Item=\count326
-\c@Hfootnote=\count327
+\Hy@abspage=\count327
+\c@Item=\count328
+\c@Hfootnote=\count329
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -717,9 +721,9 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\HyAnn@Count=\count328
-\Fld@listcount=\count329
-\c@bookmark@seq@number=\count330
+\HyAnn@Count=\count330
+\Fld@listcount=\count331
+\c@bookmark@seq@number=\count332
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -757,7 +761,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks36
 \XKV@tempa@toks=\toks37
 )
-\XKV@depth=\count331
+\XKV@depth=\count333
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
@@ -776,7 +780,7 @@ Package: datatool-base 2019/09/27 v2.32 (NLCT)
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count332
+\c@su@anzahl=\count334
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/datatool/datatool-fp.sty
 Package: datatool-fp 2019/09/27 v2.32 (NLCT)
@@ -787,19 +791,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count333
+\actioncount=\count335
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count334
-\FP@xia=\count335
-\FP@xib=\count336
-\FP@xfa=\count337
-\FP@xfb=\count338
-\FP@rega=\count339
-\FP@regb=\count340
-\FP@regs=\count341
-\FP@times=\count342
+\FP@xs=\count336
+\FP@xia=\count337
+\FP@xib=\count338
+\FP@xfa=\count339
+\FP@xfb=\count340
+\FP@rega=\count341
+\FP@regb=\count342
+\FP@regs=\count343
+\FP@times=\count344
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -818,7 +822,7 @@ Package: fp-pas 1994/08/29
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count343
+\FPseed=\count345
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -830,14 +834,14 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks40
-\@dtl@tmpcount=\count344
+\@dtl@tmpcount=\count346
 \dtl@tmplength=\skip143
-\dtl@sortresult=\count345
-\@dtl@numgrpsepcount=\count346
-\@dtl@datatype=\count347
-\dtl@codeA=\count348
-\dtl@codeB=\count349
-\@dtl@foreach@level=\count350
+\dtl@sortresult=\count347
+\@dtl@numgrpsepcount=\count348
+\@dtl@datatype=\count349
+\dtl@codeA=\count350
+\dtl@codeB=\count351
+\@dtl@foreach@level=\count352
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/base/glossaries-compat
 ible-307.sty
@@ -854,7 +858,7 @@ Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
 lish.ldf
 File: glossaries-english.ldf 2014/11/23 v1.0
 )
-\gls@level=\count351
+\gls@level=\count353
 \@gls@tmpb=\toks41
 \gls@tmplen=\skip144
 \glskeylisttok=\toks42
@@ -880,17 +884,17 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTright=\skip147
 \LTpre=\skip148
 \LTpost=\skip149
-\LTchunksize=\count352
+\LTchunksize=\count354
 \LTcapwidth=\dimen260
 \LT@head=\box69
 \LT@firsthead=\box70
 \LT@foot=\box71
 \LT@lastfoot=\box72
 \LT@gbox=\box73
-\LT@cols=\count353
-\LT@rows=\count354
-\c@LT@tables=\count355
-\c@LT@chunks=\count356
+\LT@cols=\count355
+\LT@rows=\count356
+\c@LT@tables=\count357
+\c@LT@chunks=\count358
 \LT@p@ftn=\toks46
 )
 \glsdescwidth=\skip150
@@ -901,7 +905,7 @@ sty
 Package: glossary-super 2021/11/01 v4.49 (NLCT)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
-\c@tracingst=\count357
+\c@tracingst=\count359
 \ST@wd=\dimen261
 \ST@rightskip=\skip152
 \ST@leftskip=\skip153
@@ -926,7 +930,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip156
 \bibsep=\skip157
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count358
+\c@NAT@ctr=\count360
 )
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
@@ -938,9 +942,9 @@ less on input line 42.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count359
-\l__lipsum_a_int=\count360
-\l__lipsum_b_int=\count361
+\g__lipsum_par_int=\count361
+\l__lipsum_a_int=\count362
+\l__lipsum_b_int=\count363
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 Package hyperref Info: Option `colorlinks' set `true' on input line 48.
@@ -991,14 +995,14 @@ ode.tex
 \pgf@yd=\dimen282
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count362
-\c@pgf@countb=\count363
-\c@pgf@countc=\count364
-\c@pgf@countd=\count365
+\c@pgf@counta=\count364
+\c@pgf@countb=\count365
+\c@pgf@countc=\count366
+\c@pgf@countd=\count367
 \t@pgf@toka=\toks51
 \t@pgf@tokb=\toks52
 \t@pgf@tokc=\toks53
-\pgf@sys@id@count=\count366
+\pgf@sys@id@count=\count368
 
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgf.cfg
 File: pgf.cfg 2021/05/15 v3.1.9a (3.1.9a)
@@ -1016,8 +1020,8 @@ File: pgfsys-common-pdf.def 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.
 code.tex
 File: pgfsyssoftpath.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfsyssoftpath@smallbuffer@items=\count367
-\pgfsyssoftpath@bigbuffer@items=\count368
+\pgfsyssoftpath@smallbuffer@items=\count369
+\pgfsyssoftpath@bigbuffer@items=\count370
 )
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.
 code.tex
@@ -1030,7 +1034,7 @@ Package: pgfcore 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
 \pgfmath@dimen=\dimen283
-\pgfmath@count=\count369
+\pgfmath@count=\count371
 \pgfmath@box=\box76
 \pgfmath@toks=\toks54
 \pgfmath@stack@operand=\toks55
@@ -1055,7 +1059,7 @@ code.tex)
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integ
 erarithmetics.code.tex)))
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count370
+\c@pgfmathroundto@lastzeros=\count372
 )) (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/math/pgfint.code.tex)
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.co
 de.tex
@@ -1093,7 +1097,7 @@ File: pgfcorescopes.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgfpic=\box77
 \pgf@hbox=\box78
 \pgf@layerbox@main=\box79
-\pgf@picture@serial@count=\count371
+\pgf@picture@serial@count=\count373
 )
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicst
 ate.code.tex
@@ -1128,8 +1132,8 @@ File: pgfcorearrows.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 e.tex
 File: pgfcoreshade.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \pgf@max=\dimen307
-\pgf@sys@shading@range@num=\count372
-\pgf@shadingcount=\count373
+\pgf@sys@shading@range@num=\count374
+\pgf@shadingcount=\count375
 )
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.cod
 e.tex
@@ -1196,7 +1200,7 @@ Package: tikz 2021/05/15 v3.1.9a (3.1.9a)
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothan
 dlers.code.tex
 File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgf@plot@mark@count=\count374
+\pgf@plot@mark@count=\count376
 \pgfplotmarksize=\dimen312
 )
 \tikz@lastx=\dimen313
@@ -1211,19 +1215,19 @@ File: pgflibraryplothandlers.code.tex 2021/05/15 v3.1.9a (3.1.9a)
 \tikz@figbox@bg=\box83
 \tikz@tempbox=\box84
 \tikz@tempbox@bg=\box85
-\tikztreelevel=\count375
-\tikznumberofchildren=\count376
-\tikznumberofcurrentchild=\count377
-\tikz@fig@count=\count378
+\tikztreelevel=\count377
+\tikznumberofchildren=\count378
+\tikznumberofcurrentchild=\count379
+\tikz@fig@count=\count380
 
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.cod
 e.tex
 File: pgfmodulematrix.code.tex 2021/05/15 v3.1.9a (3.1.9a)
-\pgfmatrixcurrentrow=\count379
-\pgfmatrixcurrentcolumn=\count380
-\pgf@matrix@numberofcolumns=\count381
+\pgfmatrixcurrentrow=\count381
+\pgfmatrixcurrentcolumn=\count382
+\pgf@matrix@numberofcolumns=\count383
 )
-\tikz@expandcount=\count382
+\tikz@expandcount=\count384
 
 (/usr/local/texlive/2022/texmf-dist/tex/generic/pgf/frontendlayer/tikz/librarie
 s/tikzlibrarytopaths.code.tex
@@ -1319,16 +1323,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count383
+\scratchcounter=\count385
 \scratchdimen=\dimen321
 \scratchbox=\box88
-\nofMPsegments=\count384
-\nofMParguments=\count385
+\nofMPsegments=\count386
+\nofMParguments=\count387
 \everyMPshowfont=\toks60
-\MPscratchCnt=\count386
+\MPscratchCnt=\count388
 \MPscratchDim=\dimen322
-\MPnumerator=\count387
-\makeMPintoPDFobject=\count388
+\MPnumerator=\count389
+\makeMPintoPDFobject=\count390
 \everyMPtoPDFconversion=\toks61
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1394,7 +1398,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count389
+\c@section@level=\count391
 )
 LaTeX Info: Redefining \ref on input line 2.
 LaTeX Info: Redefining \pageref on input line 2.
@@ -1405,16 +1409,6 @@ LaTeX Info: Redefining \nameref on input line 2.
 
 
 Chapter 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 4--5
-
- []
-
 LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1440,31 +1434,22 @@ LaTeX Font Info:    Trying to load font information for U+bbold on input line 7
 .
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/bbold/Ubbold.fd)
-LaTeX Font Info:    Trying to load font information for U+eus on input line 31.
-
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueus.fd
-File: ueus.fd 2013/01/14 v3.01 Euler Script
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-eus.cfg
-File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
-)
-Underfull \hbox (badness 10000) in paragraph at lines 27--33
+Underfull \hbox (badness 10000) in paragraph at lines 10--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--33
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--33
+Underfull \hbox (badness 10000) in paragraph at lines 11--11
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 27--33
+Underfull \hbox (badness 10000) in paragraph at lines 11--13
 
  []
 
@@ -1474,38 +1459,75 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--33
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 26.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Sigma' on input line 26.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 26.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 26.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 26.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 26.
+
+LaTeX Font Info:    Trying to load font information for U+eus on input line 38.
+
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueus.fd
+File: ueus.fd 2013/01/14 v3.01 Euler Script
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-eus.cfg
+File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
+)
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
 
  []
 
 
-Overfull \hbox (86.59222pt too wide) detected at line 50
+Underfull \hbox (badness 10000) in paragraph at lines 34--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
+
+ []
+
+
+Overfull \hbox (49.33148pt too wide) detected at line 57
 []
- []
-
-
-Overfull \hbox (21.54193pt too wide) detected at line 60
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 62--65
-
  []
 
 
@@ -1517,7 +1539,22 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 83--85
+Overfull \hbox (21.54193pt too wide) detected at line 65
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 67--70
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
@@ -1530,14 +1567,38 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\Sigma' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 107.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 107.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 120--121
 
  []
-
-
-Package glossaries Warning: No \printglossary or \printglossaries found. 
-(Remove \makeglossaries if you don't want any glossaries.) 
-This document will not have a glossary.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -1547,24 +1608,39 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[4] (./proof.aux)
+[4]
 
-Package rerunfilecheck Warning: File `proof.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+Package natbib Warning: Citation `leshno1993multilayer' on page 5 undefined on 
+input line 125.
 
-Package rerunfilecheck Info: Checksums for `proof.out':
-(rerunfilecheck)             Before: B7012C081B7F1A792C817C745F2E0D01;313
-(rerunfilecheck)             After:  DBCE7E8376CAA4255FE9A1094E099313;287.
+
+Package glossaries Warning: No \printglossary or \printglossaries found. 
+(Remove \makeglossaries if you don't want any glossaries.) 
+This document will not have a glossary.
+
+
+Package natbib Warning: There were undefined citations.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5] (./proof.aux)
+Package rerunfilecheck Info: File `proof.out' has not changed.
+(rerunfilecheck)             Checksum: 649637BB53FA5F3B8EC2C473EC2D8A92;672.
  ) 
 Here is how much of TeX's memory you used:
- 41368 strings out of 478268
- 824819 string characters out of 5846347
- 1235191 words of memory out of 5000000
- 58686 multiletter control sequences out of 15000+600000
- 496717 words of font info for 167 fonts, out of 8000000 for 9000
+ 41433 strings out of 478268
+ 825710 string characters out of 5846347
+ 1237323 words of memory out of 5000000
+ 58726 multiletter control sequences out of 15000+600000
+ 500127 words of font info for 189 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 119i,20n,111p,1196b,950s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 119i,20n,111p,1196b,1000s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<
 /usr/local/texlive/2022/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb><
@@ -1573,28 +1649,30 @@ usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb
 ></usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
 </usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
 usr/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/loca
-l/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/
-texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/te
-xlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texl
-ive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/
-2022/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/20
-22/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022
-/texmf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on proof.pdf (4 pages, 258710 bytes).
+r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/lo
+cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/loca
+l/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texl
+ive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texliv
+e/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/
+2022/texmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/20
+22/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022
+/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/tex
+mf-dist/fonts/type1/public/cm-super/sfti1200.pfb>
+Output written on proof.pdf (5 pages, 280363 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 122 compressed objects within 2 object streams
- 18 named destinations out of 1000 (max. 500000)
- 49189 words of extra memory for PDF output out of 51595 (max. 10000000)
+ 204 PDF objects out of 1000 (max. 8388607)
+ 142 compressed objects within 2 object streams
+ 21 named destinations out of 1000 (max. 500000)
+ 53301 words of extra memory for PDF output out of 61914 (max. 10000000)
 

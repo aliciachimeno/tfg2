@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 	\chapter{Lemmas and proof} \label{ch:proof}
-	This chapter presents the lemmas that are necessary to prove the main theorem.  
+	\noindent  This chapter presents the lemmas that are necessary to prove the main theorem.  
 	\section{Part 1}
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $.  Then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
@@ -46,18 +46,16 @@
 		First, recall that,\\
 		$$\int \sigma(x-y)\varphi(y)dy = \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy$$
 		Consider the following difference 
-		
-		\begin{equation*} 
-			\begin{split}
-				\left| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i) \varphi(y)dy \right|  &=  \\
-				& = \left|  \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y_i)\varphi(y)dy \right|  \\
-				& =  \left|  \sum_{i=1}^m \int_{\Delta_i}\varphi(y)\Big( \sigma(x-y) - \sigma(x-y_i)\Big)dy \right| \\
-				&\leq  \sum_{i=1}^m \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy 
-			\end{split}
-		\end{equation*}
+
+\begin{equation*} 
+	\begin{split}
+		\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i)& \varphi(y)dy \Bigg| =  \\
+		& = \left|  \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y_i)\varphi(y)dy \right|  \\
+		& =  \left|  \sum_{i=1}^m \int_{\Delta_i}\varphi(y)\Big( \sigma(x-y) - \sigma(x-y_i)\Big)dy \right| \\
+		&\leq  \sum_{i=1}^m \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy 
+	\end{split}
+\end{equation*}
 		If $x-\Delta_i \cap U = \varnothing $. Since $x-y \notin U$ , $x-y_i \notin U$ and $x-y_i \in [-2\alpha,2\alpha]$, bc (2) we have
-		
-		
 		\begin{equation*}
 			\begin{split}
 				\sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy  \leq  \frac{\epsilon}{\| \varphi\|_{L_1}}  \sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| = & \\
@@ -66,7 +64,7 @@
 			\end{split}
 		\end{equation*}
 		
-		If $x-\Delta_i \cap U \neq \varnothing$\\ \\ 
+		\noindent If $x-\Delta_i \cap U \neq \varnothing$\\ \\ 
 		$\sum_i |\tilde{\Delta_i}| = \sum_i|(x-\Delta_i \cap U)| \leq |U|+2|\Delta_i| r(\delta) \leq \delta + 2 \cdot \frac{2\alpha}{m} r(\delta) \leq \delta +4\delta = 5\delta$  \\ \\ 
 		True by our choice of m, satisfies $m\delta > \alpha r(\delta) \iff \delta > \frac{\alpha \cdot r(\delta)}{m}$
 		

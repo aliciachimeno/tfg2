@@ -29,11 +29,14 @@
 \theoremstyle{theorem}
 \newtheorem{theorem}{Theorem}
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}
+\newtheorem{definition}[theorem]{Definition}
 \newtheorem{xmpl}{Example}
-\newtheorem{proposition}{Proposition}	
-\newtheorem{lema}{Lemma}
-\newtheorem{corolari}{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lema}[theorem]{Lemma}
+\newtheorem{corolari}[theorem]{Corollary}
+
+
+
 
 \def\arraystretch{1.2}%  1 is the default, change whatever you need
 
