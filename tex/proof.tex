@@ -1,15 +1,15 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 	\chapter{Lemmas and proof} \label{ch:proof}
-	\noindent  This chapter presents the lemmas that are necessary to prove the main theorem.  
+	\noindent  This chapter presents the lemmas that are necessary to prove the main theorem. The problem of approximating a function g on some compact $K$ of $\mathbb{R}^n$ from $\Sigma_n$, can be divided into two parts. One part is the approximation of the form $\sum_i f_i(a^i \cdot x)$ where $f_i$ are functions in $C(\mathbb{R})$. The other is the approximation of $f_i$ on the appropiate set from $\Sigma_1$. \textcolor{red}{!!canviar}
 	\section{Part 1}
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $.  Then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
 	\begin{proof}
 		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, where $\mathcal{C}^\infty_0[a,b]$ is the set of functions $\mathcal{C}^\infty_0$ with support in $[a,b]$ for any $a<b$. \\ \\ Let $\rho$ be a metric on $\mathcal{C}^\infty_0[a,b]$ defined by
-		$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space. By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem (appendix) then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
-		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not deppend on the interval $[a,b]$.  
+		$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space. By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem (appendix \textcolor{red}{!!Revisar}) then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
+		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not deppend on the interval $[a,b]$.   \textcolor{red}{!! acabar}
 
 	\end{proof}
 	\begin{lema} % L2: step 7
@@ -19,7 +19,7 @@
 	If $\sigma \ast \varphi$ is a polynomial of degree $m$.
 	For all $\varphi \in \mathcal{C}^\infty_0$, we have that
 	$$(\sigma \ast \varphi)^{(m+1)} \, (x)=\int \sigma(x-y)\varphi^{(m+1)}(y) \, dy= 0$$  
-	From standard results in Distribution Theory, $\sigma $ is itself a polynomial of degree at most m (a.e.). NO SE PQ
+	From standard results in Distribution Theory, $\sigma $ is itself a polynomial of degree at most m (a.e.).  \textcolor{red}{!!ho he buscat i no he trobat res perquè implica que sigma polinomi que la integral sigui 0}
 	\end{proof} 
 \noindent Conclusion: If we have that $\sigma \ast \varphi$ is a polynomial then $\sigma$ is a polynomial. This contradicts the hypothesis. Therefore, $\sigma \ast \varphi$ will not be a polynomial. 
 
@@ -77,7 +77,7 @@
 				& \leq \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \, 5 \delta \leq \epsilon /3
 			\end{split}
 		\end{equation*}
-		
+		 \textcolor{red}{!! Falta acabar}
 	\end{proof}
 	
 	\begin{lema} % L4: step 3
@@ -86,16 +86,17 @@
 	
 	\begin{proof} % proof step 3
 		We recall that set $\Sigma_1 = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}, \theta \in \mathbb{R} \} $. We can write any function $h\in \Sigma_1$ as $h=\sum_i \beta_i \sigma_i(w_i x+\theta_i)= \beta_1 \sigma_1(w_1 x+\theta_1)+ ... $ \\ \\ 
-		$\frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h} \in \Sigma_1$ because is a linear combination, where $\beta_1= \frac{1}{h}, \beta_2=\frac{-1}{h}...$. \\ By hypothesis, we have $\sigma \in \mathcal{C}^{\infty}$. By definition of derivative we have
+		We can see that $\frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h} \in \Sigma_1$ because is a linear combination, where $\beta_1= \frac{1}{h}, \beta_2=\frac{-1}{h}$. \\ By hypothesis, we have $\sigma \in \mathcal{C}^{\infty}$. By definition of derivative we have
 		$$ \frac{d}{dw}\sigma(wx+\theta)= \lim_{h \to 0} \frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h}  \in \overline{\Sigma_1} \footnote{$\overline{\Sigma_1}$ denotes the clausure of the set $\Sigma_1$} $$
 		Because the limit of a set belongs to the closure of the set. \\ 
 		By the same argument, $\frac{d^k}{dw^k} \sigma(wx+\theta) \in \overline{\Sigma_1}$ for all $k\in \mathbb{N}, w,\theta \in \mathbb{R}$.\\   
 		We observe that $\frac{d}{dw} \sigma(wx+\theta) = \sigma'(wx+\theta) \cdot x$. If we differentiate this expression k times, we obtain 
 		$$ \frac{d^k}{dw^k}\sigma(wx+\theta) = \sigma^{(k)}(wx+\theta) \cdot x^{k}$$
-		Since $\sigma$ is not a polynomial (theorem hypothesis) then there exists a $\theta_k\in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$ \\  Lets see.**** If $\sigma$ is not a polynomial and $\sigma \in \mathcal{C}^\infty$, lets assume that $ \nexists \theta_k \in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. This means that the k-th derivative at every point is 0, i.e, $\sigma^{(k)}(\theta)=0 $ $\forall \theta \in \mathbb{R} $. If we integrate k times, $\int \sigma^{(k)}= \int 0 \iff \sigma^{(k-1)}=C$, $\int \sigma^{(k-1)}= \int C \iff \sigma^{(k-2)}=Cw$, then we end up $\sigma$ is a polynomial. Contradiction. Therefore, there always exists a point where the derivative does not vanish. \\ 
-		Thus, we evaluate at this point $\theta_k$ where the derivative does not vanish.
+		We will see by reduction to absurdity that if $\sigma$ is not a polynomial (by hypothesis) then there exists a $\theta_k\in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. \\ If $\sigma$ is not a polynomial and $\sigma \in \mathcal{C}^\infty$, lets assume that $ \nexists \theta_k \in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. This means that the k-th derivative at every point is 0, $$\sigma^{(k)}(\theta)=0  \quad \forall \theta \in \mathbb{R} $$
+		\noindent If we integrate k times this expression, $$\int \sigma^{(k)}= \int 0 \Rightarrow \sigma^{(k-1)}=C$$, $$\int \sigma^{(k-1)}= \int C \Rightarrow \sigma^{(k-2)}=Cw$$, then we end up $\sigma$ is a polynomial. Contradiction. Therefore, there always exists a point where the derivative does not vanish. \\ 
+		Thus, we evaluate at the point where the derivative does not vanish, we call it $\theta_k$.
 		$$  \sigma^{(k)}(\theta_k) \cdot x^{k}=\frac{d^k}{dw^k}\sigma(wx+\theta) \Bigr|_{w=0, \theta=\theta_k} \in  \overline{\Sigma_1} $$ 
-		That implies that $\overline{\Sigma_1}$ contains all polynomials, because the expression $\sigma^{(k)}(\theta_k) x^{k}$ generates all polynomials. By the Weierstrass theorem, it follows that $\Sigma_1$ contains...  \textcolor{red}{falta mirar}.
+		That implies that $\overline{\Sigma_1}$ contains all polynomials, because the expression $\sigma^{(k)}(\theta_k) x^{k}$ generates all polynomials. By the Weierstrass theorem, it follows that $\Sigma_1$ contains...  \textcolor{red}{falta acabar}.
 	\end{proof}
 	
 	\begin{lema} % L5: step 5
@@ -104,15 +105,26 @@
 	 \begin{proof}
 	 From Lemma 3, $\sigma \ast \varphi \in$
 	 \end{proof}
- \section{{$\Sigma_n$ dense in $\mathcal{C}(\mathbb{R}^n)$}}
+ \section{{$\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }}
+ Aproximar una funció contínua amb una del conjunt $\Sigma_1$ implica appriximar una funcio $\mathcal{C}(\mathbb{R}^n)$ del conjunt $\Sigma_n $ Per tant, només caldrà aproximar una funció contínua. Ho veiem amb la caracterització de densitat: 
 	\begin{lema}  % L6: step 2
-			If $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
+			If $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. 
 		\end{lema}
 	
 	\begin{proof} % proof  step 2
-			Let $V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}$. $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$. \\ 
+			Let $V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}$. $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$. (hem de veure) \\ 
 			Let $g\in \mathcal{C}(\mathbb{R}) $, for any compact subset $K \subset \mathbb{R}^n  $, $V$ dense in $\mathcal{C}(K)$. That is, given $\epsilon >0$, there exist $f_i\in  \mathcal{C}(\mathbb{R})$ and $a_i \in \mathbb{R}^n $    {\scriptsize $i=1,...,k$}  such that
+			
+			$$ \big| g(x)-\sum_{i=1}^k f_i(a^i \cdot x) \big| < \frac{\epsilon}{2}$$
+			for all $x\in K$. We now consider the set of all the points in the compact $K$ multiplied by the vector $a^i$. That is $\{a^i \cdot x | x \in K\}$ $\subseteq[\alpha_i,\beta_i] $ for some finite interval $[\alpha_i,\beta_i]$, $i=1,...,k$. By hipothesis $\Sigma_1 $ dense in $\mathcal{C}(\mathbb{R})$ , specifically $\Sigma_1 $ is dense in $[\alpha_i,\beta_i ]$ $ \, i=1,...,k$. Hence there exist constants $c_{ij}, w_{ij}$ and $\theta_{ij}$, $j=1,...,m_i$, $i=1,...,k$ such that 
+			
+			$$ \big| f_i(y) - \sum_{j=1}^{m} c_{ij} \sigma(w_{ij}y+ \theta_{ij})\big| < \frac{\epsilon}{2k}$$
+			for all $x\in K$. \\ \\
+			Therefore, 
+			$$ \big| g(x) - \sum_{i=1}^k \sum_{j=1}^m c_{ij} \sigma(w_{ij}(a^i \cdot x) + \theta_{ij})  \big| < \epsilon$$
 		\end{proof}
+	We showed that to approximate a $\mathcal{C}(\mathbb{R}^n)$ function we only need to approximate a $\mathcal{C} (\mathbb{R})$ function with the set $\Sigma_1$. 
+
 \section{Proof of the theorem}
 	\begin{proof}~ % proof del teorema
 

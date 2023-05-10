@@ -16,6 +16,10 @@ A \emph{metric space} is a pair $(X,d)$, where $X$ is a set and $d$ is a distanc
 \noindent  If we take $X$ to be a set of functions, the metric $d(f,g)$ will enable us to measure the distance between functions $f,g \in X$.
 
 \begin{definition}
+We denote the support of a function $u$ by $supp(u)= \{x | u(x)\neq 0\}$
+\end{definition}
+
+\begin{definition}
 	Let $f,g$ be real-valued functions with compact support. We define the \emph{convolution} of $f$ with $g$ as $$(f\ast g)(x)=\int f(x-t)g(t) \, dt$$
 \end{definition}
 
@@ -46,7 +50,7 @@ Examples and counterexamples of functions essentially bounded.
 \end{itemize}
 
 \begin{definition}
-	A function u defined almost everywhere on a domain $\Omega$ (a domain is an open set in $\mathbb{R}^n$) is said to be\emph{ locally essentially bounded }on $\Omega$ if for every compact set $K\subset \Omega$, $u\in L^{\infty}(K)$. We denote $u\in L_{loc}^{\infty}(K)$
+	A function u defined almost everywhere on a domain $\Omega$ (a domain is an open set in $\mathbb{R}^n$) is said to be\emph{ locally essentially bounded }on $\Omega$ if for every compact set $K\subset \Omega$, $u\in L^{\infty}(K)$. We denote $u\in L_{loc}^{\infty}(K)$.
 \end{definition}
 
 \begin{definition}We say that a set of functions $F\subset L_{loc}^{\infty}(\mathbb{R})$ is \emph{dense} in $C(\mathbb{R}^n)$ if for every function $g\in C(\mathbb{R}^n)$ and for every compact $K\subset \mathbb{R}^n$, there exist a sequence of functions $f_j\in F$ such that $$\lim_{j\rightarrow\infty} \|g-f_j\|_{L^\infty(K)}=0.$$ 
@@ -54,23 +58,26 @@ Examples and counterexamples of functions essentially bounded.
 
 \section{Results}
 \begin{definition} Let $\mathcal{M}$ denote the set of functions which are in $L_{loc}^{\infty}(\mathbb{R})$ and have the following property. The closure of the set of points of discontinuity of any function in $\mathcal{M}$ is of zero Lebesgue measure. 
-\begin{proposition}
+\begin{propo}
 (This implies that) for any $\sigma \in$ $\mathcal{M}$, interval $[a,b] .$ and $\delta >0$, there exists a finite number of open intervals, the union of which we denote by U, of measure $\delta$, such that $\sigma$ is uniformly continuous on $[a,b]/U$. 
-\end{proposition}
+\end{propo}
 \end{definition}
 
-\section{Neural Networks}
-intro \\ \\ 
-The general architecture of a multilayer feedforward network, MFN, consist of: input layer: n-input units,  one/more hidden layers : intermediate processing units, output layer: m output-units
+\begin{definition} 
+	$ \mathcal{C}^\infty_0$ functions $\mathcal{C}^\infty$ with compact support.  
+\end{definition}
+
+\section{Multilayer Feedforward Network}
+\textcolor{red}{intro???}
+Multilayer feedforward networks (MFNs) are a type of artificial neural network that consist of several layers of interconnected nodes, with each node taking input from the previous layer and producing output for the next layer. The general architecture of a multilayer feedforward network, MFN, consist of: input layer: n-input units,  one/more hidden layers : intermediate processing units, output layer: m output-units.  \textcolor{red}{dibuix???}
 \begin{definition} (Multilayer feedforward networks) The function that a MFN compute is: 
 	$$f(x)=\sum_{j=1}^k \beta_j \cdot \sigma(w_j \cdot x - \theta_j)$$
 	where $x \in \mathbb{R}^n$ is the input vector, $k \in \mathbb{N}$ is the number of processing units in the hidden layer, $w_j \in \mathbb{R}^n$ is the weight vector that connects the input to processing unit $j$ in the hidden layer, $\sigma : \mathbb{R} \rightarrow \mathbb{R}$ is an activation function applied element-wise to the vector $w_j^T x - \theta_j$, where $\theta_j \in \mathbb{R}$ is the threshold (or bias) associated with processing unit $j$ in the hidden layer, and $\beta_j \in \mathbb{R}$ is the weight that connects processing unit $j$ in the hidden layer to the output of the network.
 
 \end{definition}
+\noindent Let $N_{w}$ be the family of all functions implied by the network's architecture.  If we can show that $N_{w}$ is dense in $C(\mathbb{R}^n)$, we can conclude that for every continuous function $g \in C(\mathbb{R}^n) $ and each compact set $K \subset \mathbb{R}^n$, there is a function $f \in N_{w}$ such that $f$ is a good approximation to $g$ on K. \\ \\
+\noindent Under which necessary and sufficient conditions on $\sigma$ will the family of networks $N_w$ be capable of approximating to any desired accuracy any given continuous function?
 
-	\begin{definition} 
-	$ \mathcal{C}^\infty_0$ functions $\mathcal{C}^\infty$ with compact support.  
-\end{definition}
 
 \section{Theorem}
 \begin{theorem} Let $ \sigma \in \text{M} $. Set
@@ -90,6 +97,28 @@ The general architecture of a multilayer feedforward network, MFN, consist of: i
 \end{corolari}
 
 \noindent Com que $\sigma$ té grau fix "k", aleshores $\sigma (wx+\theta) $ grau com a molt k. Per tant el conjunt $\sigma_n$ és un espai vectorial finit i no pot ser dens. 
+
+\subsection{Previous results}
+ The activation functions that were reported thus far in the literature. 
+\begin{theorem} (Hornik Theorem 1). Standard multilayer feedforward networks with a bounded and nonconstant activation function can approximate any function in $L^p(\mu)$ arbitrary well, given a sufficiently large number of hidden units. 
+\end{theorem}
+
+\begin{theorem} (Hornik Theorem 2)  Standard multilayer feedforward networks with a continuous, bounded and nonconstant activation function can approximate any continuous function on $X$ arbitrarily well (with respect to the uniform distance) given a sufficiently large number of hidden units. 
+\end{theorem}
+The theorem generalize in particular Hornik's Theorem 2 by establishing necessary and sufficientconditions for universal approximation.
+Diferencies ? ?? 
+\section{Results}
+
+
+\begin{definition} The set $L^{p}(\mu)$ contains all mesurable functions $f$ such that: 
+	$$ \|f\|_{L^p}(\mu) = \Big( \int_{R^n} |f(x)|^p d\mu(x)\Big)^{1/p} < \infty $$
+
+\end{definition}
+
+\begin{propo}
+Let $\mu $ be a non-negative finite measure on $\mathbb{R}$ with compact support, absolutely continous with respect to Lebesgue measure. Then $\Sigma_n$ is dense in $L_p(\mu)$ , $1\leq p < \infty$, if and only of, $\sigma$ is not a polynomial.
+\end{propo}
+
 
 
 \end{document}

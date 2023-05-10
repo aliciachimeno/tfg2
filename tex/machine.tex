@@ -12,7 +12,8 @@
 	
 	Classification and regression problem. 
 	
-
+	\subsection{Artificial neural networks ? }
+Artificial neural networks are a class of machine learning models that are inspired by the structure and function of the human brain. They are composed of interconnected processing units called artificial neurons, which are organized in layers and are capable of learning and generalizing from data.
 	\section{Types of Learning}
 	\noindent
 	We can think about learning as the way we understand it as a human. We can classify a learning problem based on the degree of feedback. The three main types are: 
@@ -29,12 +30,17 @@ $$f: \{0,..., 255\}^{28 \times 28} \longrightarrow \text{probability distributio
 \end{xmpl}
 	\section{Function Learning}
 	\noindent
-	\textit{Important principle}: Many supervised learning tasks are about function learning. 
+	\textit{Important principle $I$}: Many supervised learning tasks are about function learning. 
 
 \begin{xmpl} Example of a classification problem. We want to classify if an image is a dog or not a dog. We would like to produce a value which is correlated with the probability of this image being a dog or not a dog.  We can approach the problem in the following way. We want to find a function that takes very high values when dog-image and very low val ues when non dog images and takes the value 0 when its uncertain. 
 	$$d: \mathbb{R}^{\# \text{pixels in image}} \rightarrow \mathbb{R} $$
 	such that $\mathbb{P}(d(\text{image})) = \text{probability that the image is a dog.}$ \\ \\  
 	That is what we mean by many problems can be recast as function learning. Note that there is not a god-given reason why this function should exist. We know that certain points in space, and they have certain values associated to them, but we dont know that there is some big function. 
 \end{xmpl}
+
+\noindent \textit{Important principle $II$}: Sometimes function learning can be recast as a classification problem.  
+\\ \\ 
+Binary classification problem. 
+Rather learning $\mu : \mathbb{R}^{\# \text{bits}} \rightarrow \mathbb{R}$ where big values correspond to likely and small values to unlikely. It is better to learn $\mu : \mathbb{R}^{\# \text{bits}} \rightarrow $ probability distribution on $\{-1,0,1\}$. In number theory the function $\mu(n)$ it is called Möebius function 
 	
 \end{document}
