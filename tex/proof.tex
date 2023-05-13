@@ -8,7 +8,7 @@
 	\end{lema}
 	\begin{proof}
 		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, where $\mathcal{C}^\infty_0[a,b]$ is the set of functions $\mathcal{C}^\infty_0$ with support in $[a,b]$ for any $a<b$. \\ \\ Let $\rho$ be a metric on $\mathcal{C}^\infty_0[a,b]$ defined by
-		$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space. By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem (appendix \textcolor{red}{!!Revisar}) then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
+		$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space (Fréchet space). By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
 		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not deppend on the interval $[a,b]$.   \textcolor{red}{!! acabar}
 
 	\end{proof}
@@ -77,6 +77,21 @@
 				& \leq \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \, 5 \delta \leq \epsilon /3
 			\end{split}
 		\end{equation*}
+NOse
+	
+
+\begin{equation*} 
+	\begin{split}
+		\Bigg| \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i)& \varphi(y_i)\Delta y_i \Bigg| =  \\
+		& =  \left|  \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i) [\varphi(y)-\varphi(y_i)] dy \right| \\
+		& \leq  \sum_{i=1}^m \int_{\Delta_i}  \left| \sigma(x-y_i)\right| \left| \varphi(y) - \varphi(y_i)\right|dy  \\
+		& \leq  \sum_{i=1}^m \int_{\Delta_i}  \left| \sigma(x-y_i)\right| dy \left[ \frac{\epsilon/3}{2\alpha \| \sigma\|_{L^\infty[-2\alpha,2\alpha]}}\right]  \leq \frac{\epsilon}{3} 
+	\end{split}
+\end{equation*}
+Finally, we have the result $h_m \rightrightarrows \sigma \ast \varphi $ because
+
+$$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i) \Delta y_i \Bigg| \leq \epsilon $$
+
 		 \textcolor{red}{!! Falta acabar}
 	\end{proof}
 	
@@ -117,7 +132,8 @@
 		\end{lema}
 	
 	\begin{proof} % proof  step 2
-			Let $$V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}$$ We shall see that $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$.  If we show that $V$ contains the polynomials (are dense in $C(R^n)$ for weierstrass theorem) ja estaria. \\ \\ 
+			Let $$V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}$$ We shall see that $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$.  If we show that $V$ contains the polynomials ( which are dense in $C(R^n)$ for Weierstrass Theorem) that would be enough. \\ \\  
+			\textcolor{red}{!!mirar}
 			Let $L(a)$ denote the span of the n rows of $a$ for each $a\in \mathbb{R}^n$. Set $L(R^n) = \cup L(a)$. Let $$H_k^n= \{ \sum c_m s^m \}$$  denote the set of homogeneous polynomials of n variables of total degree k, and $$H^n= \cup_{k=0}^\infty H_k^n$$ the set of all homogeneous polynomials of n variables. \\  \\ 
 			Assume that for a given $k\in \mathbb{N}$ no non-trivial $p\in H_k^n \subseteq V$ for all $k\in \mathbb{Z}$, then V contains all polynomials. For that we have V dense in $\mathcal{C}(\mathbb{R}^n)$. Now, we only need to show that $H_k^n \subseteq  V$. SOS
 			\\ \\
