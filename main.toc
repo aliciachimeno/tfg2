@@ -20,10 +20,11 @@
 \contentsline {subsection}{\numberline {3.5.2}Previous results}{8}{subsection.3.5.2}%
 \contentsline {section}{\numberline {3.6}Results}{8}{section.3.6}%
 \contentsline {chapter}{\numberline {4}Lemmas and proof}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Part 1}{9}{section.4.1}%
-\contentsline {section}{\numberline {4.2}$\Sigma _1$ dense in $\mathcal {C}(\mathbb {R})$}{10}{section.4.2}%
-\contentsline {section}{\numberline {4.3}{$\Sigma _1$ is dense in $\mathcal {C}(\mathbb {R})$, then $\Sigma _n$ is dense in $\mathcal {C}(\mathbb {R}^n)$ }}{13}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Proof of the theorem}{14}{section.4.4}%
+\contentsline {section}{\numberline {4.1}$\sigma \ast \varphi $ is not a polynomial.}{9}{section.4.1}%
+\contentsline {section}{\numberline {4.2}$\sigma \ast \varphi \in \overline {\Sigma _1}$}{10}{section.4.2}%
+\contentsline {section}{\numberline {4.3}$\Sigma _1$ dense in $\mathcal {C}(\mathbb {R})$}{11}{section.4.3}%
+\contentsline {section}{\numberline {4.4}{$\Sigma _1$ is dense in $\mathcal {C}(\mathbb {R})$, then $\Sigma _n$ is dense in $\mathcal {C}(\mathbb {R}^n)$ }}{13}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Proof of the theorem}{14}{section.4.5}%
 \contentsline {chapter}{\numberline {5}Results}{15}{chapter.5}%
 \contentsline {chapter}{\numberline {6}Conclusions}{16}{chapter.6}%
 \contentsline {section}{\numberline {6.1}Summary}{16}{section.6.1}%
