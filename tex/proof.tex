@@ -103,16 +103,21 @@
 		If for some $\varphi \in \mathcal{C}^\infty_0 $ we have that $\sigma \ast \varphi $ is not a polynomial, then $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$
 	\end{lema}
 	 \begin{proof}
-	 From Lemma 3, $\sigma \ast \varphi \in$
+	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$. Clearly, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $\theta \in \mathbb{R}$. For $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$ we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $
 	 \end{proof}
  \section{{$\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }}
- Aproximar una funció contínua amb una del conjunt $\Sigma_1$ implica appriximar una funcio $\mathcal{C}(\mathbb{R}^n)$ del conjunt $\Sigma_n $ Per tant, només caldrà aproximar una funció contínua. Ho veiem amb la caracterització de densitat: 
+ 
+ \noindent We will proof that approximating a $\mathcal{C}(\mathbb{R})$ function  with one from the set $\Sigma_1$ implies approximating a function $\mathcal{C}(\mathbb{R}^n)$ from the set $\Sigma_n$. Therefore, it is only necessary to approximate a continuous function. We can see this from the density characterization:
+
 	\begin{lema}  % L6: step 2
 			If $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. 
 		\end{lema}
 	
 	\begin{proof} % proof  step 2
-			Let $V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}$. $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$. (hem de veure) \\ 
+			Let $$V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}$$ We shall see that $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$.  If we show that $V$ contains the polynomials (are dense in $C(R^n)$ for weierstrass theorem) ja estaria. \\ \\ 
+			Let $L(a)$ denote the span of the n rows of $a$ for each $a\in \mathbb{R}^n$. Set $L(R^n) = \cup L(a)$. Let $$H_k^n= \{ \sum c_m s^m \}$$  denote the set of homogeneous polynomials of n variables of total degree k, and $$H^n= \cup_{k=0}^\infty H_k^n$$ the set of all homogeneous polynomials of n variables. \\  \\ 
+			Assume that for a given $k\in \mathbb{N}$ no non-trivial $p\in H_k^n \subseteq V$ for all $k\in \mathbb{Z}$, then V contains all polynomials. For that we have V dense in $\mathcal{C}(\mathbb{R}^n)$. Now, we only need to show that $H_k^n \subseteq  V$. SOS
+			\\ \\
 			Let $g\in \mathcal{C}(\mathbb{R}) $, for any compact subset $K \subset \mathbb{R}^n  $, $V$ dense in $\mathcal{C}(K)$. That is, given $\epsilon >0$, there exist $f_i\in  \mathcal{C}(\mathbb{R})$ and $a_i \in \mathbb{R}^n $    {\scriptsize $i=1,...,k$}  such that
 			
 			$$ \big| g(x)-\sum_{i=1}^k f_i(a^i \cdot x) \big| < \frac{\epsilon}{2}$$
@@ -129,7 +134,7 @@
 	\begin{proof}~ % proof del teorema
 
 	\begin{enumerate}
-		\item[$\Rightarrow$] To prove the implication, we will use proof by contrapositive. We will see the following. If $\sigma$ is a polynomial then $\Sigma_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. Let $\sigma$ be a polynomial of degree k, then $\sigma(wx+\theta)$ is a polynomial  of degree k for every $w,\theta$. We have $ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$ that is the set of algebraic polynomials of degree at most k. $\Sigma_n$ is not dens in $\mathcal{C}(\mathbb{R}^n)$ if for a function $f(x)\in \mathcal{C}(\mathbb{R}^n)$ we can find $\epsilon > 0$ and $K$ such that  $\| p-f \| > \epsilon$ for all $p$ polynomial of degree k. For example, let $f(x)=cos(x)$, and let $p(x)= \sigma(wx+\theta)$ that has degree at most k. This implies has maximum k roots. We can find a interval where $cos(x)$ has k+1 roots. Contradiction. Therefore $\sigma$ can not be a polynomial. 
+		\item[$\Rightarrow$] To prove the implication, we will use proof by contrapositive. We will see the following. If $\sigma$ is a polynomial then $\Sigma_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. Let $\sigma$ be a polynomial of degree k, then $\sigma(wx+\theta)$ is a polynomial  of degree k for every $w,\theta$. We have $ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$ that is the set of algebraic polynomials of degree at most k. $\Sigma_n$ is not dens in $\mathcal{C}(\mathbb{R}^n)$ if for a function $f(x)\in \mathcal{C}(\mathbb{R}^n)$ we can find $\epsilon > 0$ and $K$ such that  $\| p-f \| > \epsilon$ for all $p$ polynomial of degree k. For example, let $f(x)=cos(x)$, and let $p(x)= \sigma(wx+\theta)$ that has degree at most k. This implies has maximum k roots. We can find a interval where $cos(x)$ has k+1 roots. Therefore, $\Sigma_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. 
 
 		\item[$\Leftarrow$]  Recapitulem el que hem vist als lemes ..
 	\end{enumerate}
