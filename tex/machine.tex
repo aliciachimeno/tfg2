@@ -1,8 +1,8 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-	\chapter{Artificial Intelligence} \label{ch:machine}
+	\chapter{Machine Learning} \label{ch:machine}
 	
-	\section{What is Artificial Intelligence}
+
 	\section{What is Machine Learning}
 	\noindent Machine Learning is the science of programming computers so they can learn from data. 
 	
@@ -12,8 +12,7 @@
 	
 	Classification and regression problem. 
 	
-	\subsection{Artificial neural networks ? }
-Artificial neural networks are a class of machine learning models that are inspired by the structure and function of the human brain. They are composed of interconnected processing units called artificial neurons, which are organized in layers and are capable of learning and generalizing from data.
+
 	\section{Types of Learning}
 	\noindent
 	We can think about learning as the way we understand it as a human. We can classify a learning problem based on the degree of feedback. The three main types are: 
@@ -24,13 +23,14 @@ Artificial neural networks are a class of machine learning models that are inspi
 		\item Unsupervised learning, where we have non feedback signal. %which involves discovering patterns in data without any predefined labels or feedback, 
 		For example, deducing which dog belongs to each owner.  
 	\end{enumerate}
-\begin{xmpl}
-Example of a supervised learning task. Recognition of a letter. What we are trying to learn is a probability distribution fuction 
+
+	\noindent A classic example of a supervised learning task is digit recognition. The objective is to identify handwritten digits (0-9) based on input images. In this task, we aim to learn a probability distribution function denoted as $f$, which maps a set of pixel values ranging from 0 (black) to 255 (white), representing a 28x28 image, to a probability distribution over the digits 0 to 9.
+
 $$f: \{0,..., 255\}^{28 \times 28} \longrightarrow \text{probability distribution on } \{0,1,...,9\}$$
-\end{xmpl}
+
 	\section{Function Learning}
-	\noindent
-	\textit{Important principle $I$}: Many supervised learning tasks are about function learning. 
+	\noindent 
+	\textit{Many supervised learning tasks are about function learning.}:  
 
 \begin{xmpl} Example of a classification problem. We want to classify if an image is a dog or not a dog. We would like to produce a value which is correlated with the probability of this image being a dog or not a dog.  We can approach the problem in the following way. We want to find a function that takes very high values when dog-image and very low val ues when non dog images and takes the value 0 when its uncertain. 
 	$$d: \mathbb{R}^{\# \text{pixels in image}} \rightarrow \mathbb{R} $$
@@ -42,5 +42,22 @@ $$f: \{0,..., 255\}^{28 \times 28} \longrightarrow \text{probability distributio
 \\ \\ 
 Binary classification problem. 
 Rather learning $\mu : \mathbb{R}^{\# \text{bits}} \rightarrow \mathbb{R}$ where big values correspond to likely and small values to unlikely. It is better to learn $\mu : \mathbb{R}^{\# \text{bits}} \rightarrow $ probability distribution on $\{-1,0,1\}$. In number theory the function $\mu(n)$ it is called Möebius function 
+
+\[
+\mu(n) = \begin{cases}
+	0 & \text{if } n \text{ has a repeated square factor}, \\
+	-1 & \text{if } n \text{ has an odd number of distinct prime factors}, \\
+	1 & \text{if } n \text{ has an even number of distinct prime factors}.
+\end{cases}
+\]
+
+	
+	
+\section{Artificial neural networks }
+
+\noindent \textit{Artificial neural networks} (ANNs) are widely used for nonlinear function approximation.
+(nonlinear classifier.)  They were initially inspired by the way biological neurons process information. 
+
+They are composed of interconnected processing units called artificial neurons, which are organized in layers and are capable of learning and generalizing from data.	
 	
 \end{document}

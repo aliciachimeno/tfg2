@@ -68,7 +68,7 @@ Examples and counterexamples of functions essentially bounded.
 \end{definition}
 
 \section{Multilayer Feedforward Network}
-\noindent Multilayer feedforward networks are a type of artificial neural network that consist of several layers of interconnected nodes, with each node taking input from the previous layer and producing output for the next layer. The general architecture of a multilayer feedforward network, MFN, consist of: input layer: n-input units,  one/more hidden layers : intermediate processing units, output layer: m output-units.  \textcolor{red}{dibuix???}
+\noindent Multilayer feedforward networks are a type of artificial neural network that consist of several layers of interconnected nodes, with each node taking input from the previous layer and producing output for the next layer. The general architecture of a multilayer feedforward network, MFN, consist of: input layer: n-input units,  one/more hidden layers : intermediate processing units, output layer: m output-units. 
 
 \begin{tikzpicture}[x=2.7cm,y=1.6cm]
 	\message{^^JNeural network activation}
@@ -197,9 +197,10 @@ This does not work because $\sigma$ has degree fixed $k$, then any element in th
 
 \begin{theorem} (Hornik Theorem 2)  Standard multilayer feedforward networks with a continuous, bounded and nonconstant activation function can approximate any continuous function on $X$ arbitrarily well (with respect to the uniform distance) given a sufficiently large number of hidden units. 
 \end{theorem}
-The theorem generalize in particular Hornik's Theorem 2 by establishing necessary and sufficientconditions for universal approximation.
-Diferencies ? ?? 
-\section{Results}
+
+\noindent
+The theorem generalizes Hornik's Theorem 2 by establishing necessary and sufficient conditions for universal approximation. Note that the theorem merely requires "nonpolynomiality" in the activation function. Unlike Hornik's result, the activation functions do not need to be continuous or smooth. This has an important biological interpretation because the activation functions of real neurons may well be discontinuous or even non-elementary.
+\subsection{Results}
 
 
 \begin{definition} The set $L^{p}(\mu)$ contains all mesurable functions $f$ such that: 
@@ -211,6 +212,10 @@ Diferencies ? ??
 Let $\mu $ be a non-negative finite measure on $\mathbb{R}$ with compact support, absolutely continous with respect to Lebesgue measure. Then $\Sigma_n$ is dense in $L_p(\mu)$ , $1\leq p < \infty$, if and only of, $\sigma$ is not a polynomial.
 \end{propo}
 
+\begin{propo}
+If $\sigma\in M$ is not a polynomial (a.e) then, $$ \Sigma_n(\mathcal{A})= span \{ \sigma(\lambda w \cdot x + \theta) : \lambda, \theta \in \mathbb{R}, w \in \mathcal{A} \}$$
+is dense in $\mathcal{C}(\mathbb{R}^n)$ for some $\mathcal{A}\subset \mathbb{R}^n$ if and only if there does not exist a nontrivival polynomial vanishing on $\mathcal{A}$.
+\end{propo}
 
 
 \end{document}

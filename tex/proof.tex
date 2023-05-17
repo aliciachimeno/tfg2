@@ -31,6 +31,12 @@
 	\end{lema}
 	
 	\begin{proof} % proof step 4
+		We recall that set 
+		\begin{equation}
+			\Sigma_1 = \text{span} \{ {\sigma(w\cdot x + \theta) : w\in \mathbb{R}, \theta \in \mathbb{R} \} } 
+			\tag{1}
+			%\label{eq:ecuacion1}
+		\end{equation}
 		Consider $$h_m= \sum_{i=1}^m\varphi(y_i)\Delta y_i \sigma(x-y_i)$$ 
 		The sequence $(h_m)$ satisfies $h_j\in \Sigma_1$ for $j=1,...,m$. ($w_i=1,\theta_i=-y_i, \beta_i=\varphi(y_i)\Delta y_i$).\\ \\ 
 		Where $y_i=-\alpha + \frac{2i\alpha}{m}$, $\Delta y_i=\frac{2\alpha}{m}$ for $i=1,...,m$. Partition of the interval $[-\alpha,\alpha]$ \\ \\ We want to show that $h_m \rightrightarrows \sigma \ast \varphi $ in $[-\alpha,\alpha]$.  \\ \\
@@ -42,7 +48,7 @@
 			\item From the previous, $\sigma$ is uniformly continuous on  $[-2\alpha,2\alpha]$. 
 		\end{enumerate}
 		We choose $m$ such that $m=max\{m_1,m_2,m_3\}$. \\ \\ 
-		Now, fix $x\in [-\alpha,\alpha] $. Set $\Delta_i= [y_{i-1},]$ where .. dibuix. \\ \\
+		Now, fix $x\in [-\alpha,\alpha] $. Set $\Delta_i= [y_{i-1},y_i]$ where $y_0= \alpha$ .. dibuix. \\ \\
 		First, recall that,\\
 		$$\int \sigma(x-y)\varphi(y)dy = \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy$$
 		Consider the following difference 
@@ -77,8 +83,6 @@
 				& \leq \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \, 5 \delta \leq \epsilon /3
 			\end{split}
 		\end{equation*}
-NOse
-	
 
 \begin{equation*} 
 	\begin{split}
@@ -91,8 +95,7 @@ NOse
 Finally, we have the result $h_m \rightrightarrows \sigma \ast \varphi $ because
 
 $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i) \Delta y_i \Bigg| \leq \epsilon $$
-
-		 \textcolor{red}{!! Falta acabar}
+for all $x\in [-\alpha,\alpha ]$
 	\end{proof}
 	
 	\section{$\Sigma_1$ dense in $\mathcal{C}(\mathbb{R})$}
@@ -101,11 +104,11 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 	\end{lema}
 	
 	\begin{proof} % proof step 3
-		We recall that set $\Sigma_1 = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}, \theta \in \mathbb{R} \} $. We can write any function $h\in \Sigma_1$ as $h=\sum_i \beta_i \sigma_i(w_i x+\theta_i)= \beta_1 \sigma_1(w_1 x+\theta_1)+ ... $ \\ \\ 
-		We can see that $\frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h} \in \Sigma_1$ because is a linear combination, where $\beta_1= \frac{1}{h}, \beta_2=\frac{-1}{h}$. \\ By hypothesis, we have $\sigma \in \mathcal{C}^{\infty}$. By definition of derivative we have
+		Recall the set $\Sigma_1 $ with $(1)$. We can write any function $h\in \Sigma_1$ as $$h=\sum_i \beta_i \sigma_i(w_i x+\theta_i)= \beta_1 \sigma_1(w_1 x+\theta_1)+ ... $$ 
+		We can see that $$\frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h} \in \Sigma_1$$ because is a linear combination, where $\beta_1= \frac{1}{h}, \beta_2=\frac{-1}{h}$. \\ \\  By hypothesis, $\sigma \in \mathcal{C}^{\infty}$. By definition of derivative we have
 		$$ \frac{d}{dw}\sigma(wx+\theta)= \lim_{h \to 0} \frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h}  \in \overline{\Sigma_1} \footnote{$\overline{\Sigma_1}$ denotes the clausure of the set $\Sigma_1$} $$
-		Because the limit of a set belongs to the closure of the set. \\ 
-		By the same argument, $\frac{d^k}{dw^k} \sigma(wx+\theta) \in \overline{\Sigma_1}$ for all $k\in \mathbb{N}, w,\theta \in \mathbb{R}$.\\   
+		because the limit of a set belongs to the closure of the set. \\  \\ 
+		By the same argument, $$\frac{d^k}{dw^k} \sigma(wx+\theta) \in \overline{\Sigma_1}$$  for all $k\in \mathbb{N}, w,\theta \in \mathbb{R}$.\\ \\ 
 		 If we differentiate this expression k times, we obtain 
 		$$ \frac{d^k}{dw^k}\sigma(wx+\theta) = \sigma^{(k)}(wx+\theta) \cdot x^{k}$$
 		We will see by reduction to absurdity that if $\sigma$ is not a polynomial (by hypothesis) then there exists a $\theta_k\in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. \\ If $\sigma$ is not a polynomial and $\sigma \in \mathcal{C}^\infty$, lets assume that $ \nexists \theta_k \in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. This means that the k-th derivative at every point is 0, $$\sigma^{(k)}(\theta)=0  \quad \forall \theta \in \mathbb{R} $$
