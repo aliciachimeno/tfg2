@@ -161,5 +161,20 @@ for all $x\in [-\alpha,\alpha ]$
 		\item[$\Leftarrow$]  Recapitulem el que hem vist als lemes ..
 	\end{enumerate}
 \end{proof}
+
+\begin{remark}
+The theorem only requires for the activation function to be nonpolynomial, we dont need continuity on sigma. For example, let $\sigma$ be continuous with a jump discontinuity at 0 such that: $$\lim_{x\to 0^-} \sigma(x)=0 \qquad \lim_{x \to 0^+} \sigma(x) =1$$
+Given $f \in \mathcal{C}(\mathbb{R})$ and $K \subset \mathbb{R}$ compact, letting $w \rightarrow 0$ in $\sigma(wx)$ the function
+
+\[
+h(x) = \begin{cases} 
+	0 & \text{for } x < 0 \\
+	1 & \text{for } x > 0 
+\end{cases}
+\]
+ $h\in \overline{\Sigma_1}$. \\ \\ 
+Linear combinations of h and its translates can unifformly approximate any continuous function on any finite interval (and thus an), compact subset of R).
+
+\end{remark}
 	\cite{leshno1993multilayer}
 \end{document}

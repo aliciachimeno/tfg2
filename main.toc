@@ -11,13 +11,12 @@
 \contentsline {section}{\numberline {2.4}Artificial neural networks }{4}{section.2.4}%
 \contentsline {chapter}{\numberline {3}Multilayer Feedforward Networks}{5}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Function Approximation}{5}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Lebesgue measure}{5}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Results}{6}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Multilayer Feedforward Network}{7}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Theorem}{7}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Why does not contradict the Weierstrass approximation theorem? }{8}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Previous results}{8}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Results}{8}{subsection.3.5.3}%
+\contentsline {section}{\numberline {3.2}Results}{6}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Multilayer Feedforward Network}{7}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Theorem}{7}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Why does not contradict the Weierstrass approximation theorem? }{8}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Previous results}{8}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Results}{8}{subsection.3.4.3}%
 \contentsline {chapter}{\numberline {4}Lemmas and proof}{10}{chapter.4}%
 \contentsline {section}{\numberline {4.1}$\sigma \ast \varphi $ is not a polynomial.}{10}{section.4.1}%
 \contentsline {section}{\numberline {4.2}$\sigma \ast \varphi \in \overline {\Sigma _1}$}{11}{section.4.2}%

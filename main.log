@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  17 MAY 2023 11:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  17 MAY 2023 13:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -854,15 +854,16 @@ Package amsthm Warning: Unknown theoremstyle `theorem' on input line 62.
 \c@theorem=\count326
 \c@xmpl=\count327
 \c@lema=\count328
+\c@remark=\count329
 (/usr/local/texlive/2022/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count329
-\Gm@cntv=\count330
-\c@Gm@tempcnt=\count331
+\Gm@cnth=\count330
+\Gm@cntv=\count331
+\c@Gm@tempcnt=\count332
 \Gm@bindingoffset=\dimen289
 \Gm@wd@mp=\dimen290
 \Gm@odd@mp=\dimen291
@@ -875,12 +876,12 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 ))
 (/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.sty
 Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
-\csq@reset=\count332
-\csq@gtype=\count333
-\csq@glevel=\count334
-\csq@qlevel=\count335
-\csq@maxlvl=\count336
-\csq@tshold=\count337
+\csq@reset=\count333
+\csq@gtype=\count334
+\csq@glevel=\count335
+\csq@qlevel=\count336
+\csq@maxlvl=\count337
+\csq@tshold=\count338
 \csq@ltx@everypar=\toks47
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/csquotes/csquotes.def
@@ -923,12 +924,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen304
 \cmidrulekern=\dimen305
 \defaultaddspace=\dimen306
-\@cmidla=\count338
-\@cmidlb=\count339
+\@cmidla=\count339
+\@cmidlb=\count340
 \@aboverulesep=\dimen307
 \@belowrulesep=\dimen308
-\@thisruleclass=\count340
-\@lastruleclass=\count341
+\@thisruleclass=\count341
+\@lastruleclass=\count342
 \@thisrulewidth=\dimen309
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/fontenc.sty
@@ -958,8 +959,8 @@ Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
 \@linkdim=\dimen310
-\Hy@linkcounter=\count342
-\Hy@pagecounter=\count343
+\Hy@linkcounter=\count343
+\Hy@pagecounter=\count344
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
@@ -969,7 +970,7 @@ Now handling font encoding PD1 ...
 (/usr/local/texlive/2022/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count344
+\Hy@SavedSpaceFactor=\count345
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
@@ -984,7 +985,7 @@ Package hyperref Info: Plain pages OFF on input line 4152.
 Package hyperref Info: Backreferencing OFF on input line 4157.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4390.
-\c@Hy@tempcnt=\count345
+\c@Hy@tempcnt=\count346
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
@@ -1000,7 +1001,7 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count346
+\Fld@menulength=\count347
 \Field@Width=\dimen312
 \Fld@charsize=\dimen313
 Package hyperref Info: Hyper figures OFF on input line 6027.
@@ -1012,9 +1013,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6052.
 Package hyperref Info: PDF/A mode OFF on input line 6057.
 LaTeX Info: Redefining \ref on input line 6097.
 LaTeX Info: Redefining \pageref on input line 6101.
-\Hy@abspage=\count347
-\c@Item=\count348
-\c@Hfootnote=\count349
+\Hy@abspage=\count348
+\c@Item=\count349
+\c@Hfootnote=\count350
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -1026,9 +1027,9 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\HyAnn@Count=\count350
-\Fld@listcount=\count351
-\c@bookmark@seq@number=\count352
+\HyAnn@Count=\count351
+\Fld@listcount=\count352
+\c@bookmark@seq@number=\count353
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
 Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
@@ -1066,7 +1067,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks48
 \XKV@tempa@toks=\toks49
 )
-\XKV@depth=\count353
+\XKV@depth=\count354
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (/usr/local/texlive/2022/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
@@ -1085,7 +1086,7 @@ Package: datatool-base 2019/09/27 v2.32 (NLCT)
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/substr/substr.sty
 Package: substr 2009/10/20 v1.2 Handle substrings
-\c@su@anzahl=\count354
+\c@su@anzahl=\count355
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/datatool/datatool-fp.sty
 Package: datatool-fp 2019/09/27 v2.32 (NLCT)
@@ -1096,19 +1097,19 @@ Package: fp 1995/04/02
 `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/defpattern.sty
 Package: defpattern 1994/10/12
-\actioncount=\count355
+\actioncount=\count356
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-basic.sty
 Package: fp-basic 1996/05/13
-\FP@xs=\count356
-\FP@xia=\count357
-\FP@xib=\count358
-\FP@xfa=\count359
-\FP@xfb=\count360
-\FP@rega=\count361
-\FP@regb=\count362
-\FP@regs=\count363
-\FP@times=\count364
+\FP@xs=\count357
+\FP@xia=\count358
+\FP@xib=\count359
+\FP@xfa=\count360
+\FP@xfb=\count361
+\FP@rega=\count362
+\FP@regb=\count363
+\FP@regs=\count364
+\FP@times=\count365
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-addons.sty
 Package: fp-addons 1995/03/15
@@ -1127,7 +1128,7 @@ Package: fp-pas 1994/08/29
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-random.sty
 Package: fp-random 1995/02/23
-\FPseed=\count365
+\FPseed=\count366
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/fp/fp-eqn.sty
 Package: fp-eqn 1995/04/03
@@ -1139,14 +1140,14 @@ Package: fp-upn 1996/10/21
 Package: fp-eval 1995/04/03
 )))
 \@dtl@toks=\toks52
-\@dtl@tmpcount=\count366
+\@dtl@tmpcount=\count367
 \dtl@tmplength=\skip144
-\dtl@sortresult=\count367
-\@dtl@numgrpsepcount=\count368
-\@dtl@datatype=\count369
-\dtl@codeA=\count370
-\dtl@codeB=\count371
-\@dtl@foreach@level=\count372
+\dtl@sortresult=\count368
+\@dtl@numgrpsepcount=\count369
+\@dtl@datatype=\count370
+\dtl@codeA=\count371
+\dtl@codeB=\count372
+\@dtl@foreach@level=\count373
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/glossaries/base/glossaries-compat
 ible-307.sty
@@ -1163,7 +1164,7 @@ Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
 lish.ldf
 File: glossaries-english.ldf 2014/11/23 v1.0
 )
-\gls@level=\count373
+\gls@level=\count374
 \@gls@tmpb=\toks53
 \gls@tmplen=\skip145
 \glskeylisttok=\toks54
@@ -1189,17 +1190,17 @@ Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
 \LTright=\skip148
 \LTpre=\skip149
 \LTpost=\skip150
-\LTchunksize=\count374
+\LTchunksize=\count375
 \LTcapwidth=\dimen314
 \LT@head=\box80
 \LT@firsthead=\box81
 \LT@foot=\box82
 \LT@lastfoot=\box83
 \LT@gbox=\box84
-\LT@cols=\count375
-\LT@rows=\count376
-\c@LT@tables=\count377
-\c@LT@chunks=\count378
+\LT@cols=\count376
+\LT@rows=\count377
+\c@LT@tables=\count378
+\c@LT@chunks=\count379
 \LT@p@ftn=\toks58
 )
 \glsdescwidth=\skip151
@@ -1210,7 +1211,7 @@ sty
 Package: glossary-super 2021/11/01 v4.49 (NLCT)
  (/usr/local/texlive/2022/texmf-dist/tex/latex/supertabular/supertabular.sty
 Package: supertabular 2020/02/02 v4.1g the supertabular environment
-\c@tracingst=\count379
+\c@tracingst=\count380
 \ST@wd=\dimen315
 \ST@rightskip=\skip153
 \ST@leftskip=\skip154
@@ -1235,7 +1236,7 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip157
 \bibsep=\skip158
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count380
+\c@NAT@ctr=\count381
 )
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
@@ -1247,9 +1248,9 @@ less on input line 42.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
-\g__lipsum_par_int=\count381
-\l__lipsum_a_int=\count382
-\l__lipsum_b_int=\count383
+\g__lipsum_par_int=\count382
+\l__lipsum_a_int=\count383
+\l__lipsum_b_int=\count384
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
 Package hyperref Info: Option `colorlinks' set `true' on input line 48.
@@ -1346,16 +1347,16 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 )
 (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count384
+\scratchcounter=\count385
 \scratchdimen=\dimen325
 \scratchbox=\box88
-\nofMPsegments=\count385
-\nofMParguments=\count386
+\nofMPsegments=\count386
+\nofMParguments=\count387
 \everyMPshowfont=\toks60
-\MPscratchCnt=\count387
+\MPscratchCnt=\count388
 \MPscratchDim=\dimen326
-\MPnumerator=\count388
-\makeMPintoPDFobject=\count389
+\MPnumerator=\count389
+\makeMPintoPDFobject=\count390
 \everyMPtoPDFconversion=\toks61
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1421,7 +1422,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count390
+\c@section@level=\count391
 )
 LaTeX Info: Redefining \ref on input line 61.
 LaTeX Info: Redefining \pageref on input line 61.
@@ -1431,7 +1432,7 @@ LaTeX Info: Redefining \nameref on input line 61.
 \openout7 = `main.out'.
 
  (./tex/title.tex
-<imgs/uab.png, id=135, 1229.59375pt x 569.12625pt>
+<imgs/uab.png, id=131, 1229.59375pt x 569.12625pt>
 File: imgs/uab.png Graphic file (type png)
 <use imgs/uab.png>
 Package pdftex.def Info: imgs/uab.png  used on input line 9.
@@ -1441,17 +1442,7 @@ Package pdftex.def Info: imgs/uab.png  used on input line 9.
 \openout4 = `main.ist'.
 
  <./imgs/uab.png>]
-(./tex/pre/abstract.tex
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
-
- []
-
-[1
+(./tex/pre/abstract.tex [1
 
 
 ])
@@ -1489,7 +1480,7 @@ LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 2
-4.
+3.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/bbold/Ubbold.fd) [4
 
@@ -1575,7 +1566,7 @@ Chapter 3.
 [5
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 45--48
+Underfull \hbox (badness 10000) in paragraph at lines 44--47
 
  []
 
@@ -1589,17 +1580,17 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [6] 
 Neural network activation
-contour: Using real outline for `$w_{1,1}$' on input line 104.
-contour: Using real outline for `$w_{1,2}$' on input line 104.
-contour: Using real outline for `$w_{1,3}$' on input line 104.
-contour: Using real outline for `$w_{1,n}$' on input line 104.
+contour: Using real outline for `$w_{1,1}$' on input line 103.
+contour: Using real outline for `$w_{1,2}$' on input line 103.
+contour: Using real outline for `$w_{1,3}$' on input line 103.
+contour: Using real outline for `$w_{1,n}$' on input line 103.
 
-Overfull \hbox (759.78775pt too wide) in paragraph at lines 160--161
+Overfull \hbox (759.78775pt too wide) in paragraph at lines 159--160
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--170
+Underfull \hbox (badness 10000) in paragraph at lines 167--169
 
  []
 
@@ -1930,7 +1921,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15]) (./tex/results.tex
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 174--177
+
+ []
+
+) (./tex/results.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1979,14 +1975,14 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: DA8943FAB771741CE4B992D261FEEECB;4609.
+(rerunfilecheck)             Checksum: EF79A15B5619E083582021656A2F7591;4471.
  ) 
 Here is how much of TeX's memory you used:
- 42681 strings out of 478268
- 849802 string characters out of 5846347
- 1261897 words of memory out of 5000000
- 59672 multiletter control sequences out of 15000+600000
- 515253 words of font info for 283 fonts, out of 8000000 for 9000
+ 42692 strings out of 478268
+ 849908 string characters out of 5846347
+ 1261935 words of memory out of 5000000
+ 59679 multiletter control sequences out of 15000+600000
+ 515383 words of font info for 285 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,20n,94p,1155b,1097s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
@@ -2029,10 +2025,10 @@ ts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2022/texmf-dist/fonts
 /type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
 e1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (26 pages, 526890 bytes).
+Output written on main.pdf (26 pages, 528313 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 449 compressed objects within 5 object streams
+ 551 PDF objects out of 1000 (max. 8388607)
+ 445 compressed objects within 5 object streams
  113 named destinations out of 1000 (max. 500000)
- 78098 words of extra memory for PDF output out of 89155 (max. 10000000)
+ 78090 words of extra memory for PDF output out of 89155 (max. 10000000)
 
