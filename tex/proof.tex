@@ -1,27 +1,48 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 	\chapter{Lemmas and proof} \label{ch:proof}
-	\noindent  This chapter presents the lemmas that are necessary to prove the main theorem. The problem of approximating a function g on some compact $K$ of $\mathbb{R}^n$ from $\Sigma_n$, can be divided into two parts. One part is the approximation of the form $\sum_i f_i(a^i \cdot x)$ where $f_i$ are functions in $C(\mathbb{R})$. The other is the approximation of $f_i$ on the appropiate set from $\Sigma_1$. \textcolor{red}{!!canviar}
+	%\noindent  This chapter presents the lemmas that are necessary to prove the main theorem. The problem of approximating a function g on some compact $K$ of $\mathbb{R}^n$ from $\Sigma_n$, can be divided into two parts. One part is the approximation of the form $\sum_i f_i(a^i \cdot x)$ where $f_i$ are functions in $C(\mathbb{R})$. The other is the approximation of $f_i$ on the appropiate set from $\Sigma_1$. \textcolor{red}{!!canviar}
+	\noindent To prove that any function $g\in \mathcal{C}(\mathbb{R}^n)$ on some compact $K$ of $\mathbb{R}^n$ can be approximted by a function of the set $\Sigma_n$ we will proof the following: The function $\sigma \ast \varphi \in \overline{\Sigma_1}$ and $\sigma \ast \varphi \in \mathcal{C}^\infty $ and is not a polynomial. For that we will have $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
+	\usetikzlibrary{positioning}
+	\\ \\ 
+
+%\begin{tikzpicture}[roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},]
+%\node [roundnode]  (A) {$\Sigma_n$ dens a $\mathcal{C}(\mathbb{R}^n)$};
+%\node [roundnode]  (B) [right=of A] {$\sigma$ no és un polinomi};
+%\node [roundnode]  (C) [below right=of B] {$\sigma  \ast \varphi $ no polinomi};
+%\node [roundnode]  (D) [below left=of C] {$\sigma  \ast \varphi \in \overline{\Sigma_1}$};
+%\node [roundnode]  (E) [left=of D] {$\sigma  \ast \varphi \in \mathcal{C}^\infty$};
+%\node [roundnode]  (F) [above left=of E] {$\Sigma_1$ dens a $\mathcal{C}(\mathbb{R})$};
+%	\path[<->] (A) edge (B);
+%	\path[->] (B) edge (C);
+%	\path[->] (C) edge (D);
+%	\path[->] (D) edge (E);
+%	\path[->] (E) edge (F);
+%	\path[->] (F) edge (A);
+%\end{tikzpicture}
+
+
+
 	\section{$\sigma \ast \varphi$ is not a polynomial.}
+	\noindent We will proove that if $\sigma$ is not a polynomial (true by hypothesis) then $\sigma \ast \varphi$ is not a polynomial. We will show the contrapositive: if the convolution is a polynomial, then $\sigma$ is a polynomial.
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $.  Then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
 	\begin{proof}
 		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, where $\mathcal{C}^\infty_0[a,b]$ is the set of functions $\mathcal{C}^\infty_0$ with support in $[a,b]$ for any $a<b$. \\ \\ Let $\rho$ be a metric on $\mathcal{C}^\infty_0[a,b]$ defined by
 		$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space (Fréchet space). By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
-		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not deppend on the interval $[a,b]$.   \textcolor{red}{!! acabar}
-
+		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not deppend on the interval $[a,b]$. This can be seen as follows. By transition m depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
 	\end{proof}
 	\begin{lema} % L2: step 7
-		If $\sigma \ast \varphi$ is a polynomial such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$, then $\sigma$ is a polynomial of degree at most $m$.
+		If $\sigma \ast \varphi$ is a polynomial such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$, then $\sigma$ is a polynomial of degree at most $m$. 
 	\end{lema}
 	\begin{proof} 
 	If $\sigma \ast \varphi$ is a polynomial of degree $m$.
-	For all $\varphi \in \mathcal{C}^\infty_0$, we have that
+	For all $\varphi \in \mathcal{C}^\infty_0$, for (\ref{prop:2}) we have that
 	$$(\sigma \ast \varphi)^{(m+1)} \, (x)=\int \sigma(x-y)\varphi^{(m+1)}(y) \, dy= 0$$  
-	From standard results in Distribution Theory, $\sigma $ is itself a polynomial of degree at most m (a.e.).  \textcolor{red}{!!ho he buscat i no he trobat res perquè implica que sigma polinomi que la integral sigui 0}
+	From standard results in Distribution Theory [e.g., Friedman(1963, 57-59)], $\sigma $ is itself a polynomial of degree at most m (a.e.).  \textcolor{red}{ficar referencia}
 	\end{proof} 
-\noindent Conclusion: If we have that $\sigma \ast \varphi$ is a polynomial then $\sigma$ is a polynomial. This contradicts the hypothesis. Therefore, $\sigma \ast \varphi$ will not be a polynomial. 
+\noindent Conclusion: Consider $\sigma$ is not a polynomial implies that $\sigma \ast \varphi$ is not a polynomial. 
 
 
 \section{$\sigma \ast \varphi \in \overline{\Sigma_1}$}
@@ -124,7 +145,8 @@ for all $x\in [-\alpha,\alpha ]$
 		If for some $\varphi \in \mathcal{C}^\infty_0 $ we have that $\sigma \ast \varphi $ is not a polynomial, then $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
 	\end{lema}
 	 \begin{proof}
-	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$. Clearly, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $\theta \in \mathbb{R}$. For $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$ we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $. (ho hem de veure!!!). From Lemma 4, if $\sigma \ast \varphi \in  \mathcal{C}^\infty $, then $\Sigma_1$ dense in $\mathcal{C} (\mathbb{R}^n)$. ???? (nose si apliquem el lemma 4 amb sigma = sigma conv varphi o si sigma conv varphi de c infinit implica sigma de c infinlt aleshores apliquem el lemma 4 ??)
+	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$. Clearly, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $\theta \in \mathbb{R}$. For $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$ we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $. This follows by results in distribution (\ref{prop:29}).
+	 From Lemma 4 applied in $\sigma= \sigma \ast \varphi$, if $\sigma \ast \varphi \in  \mathcal{C}^\infty $, then $\Sigma_1$ dense in $\mathcal{C} (\mathbb{R})$. 
 	 \end{proof}
  \section{{$\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }}
  
@@ -156,25 +178,16 @@ for all $x\in [-\alpha,\alpha ]$
 	\begin{proof}~ % proof del teorema
 
 	\begin{enumerate}
-		\item[$\Rightarrow$] To prove the implication, we will use proof by contrapositive. We will see the following. If $\sigma$ is a polynomial then $\Sigma_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. Let $\sigma$ be a polynomial of degree k, then $\sigma(wx+\theta)$ is a polynomial  of degree k for every $w,\theta$. We have $ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$ that is the set of algebraic polynomials of degree at most k. $\Sigma_n$ is not dens in $\mathcal{C}(\mathbb{R}^n)$ if for a function $f(x)\in \mathcal{C}(\mathbb{R}^n)$ we can find $\epsilon > 0$ and $K$ such that  $\| p-f \| > \epsilon$ for all $p$ polynomial of degree k. For example, let $f(x)=cos(x)$, and let $p(x)= \sigma(wx+\theta)$ that has degree at most k. This implies has maximum k roots. We can find a interval where $cos(x)$ has k+1 roots. Therefore, $\Sigma_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. 
+		\item[$\Rightarrow$] 
+		To prove this implication statement, we aim to show that if $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$, then $\sigma$ is not a polynomial.
+		 We will proceed to prove the contrapositive statement, assuming that $\sigma$ is indeed a polynomial, and demonstrate that in this case, $\Sigma_n$ cannot be dense in $\mathcal{C}(\mathbb{R}^n)$. \\ \\ Let $\sigma$ be a polynomial of degree k, then $\sigma(wx+\theta)$ is a polynomial  of degree k for every $w,\theta$. Recall that $$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$  that is the set of algebraic polynomials of degree at most k. To show that $\Sigma_n$ is not dens in $\mathcal{C}(\mathbb{R}^n)$, for the definition of density, we need (only) to find a function $f(x)\in \mathcal{C}(\mathbb{R}^n)$, $\epsilon > 0$ and $K$ such that  $\| p-f \| > \epsilon$ for all $p$ polynomial of degree k. For example, let $f(x)=cos(x)$, and let $p(x)= \sigma(wx+\theta)$ that has degree at most k. This implies has maximum k roots. We can find a interval where $cos(x)$ has k+1 roots. Therefore, $\Sigma_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. 
 
-		\item[$\Leftarrow$]  Recapitulem el que hem vist als lemes ..
+		\item[$\Leftarrow$]  In order to prove this implication, we need to show that if $\sigma$ is not an algebraic polynomial, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
+		
+		
+		 By hypothesis $\sigma$ is not a polynomial, for Lemma 1 and Lemma 2 this implies that $\sigma \ast \varphi$ is not a polynomial. For Lemma 3 we have that $\sigma \ast \varphi \in \overline{\Sigma_1}$. We showed in Lemma 5 that $\sigma \ast \varphi \in \mathcal{C}^\infty$ and for Lemma 4 and  Lemma 5 we have that $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$. Finally, for Lemma 6 $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
 	\end{enumerate}
 \end{proof}
 
-\begin{remark}
-The theorem only requires for the activation function to be nonpolynomial, we dont need continuity on sigma. For example, let $\sigma$ be continuous with a jump discontinuity at 0 such that: $$\lim_{x\to 0^-} \sigma(x)=0 \qquad \lim_{x \to 0^+} \sigma(x) =1$$
-Given $f \in \mathcal{C}(\mathbb{R})$ and $K \subset \mathbb{R}$ compact, letting $w \rightarrow 0$ in $\sigma(wx)$ the function
-
-\[
-h(x) = \begin{cases} 
-	0 & \text{for } x < 0 \\
-	1 & \text{for } x > 0 
-\end{cases}
-\]
- $h\in \overline{\Sigma_1}$. \\ \\ 
-Linear combinations of h and its translates can unifformly approximate any continuous function on any finite interval (and thus an), compact subset of R).
-
-\end{remark}
 	\cite{leshno1993multilayer}
 \end{document}

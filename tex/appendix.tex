@@ -43,6 +43,14 @@ We say that a property holds almost everywhere (a.e.) if the set of points that 
 
 \begin{definition} Let $A$ be a subset of the metric space $(X,d)$. $A$ is said to be \emph{nowhere dense} if for every (nonempty) open subset $U\subseteq X$, the intersection $U\cap\overline{A}$ is not dense in $U$, meaning that $U$ contains a point that is not in the closure of $A$.
 \end{definition}
+
+\begin{propo}
+If $f$ is a smooth function that is compactly supported and $g$ is a distribution, then $f\ast g$ is a smooth function defined by
+$${\displaystyle \int _{\mathbb {R} ^{d}}{f}(y)g(x-y)\,dy=(f*g)(x)\in C^{\infty }(\mathbb {R} ^{d}).} $$ \label{prop:29}
+\end{propo}
+\begin{propo} \label{prop:2}
+$${\frac {\partial }{\partial x_{i}}}(f*g)={\frac {\partial f}{\partial x_{i}}}*g=f*{\frac {\partial g}{\partial x_{i}}}.$$
+\end{propo}
 \begin{definition}
 	A set it is said to be category $I$ if it can be written as a countable union of nowhere-dense sets. Otherwise it is said to be of \emph{category $II$}
 \end{definition}
