@@ -17,9 +17,9 @@
 
 	\section{Proof}
 	\subsection{Left $\Leftarrow$ ?? }
-	Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in . We will divide the proof into 
+	Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in . We will divide the proof into ..??
 	\subsubsection{$\sigma$ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi$ is not a polynomial.}
-	\noindent We will proove that if $\sigma$ is not a polynomial (true by hypothesis) then $\sigma \ast \varphi$ is not a polynomial. We will show the contrapositive: if the convolution is a polynomial, then $\sigma$ is a polynomial.
+	\noindent We will prove that if $\sigma$ is not a polynomial (true by hypothesis) then $\sigma \ast \varphi$ is not a polynomial. We will show the contrapositive: if the convolution is a polynomial, then $\sigma$ is a polynomial. In order to show it, we need the following two lemmas. 
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $.  Then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
@@ -37,7 +37,7 @@
 	$$(\sigma \ast \varphi)^{(m+1)} \, (x)=\int \sigma(x-y)\varphi^{(m+1)}(y) \, dy= 0$$  
 	From standard results in Distribution Theory [e.g., Friedman(1963, 57-59)], $\sigma $ is itself a polynomial of degree at most m (a.e.).
 	\end{proof} 
-\noindent Conclusion: Consider $\sigma$ is not a polynomial implies that $\sigma \ast \varphi$ is not a polynomial. 
+\noindent Conclusion: If $\sigma$ is not a polynomial, then it follows that the convolution $\sigma \ast \varphi$ is not a polynomial.
 
 
 \subsubsection{$\sigma \ast \varphi \in \overline{\Sigma_1}$}
