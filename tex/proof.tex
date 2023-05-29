@@ -1,37 +1,32 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-	\chapter{Lemmas and proof} \label{ch:proof}
-	%\noindent  This chapter presents the lemmas that are necessary to prove the main theorem. The problem of approximating a function g on some compact $K$ of $\mathbb{R}^n$ from $\Sigma_n$, can be divided into two parts. One part is the approximation of the form $\sum_i f_i(a^i \cdot x)$ where $f_i$ are functions in $C(\mathbb{R})$. The other is the approximation of $f_i$ on the appropiate set from $\Sigma_1$. \textcolor{red}{!!canviar}
-	\noindent To prove that any function $g\in \mathcal{C}(\mathbb{R}^n)$ on some compact $K$ of $\mathbb{R}^n$ can be approximted by a function of the set $\Sigma_n$ we will proof the following: The function $\sigma \ast \varphi \in \overline{\Sigma_1}$ and $\sigma \ast \varphi \in \mathcal{C}^\infty $ and is not a polynomial. For that we will have $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
-	\usetikzlibrary{positioning}
-	\\ \\ 
+	\chapter{Theorem and proof} \label{ch:proof}
+\noindent  The work revolves around the following theorem and its proof. 
+	\section{Theorem}
+	\begin{theorem} Let $ \sigma \in  \mathcal{M}$. Set
+		$$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$
+		Then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not an algebraic polynomial. 
+		
+	\end{theorem}
+\section{Pre-pre}
 
-%\begin{tikzpicture}[roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},]
-%\node [roundnode]  (A) {$\Sigma_n$ dens a $\mathcal{C}(\mathbb{R}^n)$};
-%\node [roundnode]  (B) [right=of A] {$\sigma$ no és un polinomi};
-%\node [roundnode]  (C) [below right=of B] {$\sigma  \ast \varphi $ no polinomi};
-%\node [roundnode]  (D) [below left=of C] {$\sigma  \ast \varphi \in \overline{\Sigma_1}$};
-%\node [roundnode]  (E) [left=of D] {$\sigma  \ast \varphi \in \mathcal{C}^\infty$};
-%\node [roundnode]  (F) [above left=of E] {$\Sigma_1$ dens a $\mathcal{C}(\mathbb{R})$};
-%	\path[<->] (A) edge (B);
-%	\path[->] (B) edge (C);
-%	\path[->] (C) edge (D);
-%	\path[->] (D) edge (E);
-%	\path[->] (E) edge (F);
-%	\path[->] (F) edge (A);
-%\end{tikzpicture}
+\begin{definition} Let  $\mathcal{M}$ denote the set of functions which are in $L_{loc}^{\infty}(\mathbb{R})$ and have the following property. The closure of the set of points of discontinuity of any function in $\mathcal{M}$ is of zero Lebesgue measure. 
+\end{definition}
+\noindent This implies that for any $\sigma \in$ $\mathcal{M}$, interval $[a,b] .$ and $\delta >0$, there exists a finite number of open intervals, the union of which we denote by U, of measure $\delta$, such that $\sigma$ is uniformly continuous on $[a,b]/U$. 
 
 
-
-	\section{$\sigma \ast \varphi$ is not a polynomial.}
+	\section{Proof}
+	\subsection{Left $\Leftarrow$ ?? }
+	Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in . We will divide the proof into 
+	\subsubsection{$\sigma$ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi$ is not a polynomial.}
 	\noindent We will proove that if $\sigma$ is not a polynomial (true by hypothesis) then $\sigma \ast \varphi$ is not a polynomial. We will show the contrapositive: if the convolution is a polynomial, then $\sigma$ is a polynomial.
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $.  Then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
 	\begin{proof}
-		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, where $\mathcal{C}^\infty_0[a,b]$ is the set of functions $\mathcal{C}^\infty_0$ with support in $[a,b]$ for any $a<b$. \\ \\ Let $\rho$ be a metric on $\mathcal{C}^\infty_0[a,b]$ defined by
-		$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space (Fréchet space). By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
-		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not deppend on the interval $[a,b]$. This can be seen as follows. By transition m depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
+		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, where $\mathcal{C}^\infty_0[a,b]$ is the set of functions $\mathcal{C}^\infty_0$ with support in $[a,b]$ for any $a<b$. \\ \\ For () we have that $(\mathcal{C}^\infty_0[a,b],\rho)$ is a complete metric space. 
+		 By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
+		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not depend on the interval $[a,b]$. This can be seen as follows. By transition m depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
 	\end{proof}
 	\begin{lema} % L2: step 7
 		If $\sigma \ast \varphi$ is a polynomial such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$, then $\sigma$ is a polynomial of degree at most $m$. 
@@ -45,7 +40,7 @@
 \noindent Conclusion: Consider $\sigma$ is not a polynomial implies that $\sigma \ast \varphi$ is not a polynomial. 
 
 
-\section{$\sigma \ast \varphi \in \overline{\Sigma_1}$}
+\subsubsection{$\sigma \ast \varphi \in \overline{\Sigma_1}$}
 	\begin{lema} % L3: step 4
 		For each $\varphi \in  \mathcal{C}^\infty_0$, $ \sigma \ast \varphi \in  \overline{\Sigma_1}$. 
 		
@@ -76,21 +71,22 @@
 
 \begin{equation*} 
 	\begin{split}
-		\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i)& \varphi(y)dy \Bigg| =  \\
+		\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \int_{\Delta_i}& \sigma(x-y_i) \varphi(y)dy \Bigg|  \\
 		& = \left|  \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y_i)\varphi(y)dy \right|  \\
 		& =  \left|  \sum_{i=1}^m \int_{\Delta_i}\varphi(y)\Big( \sigma(x-y) - \sigma(x-y_i)\Big)dy \right| \\
 		&\leq  \sum_{i=1}^m \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy 
 	\end{split}
 \end{equation*}
-		If $x-\Delta_i \cap U = \varnothing $. Since $x-y \notin U$ , $x-y_i \notin U$ and $x-y_i \in [-2\alpha,2\alpha]$, bc (2) we have
+		If $x-\Delta_i \cap U = \varnothing $. Since $x-y \notin U$ , $x-y_i \notin U$ and $x-y_i \in [-2\alpha,2\alpha]$. For choice of m in property 2, we have\\ 
 		\begin{equation*}
 			\begin{split}
-				\sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy  \leq  \frac{\epsilon}{\| \varphi\|_{L_1}}  \sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| = & \\
+				\sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy  \leq  \frac{\epsilon}{\| \varphi\|_{L_1}}  \sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| & \\
 				& =  \frac{\epsilon}{3\| \varphi\|_{L_1}} \int \left|\varphi(y)\right| dy \\
-				& =  \frac{\epsilon}{3\| \varphi\|_{L_1}} \left|\varphi(y)\right|_{L_1} = \frac{\epsilon}{3} 
+				& =  \frac{\epsilon}{3\| \varphi\|_{L_1}} \left|\varphi(y)\right|_{L_1}  \\
+				& = \frac{\epsilon}{3} 
 			\end{split}
 		\end{equation*}
-		
+		\\ 
 		\noindent If $x-\Delta_i \cap U \neq \varnothing$\\ \\ 
 		$\sum_i |\tilde{\Delta_i}| = \sum_i|(x-\Delta_i \cap U)| \leq |U|+2|\Delta_i| r(\delta) \leq \delta + 2 \cdot \frac{2\alpha}{m} r(\delta) \leq \delta +4\delta = 5\delta$  \\ \\ 
 		True by our choice of m, satisfies $m\delta > \alpha r(\delta) \iff \delta > \frac{\alpha \cdot r(\delta)}{m}$
@@ -107,7 +103,7 @@
 
 \begin{equation*} 
 	\begin{split}
-		\Bigg| \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i)& \varphi(y_i)\Delta y_i \Bigg| =  \\
+		\Bigg| \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i)& \varphi(y_i)\Delta y_i \Bigg| \\
 		& =  \left|  \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i) [\varphi(y)-\varphi(y_i)] dy \right| \\
 		& \leq  \sum_{i=1}^m \int_{\Delta_i}  \left| \sigma(x-y_i)\right| \left| \varphi(y) - \varphi(y_i)\right|dy  \\
 		& \leq  \sum_{i=1}^m \int_{\Delta_i}  \left| \sigma(x-y_i)\right| dy \left[ \frac{\epsilon/3}{2\alpha \| \sigma\|_{L^\infty[-2\alpha,2\alpha]}}\right]  \leq \frac{\epsilon}{3} 
@@ -119,7 +115,7 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 for all $x\in [-\alpha,\alpha ]$
 	\end{proof}
 	
-	\section{$\Sigma_1$ dense in $\mathcal{C}(\mathbb{R})$}
+	\subsection{$\Sigma_1$ dense in $\mathcal{C}(\mathbb{R})$}
 	\begin{lema} % L4: step 3
 		If $\sigma \in \mathcal{C}^{\infty}$, then $ \Sigma_1$ is dense in  $\mathcal{C}(\mathbb{R})$.
 	\end{lema}
@@ -148,7 +144,7 @@ for all $x\in [-\alpha,\alpha ]$
 	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$. Clearly, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $\theta \in \mathbb{R}$. For $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$ we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $. This follows by results in distribution (\ref{prop:29}).
 	 From Lemma 4 applied in $\sigma= \sigma \ast \varphi$, if $\sigma \ast \varphi \in  \mathcal{C}^\infty $, then $\Sigma_1$ dense in $\mathcal{C} (\mathbb{R})$. 
 	 \end{proof}
- \section{{$\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }}
+ \subsection{{$\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }}
  
  \noindent We will proof that approximating a $\mathcal{C}(\mathbb{R})$ function  with one from the set $\Sigma_1$ implies approximating a function $\mathcal{C}(\mathbb{R}^n)$ from the set $\Sigma_n$. Therefore, it is only necessary to approximate a continuous function. We can see this from the density characterization:
 
@@ -174,7 +170,7 @@ for all $x\in [-\alpha,\alpha ]$
 		\end{proof}
 	\noindent We showed that to approximate a $\mathcal{C}(\mathbb{R}^n)$ function we only need to approximate a $\mathcal{C} (\mathbb{R})$ function with the set $\Sigma_1$. 
 
-\section{Proof of the theorem}
+\section{Proof}
 	\begin{proof}~ % proof del teorema
 
 	\begin{enumerate}

@@ -1,27 +1,35 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\chapter{Multilayer Feedforward Networks} \label{ch:methods}
-\section{Function Approximation}
-\noindent In this paper we take $C(\mathbb{R}^n)$ to be the family of "real world" functions that one may wish to approximate. If we can show that a given set of functions $F$ is dense in $C(\mathbb{R}^n)$, we can conclude that for every continuous function $g \in C(\mathbb{R}^n) $ and each compact set $K \subset \mathbb{R}^n$, there is a function $f \in F$ such that $f$ is a good approximation to $g$ on K. 
+\chapter{Function Approximation} \label{ch:methods}
+\noindent Among the most famous techniques for function approximation, we find interpolation: such as Taylor polynomial, Chebyshev polynomial, the method of least squares, or spline approximation. In this chapter we are going to talk about ...
+\section{????}
+\noindent In this section we present some mathematical definitions and results of function approximation. 
+If we want to approximate functions, we need to define the following notions: distance between functions, density,
+
 
 \begin{definition}\label{thm:first}
-	A \emph{metric} (or \emph{distance}) on a set $X$ is a function $d:X\times X\rightarrow \mathbb{R} $ such that forall $s,t\in X$ the following properties are satisfied:
+	A \emph{metric} (or \emph{distance}) on a set $X$ is a function $d:X\times X\rightarrow \mathbb{R} $ such that for all $s,t, u\in X$ the following properties are satisfied:
 	\begin{enumerate}
 		\item $d(s,t) \geq 0$ and $ \, d(s,t)=0$ if and only if $ s=t$.
 		\item $d(s,t)=d(t,s)$.
-		\item $d(s,t)\leq d(s,u)+d(u,t)\quad$(\emph{triangular inequality}).
+		\item $d(s,t)\leq d(s,u)+d(u,t)\quad$(\emph{triangle inequality}).
 	\end{enumerate}
 A \emph{metric space} is a pair $(X,d)$, where $X$ is a set and $d$ is a distance in $X$.
 \end{definition}
 \noindent  If we take $X$ to be a set of functions, the metric $d(f,g)$ will enable us to measure the distance between functions $f,g \in X$.
 
-\begin{definition}
-We denote the support of a function $u$ by $supp(u)= \{x | u(x)\neq 0\}$
+
+\begin{definition} We dentoe by $\mathcal{C}(\mathbb{R}^n)$ the set of continuous functions defined on $\mathbb{R}^n$.
 \end{definition}
 
-\begin{definition}
-	Let $f,g$ be real-valued functions with compact support. We define the \emph{convolution} of $f$ with $g$ as $$(f\ast g)(x)=\int f(x-t)g(t) \, dt$$
+\begin{definition} We denote by
+	$ \mathcal{C}^\infty_0$ functions $\mathcal{C}^\infty$ with compact support. Recall that the support of a function $u$ is denoted by $supp(u)= \{x | u(x)\neq 0\}$
 \end{definition}
+\begin{propo} 
+Let $\rho$ be a metric on the set $\mathcal{C}^\infty_0[a,b]$ defined by
+$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space (Fréchet space).
+\end{propo}
+
 
 \noindent Lebesgue measure
 
@@ -36,6 +44,9 @@ We denote the support of a function $u$ by $supp(u)= \{x | u(x)\neq 0\}$
 A set $E\subseteq \mathbb{R}^n $ is \emph{Lebesgue mesurable} (or mesurable) if $\forall \epsilon >0$, there exist $U$ open set such that $E \subseteq U$ and $|U\setminus E|^* < \epsilon $
 \end{definition}
 
+\begin{definition}
+	We say that a property holds almost everywhere (a.e.) if the set of points that doesn’t hold it is null.
+\end{definition}
 \begin{definition}
 	A function $u$ defined almost everywhere on a measurable set $\Omega \in \mathbb{R}^n$ is said to be \emph{essentially bounded} on $\Omega$ if $|u(x)|$ is bounded almost everywhere on $\Omega$. We denote $u\in L^{\infty}(\Omega)$ with the norm $$\|u\|_{L^{\infty}(\Omega)}= inf(\lambda | \{ x : |u(x)| \geq \lambda \} = 0 ) = ess \sup_{x\in \Omega} |u(x)|$$
 
@@ -55,16 +66,12 @@ Examples and counterexamples of functions essentially bounded.
 \begin{definition}We say that a set of functions $F\subset L_{loc}^{\infty}(\mathbb{R})$ is \emph{dense} in $C(\mathbb{R}^n)$ if for every function $g\in C(\mathbb{R}^n)$ and for every compact $K\subset \mathbb{R}^n$, there exist a sequence of functions $f_j\in F$ such that $$\lim_{j\rightarrow\infty} \|g-f_j\|_{L^\infty(K)}=0.$$ 
 \end{definition}
 
-\section{Results}
-\begin{definition} Let $\mathcal{M}$ denote the set of functions which are in $L_{loc}^{\infty}(\mathbb{R})$ and have the following property. The closure of the set of points of discontinuity of any function in $\mathcal{M}$ is of zero Lebesgue measure. 
-\begin{propo}
-(This implies that) for any $\sigma \in$ $\mathcal{M}$, interval $[a,b] .$ and $\delta >0$, there exists a finite number of open intervals, the union of which we denote by U, of measure $\delta$, such that $\sigma$ is uniformly continuous on $[a,b]/U$. 
-\end{propo}
+
+\begin{definition}
+	Let $f,g$ be real-valued functions with compact support. We define the \emph{convolution} of $f$ with $g$ as $$(f\ast g)(x)=\int f(x-t)g(t) \, dt$$
 \end{definition}
 
-\begin{definition} 
-	$ \mathcal{C}^\infty_0$ functions $\mathcal{C}^\infty$ with compact support.  
-\end{definition}
+
 
 \section{Multilayer Feedforward Network}
 \noindent Multilayer feedforward networks are a type of artificial neural network that consist of several layers of interconnected nodes, with each node taking input from the previous layer and producing output for the next layer. The general architecture of a multilayer feedforward network, MFN, consist of: input layer: n-input units,  one/more hidden layers : intermediate processing units, output layer: m output-units. 
@@ -168,67 +175,5 @@ Examples and counterexamples of functions essentially bounded.
 \noindent Under which necessary and sufficient conditions on $\sigma$ will the family of networks $N_w$ be capable of approximating to any desired accuracy any given continuous function?
 
 
-\section{Theorem}
-\begin{theorem} Let $ \sigma \in \text{M} $. Set
-	$$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$
-	Then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not an algebraic polynomial. 
-	
-\end{theorem}
-\subsection{Why does not contradict the Weierstrass approximation theorem? }
-
-
-\begin{theorem}(Weierstrass  approximation theorem). 
-	Let $f:[a,b]\rightarrow \mathbb{R} $ be a continuous function. Then, there exists polynomials $p_n\in \mathcal{R}[x]$ such that the sequence $(p_n)$ converge uniformly to $f$ on $[a,b]$. 
-\end{theorem} 
-
-\begin{corolari}
-	The set of polynomial functions $\mathcal{R}^n[x]$ is dense in the space of continuous functions on a compact set $K \subset \mathbb{R}^n$, $\mathcal{C}(K)$. So any continuous function on a compact set can be approximated arbitrarly well by a polynomial. 
-\end{corolari}
-
-\noindent The theorem states that: if $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ then $\sigma$ is not an algebraic polynomial. But why this statment does not contradict the Weierstrass approximation theorem ?
-This does not work because $\sigma$ has degree fixed $k$, then any element in the set $\Sigma_n$ has degree at most $k$. Hence, the set $\Sigma_n$ is a finite vector space and can not be dense in $\mathcal{C}(\mathbb{R}^n)$. Not all contiunous functions can be apparoximated with a polynimial of degree fixed, for example: 
-(comment per afegir : per exemple una funcio que sigui continua que no es pugui approximar per un polinomi de com a molt grau k , una k tingui grau mes gran que k polinomi de k+1 ?? )
-
-\subsection{Previous results}
- The activation functions that were reported thus far in the literature. 
-\begin{theorem} (Hornik Theorem 1). Standard multilayer feedforward networks with a bounded and nonconstant activation function can approximate any function in $L^p(\mu)$ arbitrary well, given a sufficiently large number of hidden units. 
-\end{theorem}
-
-\begin{theorem} (Hornik Theorem 2)  Standard multilayer feedforward networks with a continuous, bounded and nonconstant activation function can approximate any continuous function on $X$ arbitrarily well (with respect to the uniform distance) given a sufficiently large number of hidden units. 
-\end{theorem}
-
-\noindent
-The theorem generalizes Hornik's Theorem 2 by establishing necessary and sufficient conditions for universal approximation. Note that the theorem merely requires "nonpolynomiality" in the activation function. Unlike Hornik's result, the activation functions do not need to be continuous or smooth. This has an important biological interpretation because the activation functions of real neurons may well be discontinuous or even non-elementary.
-\subsection{Results}
-
-
-\begin{definition} The set $L^{p}(\mu)$ contains all mesurable functions $f$ such that: 
-	$$ \|f\|_{L^p}(\mu) = \Big( \int_{R^n} |f(x)|^p d\mu(x)\Big)^{1/p} < \infty $$
-
-\end{definition}
-
-\begin{propo}
-Let $\mu $ be a non-negative finite measure on $\mathbb{R}$ with compact support, absolutely continous with respect to Lebesgue measure. Then $\Sigma_n$ is dense in $L_p(\mu)$ , $1\leq p < \infty$, if and only of, $\sigma$ is not a polynomial.
-\end{propo}
-
-\begin{propo}
-If $\sigma\in M$ is not a polynomial (a.e) then, $$ \Sigma_n(\mathcal{A})= span \{ \sigma(\lambda w \cdot x + \theta) : \lambda, \theta \in \mathbb{R}, w \in \mathcal{A} \}$$
-is dense in $\mathcal{C}(\mathbb{R}^n)$ for some $\mathcal{A}\subset \mathbb{R}^n$ if and only if there does not exist a nontrivival polynomial vanishing on $\mathcal{A}$.
-\end{propo}
-
-\begin{remark}
-	The theorem only requires for the activation function to be nonpolynomial, we dont need continuity on sigma. For example, let $\sigma$ be continuous with a jump discontinuity at 0 such that: $$\lim_{x\to 0^-} \sigma(x)=0 \qquad \lim_{x \to 0^+} \sigma(x) =1$$
-	Given $f \in \mathcal{C}(\mathbb{R})$ and $K \subset \mathbb{R}$ compact, letting $w \rightarrow 0$ in $\sigma(wx)$ the function
-	
-	\[
-	h(x) = \begin{cases} 
-		0 & \text{for } x < 0 \\
-		1 & \text{for } x > 0 
-	\end{cases}
-	\]
-	$h\in \overline{\Sigma_1}$. \\ \\ 
-	Linear combinations of h and its translates can unifformly approximate any continuous function on any finite interval (and thus an), compact subset of R).
-	
-\end{remark}
 
 \end{document}
