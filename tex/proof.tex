@@ -16,16 +16,15 @@
 
 
 	\section{Proof}
-	\subsection{Left $\Leftarrow$ ?? }
-	Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in . We will divide the proof into ..??
-	\subsubsection{$\sigma$ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi$ is not a polynomial.}
-	\noindent We will prove that if $\sigma$ is not a polynomial (true by hypothesis) then $\sigma \ast \varphi$ is not a polynomial. We will show the contrapositive: if the convolution is a polynomial, then $\sigma$ is a polynomial. In order to show it, we need the following two lemmas. 
+	\subsection{Lemmas to prove  $\Leftarrow$ }
+	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that the set $\Sigma_n $ is dense in $\mathcal{C}(\mathbb{R}^n)$, we need to follow the steps : find. For that we have \\  \\ 
+	%\subsubsection{$\sigma$ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi$ is not a polynomial.}
+	\noindent In the following two lemmas, we will demonstrate that under the assumption that $\sigma$ is not a polynomial, it follows that $\sigma \ast \varphi$ is not a polynomial. To prove this, we will show the contrapositive: if the convolution is a polynomial, then $\sigma$ is a polynomial. 
 	\begin{lema}  % L1 :step 6
-		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $.  Then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
+		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $, then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
 	\begin{proof}
-		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, where $\mathcal{C}^\infty_0[a,b]$ is the set of functions $\mathcal{C}^\infty_0$ with support in $[a,b]$ for any $a<b$. \\ \\ For () we have that $(\mathcal{C}^\infty_0[a,b],\rho)$ is a complete metric space. 
-		 By assumption, we have that $\sigma \ast \varphi$ is a polynomial (for any $\varphi \in \mathcal{C}^\infty_0[a,b]$). \\ \\  Consider the following set, which has the property that we want to show.  \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ Clearly, if $\varphi \in V_k$, then $deg(\sigma \ast \varphi) \leq k.$ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, for Blaire's Category Theorem then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
+		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, for some $a<b$. \\ \\ By (\ref{prop:frech}) we have that $(\mathcal{C}^\infty_0[a,b],\rho)$ is a complete metric space.  \\ \\  Consider the following set, \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ \\ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, by Baire's Category Theorem (\ref{baire}) then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
 		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not depend on the interval $[a,b]$. This can be seen as follows. By transition m depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
 	\end{proof}
 	\begin{lema} % L2: step 7
@@ -33,14 +32,14 @@
 	\end{lema}
 	\begin{proof} 
 	If $\sigma \ast \varphi$ is a polynomial of degree $m$.
-	For all $\varphi \in \mathcal{C}^\infty_0$, for (\ref{prop:2}) we have that
+	For all $\varphi \in \mathcal{C}^\infty_0$, using (\ref{prop:2}) we have that
 	$$(\sigma \ast \varphi)^{(m+1)} \, (x)=\int \sigma(x-y)\varphi^{(m+1)}(y) \, dy= 0$$  
 	From standard results in Distribution Theory [e.g., Friedman(1963, 57-59)], $\sigma $ is itself a polynomial of degree at most m (a.e.).
 	\end{proof} 
-\noindent Conclusion: If $\sigma$ is not a polynomial, then it follows that the convolution $\sigma \ast \varphi$ is not a polynomial.
+\noindent We showed indeed that if $\sigma$ is not a polynomial, then it follows that the convolution $\sigma \ast \varphi$ is not a polynomial. \\ \\
 
 
-\subsubsection{$\sigma \ast \varphi \in \overline{\Sigma_1}$}
+%\subsubsection{$\sigma \ast \varphi \in \overline{\Sigma_1}$}
 	\begin{lema} % L3: step 4
 		For each $\varphi \in  \mathcal{C}^\infty_0$, $ \sigma \ast \varphi \in  \overline{\Sigma_1}$. 
 		
@@ -94,7 +93,7 @@
 		
 		\begin{equation*}
 			\begin{split}
-				\sum_{i=1}^m  \int_{\tilde{\Delta_i}} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy & \leq \\
+				\sum_{i=1}^m  \int_{\tilde{\Delta_i}} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy & \\
 				&  \leq  \sum_{i=1}^m  \int_{\tilde{\Delta_i}} \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \\
 				& = \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \sum_i| \tilde{\Delta_i} | \\
 				& \leq \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \, 5 \delta \leq \epsilon /3
@@ -115,21 +114,25 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 for all $x\in [-\alpha,\alpha ]$
 	\end{proof}
 	
-	\subsection{$\Sigma_1$ dense in $\mathcal{C}(\mathbb{R})$}
+	%\subsubsection{$\Sigma_1$ dense in $\mathcal{C}(\mathbb{R})$}
 	\begin{lema} % L4: step 3
 		If $\sigma \in \mathcal{C}^{\infty}$, then $ \Sigma_1$ is dense in  $\mathcal{C}(\mathbb{R})$.
 	\end{lema}
 	
 	\begin{proof} % proof step 3
-		Recall the set $\Sigma_1 $ with $(1)$. We can write any function $h\in \Sigma_1$ as $$h=\sum_i \beta_i \sigma_i(w_i x+\theta_i)= \beta_1 \sigma_1(w_1 x+\theta_1)+ ... $$ 
-		We can see that $$\frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h} \in \Sigma_1$$ because is a linear combination, where $\beta_1= \frac{1}{h}, \beta_2=\frac{-1}{h}$. \\ \\  By hypothesis, $\sigma \in \mathcal{C}^{\infty}$. By definition of derivative we have
+		We suppose that  $\sigma \in \mathcal{C}^{\infty}$ and recall by the theorem hypothesis $\sigma$ is not a polynomial. 
+		 We can write any function $f$ of the set $\Sigma_1$ as $$f=\sum_i \beta_i \sigma_i(w_i x+\theta_i)= \beta_1 \sigma_1(w_1 x+\theta_1)+ ... $$ 
+		We can see that the function $$\frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h} \in \Sigma_1$$ because is a linear combination, where $\beta_1= \frac{1}{h}, \beta_2=\frac{-1}{h}$. \\ \\  By hypothesis, $\sigma \in \mathcal{C}^{\infty}$. By definition of derivative we have
 		$$ \frac{d}{dw}\sigma(wx+\theta)= \lim_{h \to 0} \frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h}  \in \overline{\Sigma_1} \footnote{$\overline{\Sigma_1}$ denotes the clausure of the set $\Sigma_1$} $$
 		because the limit of a set belongs to the closure of the set. \\  \\ 
 		By the same argument, $$\frac{d^k}{dw^k} \sigma(wx+\theta) \in \overline{\Sigma_1}$$  for all $k\in \mathbb{N}, w,\theta \in \mathbb{R}$.\\ \\ 
 		 If we differentiate this expression k times, we obtain 
 		$$ \frac{d^k}{dw^k}\sigma(wx+\theta) = \sigma^{(k)}(wx+\theta) \cdot x^{k}$$
-		We will see by reduction to absurdity that if $\sigma$ is not a polynomial (by hypothesis) then there exists a $\theta_k\in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. \\ If $\sigma$ is not a polynomial and $\sigma \in \mathcal{C}^\infty$, lets assume that $ \nexists \theta_k \in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. This means that the k-th derivative at every point is 0, $$\sigma^{(k)}(\theta)=0  \quad \forall \theta \in \mathbb{R} $$
-		\noindent If we integrate k times this expression, $$\int \sigma^{(k)}= \int 0 \Rightarrow \sigma^{(k-1)}=C$$, $$\int \sigma^{(k-1)}= \int C \Rightarrow \sigma^{(k-2)}=Cw$$, then we end up $\sigma$ is a polynomial. Contradiction. Therefore, there always exists a point where the derivative does not vanish. \\ 
+		We are going to see that if $\sigma$ is not a polynomial (by hypothesis) then there exists a $\theta_k\in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. To show that, let us assume that does not exist any $ \theta_k \in \mathbb{R}$ such that $\sigma^{(k)}(\theta_k)  \neq 0$. This means that the k-th derivative at every point is 0, i.e. $$\sigma^{(k)}(\theta)=0  \quad \forall \theta \in \mathbb{R} $$
+		\noindent  If we integrate this expression, we will have
+			$\int \sigma^{(k)}= \int 0$. This implies that $$\sigma^{(k-1)}(x) = C_1$$ for some constant $C_1$, as integrating zero results in a constant. If we integrate again, we have: $$\sigma^{(k-2)}(x) = C_1x + C_2$$ for some constants $C_1$ and $C_2$.
+		
+		\noindent Continuing this process, we arrive at $$\sigma(x) = C_1x^{k-1} + C_2x^{k-2} + \ldots + C_{k-1}x + C_k$$ for constants $C_1, C_2, \ldots, C_k$. Hence, $\sigma$ is a polynomial of degree $k-1$, which contradicts our assumption that $\sigma$ is not a polynomial. Therefore, there always exists a point where the derivative does not vanish. \\  \\ 
 		Thus, we evaluate at the point where the derivative does not vanish, we call it $\theta_k$.
 		$$  \sigma^{(k)}(\theta_k) \cdot x^{k}=\frac{d^k}{dw^k}\sigma(wx+\theta) \Bigr|_{w=0, \theta=\theta_k} \in  \overline{\Sigma_1} $$ 
 		This implies that $\overline{\Sigma_1}$ contains all polynomials, because the expression $\sigma^{(k)}(\theta_k) x^{k}$ generates all polynomials. By the Weierstrass theorem, we know that the polynomials are dense in $\mathcal{C}(\mathbb{R})$. This concludes that the set $\overline{\Sigma_1}$ contains a set which is dense in  $\mathcal{C}(\mathbb{R})$, therefore $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
@@ -141,12 +144,12 @@ for all $x\in [-\alpha,\alpha ]$
 		If for some $\varphi \in \mathcal{C}^\infty_0 $ we have that $\sigma \ast \varphi $ is not a polynomial, then $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
 	\end{lema}
 	 \begin{proof}
-	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$. Clearly, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $\theta \in \mathbb{R}$. For $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$ we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $. This follows by results in distribution (\ref{prop:29}).
+	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$ for each $\varphi \in \mathcal{C}^\infty_0$ . Clearly, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $\theta \in \mathbb{R}$. For $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$, from results in distribution (\ref{prop:29}) we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $.
 	 From Lemma 4 applied in $\sigma= \sigma \ast \varphi$, if $\sigma \ast \varphi \in  \mathcal{C}^\infty $, then $\Sigma_1$ dense in $\mathcal{C} (\mathbb{R})$. 
 	 \end{proof}
- \subsection{{$\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }}
+% \subsubsection{{$\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }}
  
- \noindent We will proof that approximating a $\mathcal{C}(\mathbb{R})$ function  with one from the set $\Sigma_1$ implies approximating a function $\mathcal{C}(\mathbb{R}^n)$ from the set $\Sigma_n$. Therefore, it is only necessary to approximate a continuous function. We can see this from the density characterization:
+ \noindent We will prove that approximating a $\mathcal{C}(\mathbb{R})$ function  with one from the set $\Sigma_1$ implies approximating a function $\mathcal{C}(\mathbb{R}^n)$ from the set $\Sigma_n$. Therefore, it is only necessary to approximate a continuous function. We can see this from the density characterization:
 
 	\begin{lema}  % L6: step 2
 			If $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. 

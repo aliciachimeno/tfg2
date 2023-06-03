@@ -1,11 +1,17 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  3 JUN 2023 20:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  3 JUN 2023 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**main.tex
-(./main.tex
+**neuralnetworks.tex
+(./neuralnetworks.tex
 LaTeX2e <2021-11-15> patch level 1
 L3 programming layer <2022-02-24>
+(/usr/local/texlive/2022/texmf-dist/tex/latex/subfiles/subfiles.cls
+Document Class: subfiles 2020/11/14 v2.2 Multi-file projects (class)
+Preamble taken from file `../main.tex'
+(/usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
+Package: import 2020/04/01  v 6.2
+) (../main.tex
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2022/texmf-dist/tex/latex/base/bk12.clo
@@ -43,11 +49,13 @@ Package babel Info: Hyphen rules for 'australian' set to \l@ukenglish
 Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 (babel)             (\language21). Reported on input line 108.
 ))
-(./almutils.sty (/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
+(..//almutils.sty
+(/usr/local/texlive/2022/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks16
 \inpenc@posthook=\toks17
-) (/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
+)
+(/usr/local/texlive/2022/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2021/10/15 v2.17l AMS math features
 \@mathmargin=\skip49
 
@@ -908,10 +916,7 @@ rs
 )
 (/usr/local/texlive/2022/texmf-dist/tex/latex/subfiles/subfiles.sty
 Package: subfiles 2020/11/14 v2.2 Multi-file projects (package)
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/import/import.sty
-Package: import 2020/04/01  v 6.2
-))
+)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \heavyrulewidth=\dimen297
@@ -1240,11 +1245,11 @@ LaTeX Info: Redefining \cite on input line 694.
 )
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 43.
+less on input line 40.
 
 
 Package fancyhdr Warning: \fancyhead's `E' option without twoside option is use
-less on input line 45.
+less on input line 42.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.sty
 Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
@@ -1253,7 +1258,7 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
 \l__lipsum_b_int=\count384
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex))
-Package hyperref Info: Option `colorlinks' set `true' on input line 51.
+Package hyperref Info: Option `colorlinks' set `true' on input line 48.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/background/background.sty
 Package: background 2014/03/04 v2.1 background material
@@ -1284,39 +1289,42 @@ Package: afterpage 2014/10/28 v1.08 After-Page Package (DPC)
 ))
 \glswrite=\write4
 \glo@main@file=\write5
-\openout5 = `main.glo'.
+\openout5 = `neuralnetworks.glo'.
 
-Package glossaries Info: Writing glossary file main.glo on input line 57.
+Package glossaries Info: Writing glossary file neuralnetworks.glo on input line
+ 54.
 \glo@acronym@file=\write6
-\openout6 = `main.acn'.
+\openout6 = `neuralnetworks.acn'.
 
-Package glossaries Info: Writing glossary file main.acn on input line 57.
+Package glossaries Info: Writing glossary file neuralnetworks.acn on input line
+ 54.
+))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
 
-(./main.aux)
-\openout1 = `main.aux'.
+(./neuralnetworks.aux)
+\openout1 = `neuralnetworks.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/translations/translations-basic-d
 ictionary-english.trsl
@@ -1324,19 +1332,19 @@ File: translations-basic-dictionary-english.trsl (english translation file `tra
 nslations-basic-dictionary')
 )
 Package translations Info: loading dictionary `translations-basic-dictionary' f
-or `english'. on input line 64.
-LaTeX Info: Redefining \microtypecontext on input line 64.
-Package microtype Info: Applying patch `item' on input line 64.
-Package microtype Info: Applying patch `toc' on input line 64.
-Package microtype Info: Applying patch `eqnum' on input line 64.
-Package microtype Info: Applying patch `footnote' on input line 64.
+or `english'. on input line 2.
+LaTeX Info: Redefining \microtypecontext on input line 2.
+Package microtype Info: Applying patch `item' on input line 2.
+Package microtype Info: Applying patch `toc' on input line 2.
+Package microtype Info: Applying patch `eqnum' on input line 2.
+Package microtype Info: Applying patch `footnote' on input line 2.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 64.
+LaTeX Info: Redefining \showhyphens on input line 2.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -1411,7 +1419,7 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring ON on input line 64.
+Package hyperref Info: Link coloring ON on input line 2.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 
@@ -1424,596 +1432,45 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count391
 )
-LaTeX Info: Redefining \ref on input line 64.
-LaTeX Info: Redefining \pageref on input line 64.
-LaTeX Info: Redefining \nameref on input line 64.
- (./main.out) (./main.out)
+LaTeX Info: Redefining \ref on input line 2.
+LaTeX Info: Redefining \pageref on input line 2.
+LaTeX Info: Redefining \nameref on input line 2.
+ (./neuralnetworks.out) (./neuralnetworks.out)
 \@outlinefile=\write7
-\openout7 = `main.out'.
-
- (./tex/title.tex
-<imgs/uab.png, id=127, 1229.59375pt x 569.12625pt>
-File: imgs/uab.png Graphic file (type png)
-<use imgs/uab.png>
-Package pdftex.def Info: imgs/uab.png  used on input line 9.
-(pdftex.def)             Requested size: 256.07741pt x 118.52136pt.
-) [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
-\openout4 = `main.ist'.
-
- <./imgs/uab.png>]
-(./tex/pre/abstract.tex [1
+\openout7 = `neuralnetworks.out'.
 
 
-])
-No file main.acr.
-(./tex/pre/preface.tex [2
-
-]
-
-Package natbib Warning: Citation `adams2009hitchhiker' on page iii undefined on
- input line 8.
-
-) [3
-
-] (./main.toc
-LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
-File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
-File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Trying to load font information for U+rsfs on input line 8.
-
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/jknapltx/ursfs.fd
-File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [4
-
-])
-\tf@toc=\write8
-\openout8 = `main.toc'.
-
-
-(./tex/intro.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.5     \chapter
-                {Introduction} \label{ch:intro} [1]
 Chapter 1.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
+Package glossaries Warning: No \printglossary or \printglossaries found. 
+(Remove \makeglossaries if you don't want any glossaries.) 
+This document will not have a glossary.
 
- []
+[1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
+\openout4 = `neuralnetworks.ist'.
 
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 10--18
-
- []
-
-) (./tex/machine.tex [2
 
 ]
-Chapter 2.
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-
-Overfull \hbox (4.56557pt too wide) in paragraph at lines 14--15
-[]\T1/cmr/m/n/12 (-20) Unsupervised learn-ing, where we have non feed-back sig-
-nal. For ex-am-ple,deducing
- []
-
-<imgs/gdp.png, id=207, 1100.61188pt x 679.03688pt>
-File: imgs/gdp.png Graphic file (type png)
-<use imgs/gdp.png>
-Package pdftex.def Info: imgs/gdp.png  used on input line 27.
-(pdftex.def)             Requested size: 256.07741pt x 157.9884pt.
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[3
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[4 <./imgs/gdp.png>]
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 7
-1.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/bbold/Ubbold.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 79--82
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--88
-
- []
-
-) (./tex/methods.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[5]
-Chapter 3.
-[6
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 56--59
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[7] 
-Neural network activation
-contour: Using real outline for `$w_{1,1}$' on input line 111.
-contour: Using real outline for `$w_{1,2}$' on input line 111.
-contour: Using real outline for `$w_{1,3}$' on input line 111.
-contour: Using real outline for `$w_{1,n}$' on input line 111.
-
-Overfull \hbox (759.78775pt too wide) in paragraph at lines 167--168
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 175--177
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[8]) (./tex/neuralnetworks.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[9]
-Chapter 4.
-) (./tex/proof.tex [10
-
-]
-Chapter 5.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 19.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Leftarrow' on input line 19.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 19.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 20--23
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 27--27
-
- []
-
-[11
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 27--29
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 39--40
-
- []
-
-LaTeX Font Info:    Trying to load font information for U+eus on input line 59.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/ueus.fd
-File: ueus.fd 2013/01/14 v3.01 Euler Script
-)
-(/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-eus.cfg
-File: mt-eus.cfg 2006/07/28 v1.2 microtype config. file: AMS Euler Script (RS)
-)
-Underfull \hbox (badness 10000) in paragraph at lines 55--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--61
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 55--61
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 65--68
-
- []
-
-
-Overfull \hbox (0.61707pt too wide) detected at line 78
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
-
- []
-
-
-Overfull \hbox (2.80743pt too wide) detected at line 87
-[]
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 87--92
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 87--92
-
- []
-
-
-Overfull \hbox (24.16121pt too wide) detected at line 110
-[]
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 126--128
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 128--130
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 135--137
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 159--161
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--165
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 161--165
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[16]
-Underfull \hbox (badness 10000) in paragraph at lines 169--172
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
-
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[17]) (./tex/function.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[18]
-Chapter 6.
-
-Package hyperref Warning: Difference (2) between bookmark levels is greater 
-(hyperref)                than one, level fixed on input line 6.
-
-[19
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 57--60
-
- []
-
-) (./tex/conclusion.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[20]
-Chapter 7.
-) (./main.bbl [21
-
-]
-Chapter 8.
-) (./tex/appendix.tex [22
-
-]
-Appendix A.
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 9--11
-
- []
-
-[23
-
-])
-
-Package natbib Warning: There were undefined citations.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 14.49998pt, for example:
-(fancyhdr)                \setlength{\headheight}{14.49998pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-
-(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
-
-[24] (./main.aux)
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 33DEDA7A74248C1A375D90536D03D23B;3942
-(rerunfilecheck)             After:  E80B4ED2B5BB20B2FB2B455FC94C7C8B;3799.
+(./neuralnetworks.aux)
+Package rerunfilecheck Info: File `neuralnetworks.out' has not changed.
+(rerunfilecheck)             Checksum: 45E1D75FCE0E2FCE1E3D8F16C51BD4C2;121.
  ) 
 Here is how much of TeX's memory you used:
- 42705 strings out of 478268
- 850238 string characters out of 5846347
- 1263409 words of memory out of 5000000
- 59698 multiletter control sequences out of 15000+600000
- 513336 words of font info for 277 fonts, out of 8000000 for 9000
+ 41533 strings out of 478268
+ 832710 string characters out of 5846347
+ 1235120 words of memory out of 5000000
+ 59047 multiletter control sequences out of 15000+600000
+ 472255 words of font info for 38 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,20n,94p,1155b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{glo:uab} has been referenced but does not exist, re
-placed by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.2.2.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{section.2.2} has been referenced but does not exist
-, replaced by a fixed one
-
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/
-usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></u
-sr/local/texlive/2022/texmf-dist/fonts/type1/public/bbold-type1/bbold7.pfb></us
-r/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/lo
-cal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr
-/local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-local/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/l
-ocal/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local
-/texlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/t
-exlive/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/tex
-live/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texliv
-e/2022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2022
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2022/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2022/texm
-f-dist/fonts/type1/public/amsfonts/euler/eusm10.pfb></usr/local/texlive/2022/te
-xmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2
-022/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/202
-2/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2022/
-texmf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2022/te
-xmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2022/texm
-f-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2022/texmf-
-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2022/texmf-di
-st/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2022/texmf-dist
-/fonts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2022/texmf-dist/f
-onts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2022/texmf-dist/fon
-ts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2022/texmf-dist/fonts
-/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
-ype1/public/cm-super/sfti1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
-e1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (29 pages, 753315 bytes).
+ 119i,12n,111p,1205b,833s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfbx2488.pfb></
+usr/local/texlive/2022/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on neuralnetworks.pdf (1 page, 28420 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 457 compressed objects within 5 object streams
- 117 named destinations out of 1000 (max. 500000)
- 73991 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 32 PDF objects out of 1000 (max. 8388607)
+ 24 compressed objects within 1 object stream
+ 3 named destinations out of 1000 (max. 500000)
+ 6165 words of extra memory for PDF output out of 10000 (max. 10000000)
 

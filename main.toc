@@ -6,34 +6,25 @@
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Machine Learning}{3}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Machine Learning Basics}{3}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Tasks}{3}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Performance Measure}{3}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Experience}{3}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Types of Learning}{3}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Supervised learning}{4}{subsection.2.2.1}%
-\contentsline {section}{\numberline {2.3}Function Learning}{4}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Artificial neural networks }{4}{section.2.4}%
+\contentsline {subsection}{\numberline {2.1.1}Linear Regression}{3}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}A learning problem}{4}{subsection.2.1.2}%
 \contentsline {chapter}{\numberline {3}Function Approximation}{6}{chapter.3}%
 \contentsline {section}{\numberline {3.1}????}{6}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Multilayer Feedforward Network}{8}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Theorem and proof}{9}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Theorem}{9}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Pre-pre}{9}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Proof}{9}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Left $\Leftarrow $ ?? }{9}{subsection.4.3.1}%
-\contentsline {subsubsection}{$\sigma $ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi $ is not a polynomial.}{9}{section*.6}%
-\contentsline {subsubsection}{$\sigma \ast \varphi \in \overline {\Sigma _1}$}{10}{section*.7}%
-\contentsline {subsection}{\numberline {4.3.2}$\Sigma _1$ dense in $\mathcal {C}(\mathbb {R})$}{12}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}{$\Sigma _1$ is dense in $\mathcal {C}(\mathbb {R})$, then $\Sigma _n$ is dense in $\mathcal {C}(\mathbb {R}^n)$ }}{14}{subsection.4.3.3}%
-\contentsline {section}{\numberline {4.4}Proof}{15}{section.4.4}%
-\contentsline {chapter}{\numberline {5}About the theorem}{16}{chapter.5}%
-\contentsline {subsection}{\numberline {5.0.1}Why does it not contradict the Weierstrass approximation theorem? }{16}{subsection.5.0.1}%
-\contentsline {subsection}{\numberline {5.0.2}Previous results}{16}{subsection.5.0.2}%
-\contentsline {subsection}{\numberline {5.0.3}Results}{17}{subsection.5.0.3}%
-\contentsline {chapter}{\numberline {6}Results}{18}{chapter.6}%
-\contentsline {chapter}{\numberline {7}Conclusions}{19}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Summary}{19}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Outlook and Future Work}{19}{section.7.2}%
-\contentsline {chapter}{\numberline {8}References}{20}{chapter.8}%
-\contentsline {chapter}{\numberline {A} Theory used}{21}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Blaire's category theorem}{22}{section.A.1}%
+\contentsline {chapter}{\numberline {4}Neural Networks}{10}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Theorem and proof}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Theorem}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Pre-pre}{11}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Proof}{11}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Lemmas to prove $\Leftarrow $ }{11}{subsection.5.3.1}%
+\contentsline {section}{\numberline {5.4}Proof}{17}{section.5.4}%
+\contentsline {chapter}{\numberline {6}About the theorem}{19}{chapter.6}%
+\contentsline {subsection}{\numberline {6.0.1}Why does it not contradict the Weierstrass approximation theorem? }{19}{subsection.6.0.1}%
+\contentsline {subsection}{\numberline {6.0.2}Previous results}{19}{subsection.6.0.2}%
+\contentsline {subsection}{\numberline {6.0.3}Results}{20}{subsection.6.0.3}%
+\contentsline {chapter}{\numberline {7}Conclusions}{21}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Summary}{21}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Outlook and Future Work}{21}{section.7.2}%
+\contentsline {chapter}{\numberline {8}References}{22}{chapter.8}%
+\contentsline {chapter}{\numberline {A} Theory used}{23}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Baire's category theorem}{24}{section.A.1}%

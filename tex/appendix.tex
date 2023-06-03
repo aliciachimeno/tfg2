@@ -38,24 +38,33 @@ We say that a property holds almost everywhere (a.e.) if the set of points that 
 	$\varphi$ : $I \rightarrow \mathbb{R}$ is uniformly continuous on $I$ if $\forall \epsilon > 0 \exists \delta >0 $ such that $|\varphi(x)- \varphi(y)| < \epsilon$ whenever $|x-y|< \delta$
 \end{definition}
 
+\begin{propo}
+	If $f$ is a smooth function that is compactly supported and $g$ is a distribution, then $f\ast g$ is a smooth function defined by
+	$${\displaystyle \int _{\mathbb {R} ^{d}}{f}(y)g(x-y)\,dy=(f*g)(x)\in C^{\infty }(\mathbb {R} ^{d}).} $$ \label{prop:29}
+\end{propo}
+\begin{propo} \label{prop:2}
+	$${\frac {\partial }{\partial x_{i}}}(f*g)={\frac {\partial f}{\partial x_{i}}}*g=f*{\frac {\partial g}{\partial x_{i}}}.$$
+\end{propo}
 
-\section{Blaire's category theorem}
+\section{Baire's category theorem} \label{baire}
 
 \begin{definition} Let $A$ be a subset of the metric space $(X,d)$. $A$ is said to be \emph{nowhere dense} if for every (nonempty) open subset $U\subseteq X$, the intersection $U\cap\overline{A}$ is not dense in $U$, meaning that $U$ contains a point that is not in the closure of $A$.
 \end{definition}
 
-\begin{propo}
-If $f$ is a smooth function that is compactly supported and $g$ is a distribution, then $f\ast g$ is a smooth function defined by
-$${\displaystyle \int _{\mathbb {R} ^{d}}{f}(y)g(x-y)\,dy=(f*g)(x)\in C^{\infty }(\mathbb {R} ^{d}).} $$ \label{prop:29}
-\end{propo}
-\begin{propo} \label{prop:2}
-$${\frac {\partial }{\partial x_{i}}}(f*g)={\frac {\partial f}{\partial x_{i}}}*g=f*{\frac {\partial g}{\partial x_{i}}}.$$
-\end{propo}
 \begin{definition}
 	A set it is said to be category $I$ if it can be written as a countable union of nowhere-dense sets. Otherwise it is said to be of \emph{category $II$}
 \end{definition}
-\begin{theorem} (Blaire's Category Theorem)
+\begin{theorem} (Baire's Category Theorem)
 	Any complete metric space is of category $II$.
 \end{theorem}
-\noindent Therefore, if we have $\mathcal{C}_0^\infty[a,b]$ complete metric space, we know that is of category $II$, i.e. $\mathcal{C}_0^\infty[a,b]$  cannot be written as a countable union of nowhere-dense sets. We have $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. Therefore, some $V_m$ contains a nonempty open set. $V_m$ is a vector space thus $V_m=\mathcal{C}_0^\infty[a,b]$. no entenc el final
+\noindent $\mathcal{C}_0^\infty[a,b]$ is a complete metric space,  by Baire's thm is of category $II$, i.e. $\mathcal{C}_0^\infty[a,b]$  cannot be written as a countable union of nowhere-dense sets. We have $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. Therefore, some $V_m$ contains a nonempty open set. $V_m$ is a vector space thus $V_m=\mathcal{C}_0^\infty[a,b]$. no entenc el final
+
+
+
+
+( C~ [ a, b] is of the second category andtherefore some I/',, contains a non-void open set. BecauseV,, is a vector space thus V,, = C~[a, b]).
+
+
+
+
 \end{document}

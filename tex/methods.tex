@@ -1,7 +1,7 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \chapter{Function Approximation} \label{ch:methods}
-\noindent Among the most famous techniques for function approximation, we find interpolation: such as Taylor polynomial, Chebyshev polynomial, the method of least squares, or spline approximation. In this chapter we are going to talk about ...
+\noindent Creating a machine learning model to predict/classify from a given data is a similar process than when we calculate a function from a given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial, Chebyshev polynomial, the method of least squares, or spline approximation. In this chapter we are going to talk about ...
 \section{????}
 \noindent In this section we present some mathematical definitions and results of function approximation. 
 If we want to approximate functions, we need to define the following notions: distance between functions, density,
@@ -23,12 +23,13 @@ A \emph{metric space} is a pair $(X,d)$, where $X$ is a set and $d$ is a distanc
 \end{definition}
 
 \begin{definition} We denote by
-	$ \mathcal{C}^\infty_0$ functions $\mathcal{C}^\infty$ with compact support. Recall that the support of a function $u$ is denoted by $supp(u)= \{x | u(x)\neq 0\}$
+	$ \mathcal{C}^\infty_0$ the set of infinitely differentiable functions (also called smooth functions), $\mathcal{C}^\infty$, with compact support. Recall that the support of a function $u$ is denoted by $$supp(u)= \overline{\{x | u(x)\neq 0\}}$$
 \end{definition}
-\begin{propo} 
-Let $\rho$ be a metric on the set $\mathcal{C}^\infty_0[a,b]$ defined by
-$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $. We can show that $(\mathcal{C}^\infty_0[a,b],\rho)$  is a complete metric space (Fréchet space).
+\begin{propo} \label{prop:frech}
+Let $\rho$ be a metric defined on the set $\mathcal{C}^\infty_0[a,b]$ as follows:
+$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $.  Then the metric space $(\mathcal{C}^\infty_0[a,b],\rho)$  is complete, also known as a Fréchet space.
 \end{propo}
+
 
 
 \noindent Lebesgue measure
@@ -37,7 +38,7 @@ $$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varp
 	$$ Q = [a_1,b_1]  \times ... \times [a_d,b_d] = \prod_{i=1}^d [a_i,b_i]$$
 	The volume of the box is $$ vol(Q)= (b_1,a_1) ... (b_d-a_d)= \prod_{i=1}^d (b_i-a_i)$$
 	The \emph{exterior measure} (or outer measure) of a set $E\subseteq \mathbb{R}^d$ is $$ |E|^* = \inf\{\sum_k vol(Q_k)\} $$ 
-	where the infimum is taken over all finite or countable collection of boxes $Q_k$ such that $E \subseteq \cup_k Q_k$
+	where the infimum is taken over all finite or countable collection of boxes $\{Q_k\}$ such that $E \subseteq \cup_k Q_k$
 \end{definition}
 
 \begin{definition}
