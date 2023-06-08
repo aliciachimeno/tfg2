@@ -3,10 +3,112 @@
 	\chapter{Neural Networks} \label{ch:neural}
 	
 	
-	\noindent \textit{Artificial neural networks} (ANNs) are widely used for nonlinear function approximation.
-	(nonlinear classifier.)  They were initially inspired by the way biological neurons process information. 
-	
+	\noindent \textit{Artificial neural networks} (ANNs) are widely used for nonlinear function approximation. 
+	(nonlinear classifier).  They were initially inspired by the way biological neurons process information. 
 	They are composed of interconnected processing units called artificial neurons, which are organized in layers and are capable of learning and generalizing from data.	
+	
+	
+	
+	\section{Multilayer Feedforward Network}
+	\noindent Multilayer feedforward networks are a type of artificial neural network that consist of several layers of interconnected nodes, with each node taking input from the previous layer and producing output for the next layer. The general architecture of a multilayer feedforward network, MFN, consist of: input layer: n-input units,  one/more hidden layers : intermediate processing units, output layer: m output-units. 
+	
+	\begin{tikzpicture}[x=2.7cm,y=1.6cm]
+		\message{^^JNeural network activation}
+		\def\NI{4} % number of nodes in input layers
+		\def\NO{2} % number of nodes in output layers
+		\def\yshift{0.4} % shift last node for dots
+		
+		% INPUT LAYER
+		\foreach \i [evaluate={\c=int(\i==\NI); \y=\NI/2-\i-\c*\yshift; \index=(\i<\NI?int(\i):"n");}]
+		in {1,...,\NI}{ % loop over nodes
+			\node[node in,outer sep=0.6] (NI-\i) at (0,\y) {$x_{\index}^{}$};
+		}
+		
+		% OUTPUT LAYER
+		\foreach \i [evaluate={\c=int(\i==\NO); \y=\NO/2-\i-\c*\yshift; \index=(\i<\NO?int(\i):"m");}]
+		in {\NO,...,1}{ % loop over nodes
+			\ifnum\i=1 % high-lighted node
+			\node[node hidden]
+			(NO-\i) at (1,\y) {$y_{\index}^{}$};
+			\foreach \j [evaluate={\index=(\j<\NI?int(\j):"n");}] in {1,...,\NI}{ % loop over nodes in previous layer
+				\draw[connect,white,line width=1.2] (NI-\j) -- (NO-\i);
+				\draw[connect] (NI-\j) -- (NO-\i)
+				node[pos=0.50] {\contour{white}{$w_{1,\index}$}};
+			}
+			\else % other light-colored nodes
+			\node[node,blue!20!black!80,draw=myblue!20,fill=myblue!5]
+			(NO-\i) at (1,\y) {$a_{\index}^{(1)}$};
+			\foreach \j in {1,...,\NI}{ % loop over nodes in previous layer
+				%\draw[connect,white,line width=1.2] (NI-\j) -- (NO-\i);
+				\draw[connect,myblue!20] (NI-\j) -- (NO-\i);
+			}
+			\fi
+		}
+		
+		% DOTS
+		\path (NI-\NI) --++ (0,1+\yshift) node[midway,scale=1.2] {$\vdots$};
+		\path (NO-\NO) --++ (0,1+\yshift) node[midway,scale=1.2] {$\vdots$};
+		
+		% EQUATIONS
+		\def\agr#1{{\color{mydarkgreen}a_{#1}^{(0)}}}
+		\node[below=17,right=11,mydarkblue,scale=0.95] at (NO-1)
+		{$\begin{aligned} %\underset{\text{bias}}{b_1}
+				&= \color{mydarkred}\sigma\left( \color{black}
+				w_{1,0}\agr{0} + w_{1,1}\agr{1} + \ldots + w_{1,n}\agr{n} + b_1^{(0)}
+				\color{mydarkred}\right)\\
+				&= \color{mydarkred}\sigma\left( \color{black}
+				\sum_{i=1}^{n} w_{1,i}\agr{i} + b_1^{(0)}
+				\color{mydarkred}\right)
+			\end{aligned}$};
+		\node[right,scale=0.9] at (1.3,-1.3)
+		{$\begin{aligned}
+				{\color{mydarkblue}
+					\begin{pmatrix}
+						a_{1}^{(1)} \\[0.3em]
+						a_{2}^{(1)} \\
+						\vdots \\
+						a_{m}^{(1)}
+				\end{pmatrix}}
+				&=
+				\color{mydarkred} \beta_j \cdot \sigma\left[ \color{black}
+				\begin{pmatrix}
+					w_{1,0} & w_{1,1} & \ldots & w_{1,n} \\
+					w_{2,0} & w_{2,1} & \ldots & w_{2,n} \\
+					\vdots  & \vdots  & \ddots & \vdots  \\
+					w_{m,0} & w_{m,1} & \ldots & w_{m,n}
+				\end{pmatrix}
+				{\color{mydarkgreen}
+					\begin{pmatrix}
+						x_{1}^{} \\[0.3em]
+						x_{2}^{} \\
+						\vdots \\
+						x_{n}^{}
+				\end{pmatrix}}
+				+
+				\begin{pmatrix}
+					\theta_{1}^{} \\[0.3em]
+					\theta_{2}^{} \\
+					\vdots \\
+					\theta_{m}^{}
+				\end{pmatrix}
+				\color{mydarkred}\right]\\[0.5em]
+				{\color{mydarkblue}a^{(1)}}
+				&=\beta_j \cdot \color{mydarkred}\sigma\left( \color{black}
+				\mathbf{W}^{(0)} {\color{mydarkgreen}a^{(0)}}-\mathbf{\theta_j}^{}
+				\color{mydarkred}\right)
+				%\color{black},\quad \mathbf{W}^{(0)} \in \mathbb{R}^{m\times n}
+			\end{aligned}$};
+		
+	\end{tikzpicture}
+	
+	
+	\begin{definition} (Multilayer feedforward networks) The function that a MFN compute is: 
+		$$f(x)=\sum_{j=1}^k \beta_j \cdot \sigma(w_j \cdot x - \theta_j)$$
+		where $x \in \mathbb{R}^n$ is the input vector, $k \in \mathbb{N}$ is the number of processing units in the hidden layer, $w_j \in \mathbb{R}^n$ is the weight vector that connects the input to processing unit $j$ in the hidden layer, $\sigma : \mathbb{R} \rightarrow \mathbb{R}$ is an activation function applied element-wise to the vector $w_j^T x - \theta_j$, where $\theta_j \in \mathbb{R}$ is the threshold (or bias) associated with processing unit $j$ in the hidden layer, and $\beta_j \in \mathbb{R}$ is the weight that connects processing unit $j$ in the hidden layer to the output of the network.
+		
+	\end{definition}
+	\noindent Let $N_{w}$ be the family of all functions implied by the network's architecture.  If we can show that $N_{w}$ is dense in $C(\mathbb{R}^n)$, we can conclude that for every continuous function $g \in C(\mathbb{R}^n) $ and each compact set $K \subset \mathbb{R}^n$, there is a function $f \in N_{w}$ such that $f$ is a good approximation to $g$ on K. \\ \\
+	\noindent Under which necessary and sufficient conditions on $\sigma$ will the family of networks $N_w$ be capable of approximating to any desired accuracy any given continuous function?
 	
 	
 \end{document}

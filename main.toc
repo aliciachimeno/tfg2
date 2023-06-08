@@ -8,10 +8,10 @@
 \contentsline {section}{\numberline {2.1}Machine Learning Basics}{3}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Linear Regression}{3}{subsection.2.1.1}%
 \contentsline {subsection}{\numberline {2.1.2}A learning problem}{4}{subsection.2.1.2}%
-\contentsline {chapter}{\numberline {3}Function Approximation}{6}{chapter.3}%
-\contentsline {section}{\numberline {3.1}????}{6}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Multilayer Feedforward Network}{8}{section.3.2}%
-\contentsline {chapter}{\numberline {4}Neural Networks}{10}{chapter.4}%
+\contentsline {chapter}{\numberline {3}Neural Networks}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Multilayer Feedforward Network}{6}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Function Approximation}{8}{chapter.4}%
+\contentsline {section}{\numberline {4.1}????}{8}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Theorem and proof}{11}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Theorem}{11}{section.5.1}%
 \contentsline {section}{\numberline {5.2}Pre-pre}{11}{section.5.2}%
