@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  8 JUN 2023 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  9 JUN 2023 11:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1432,7 +1432,7 @@ LaTeX Info: Redefining \nameref on input line 64.
 \openout7 = `main.out'.
 
  (./tex/title.tex
-<imgs/uab.png, id=123, 1229.59375pt x 569.12625pt>
+<imgs/uab.png, id=127, 1229.59375pt x 569.12625pt>
 File: imgs/uab.png Graphic file (type png)
 <use imgs/uab.png>
 Package pdftex.def Info: imgs/uab.png  used on input line 9.
@@ -1542,7 +1542,7 @@ Overfull \hbox (4.56557pt too wide) in paragraph at lines 14--15
 nal. For ex-am-ple,deducing
  []
 
-<imgs/gdp.png, id=202, 1100.61188pt x 679.03688pt>
+<imgs/gdp.png, id=207, 1100.61188pt x 679.03688pt>
 File: imgs/gdp.png Graphic file (type png)
 <use imgs/gdp.png>
 Package pdftex.def Info: imgs/gdp.png  used on input line 27.
@@ -1553,27 +1553,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 [3
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 37--38
+Underfull \hbox (badness 10000) in paragraph at lines 36--37
+
+ []
+
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 3
+9.
+(/usr/local/texlive/2022/texmf-dist/tex/latex/bbold/Ubbold.fd)
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--53
+Underfull \hbox (badness 10000) in paragraph at lines 62--76
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 39--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--69
+Underfull \hbox (badness 10000) in paragraph at lines 62--76
 
  []
 
@@ -1586,16 +1583,30 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
 [4 <./imgs/gdp.png>]
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 7
-1.
-
-(/usr/local/texlive/2022/texmf-dist/tex/latex/bbold/Ubbold.fd)
-Underfull \hbox (badness 10000) in paragraph at lines 79--82
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 84--88
+Underfull \hbox (badness 10000) in paragraph at lines 90--92
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--105
+
+ []
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 14.49998pt, for example:
+(fancyhdr)                \setlength{\headheight}{14.49998pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+
+(fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 107--111
 
  []
 
@@ -1608,8 +1619,18 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[5]
+[6]
 Chapter 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 5--6
+
+ []
+
 
 Neural network activation
 contour: Using real outline for `$w_{1,1}$' on input line 47.
@@ -1621,7 +1642,7 @@ Overfull \hbox (759.78775pt too wide) in paragraph at lines 103--104
 [][] 
  []
 
-[6
+[7
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 111--113
@@ -1637,9 +1658,9 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[7]
+[8]
 Chapter 4.
-[8
+[9
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 56--59
@@ -1654,7 +1675,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[9]) (./tex/proof.tex
+[10]) (./tex/proof.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1663,7 +1684,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[10]
+[11]
 Chapter 5.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1697,7 +1718,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--27
 
  []
 
-[11
+[12
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 27--29
@@ -1749,7 +1770,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[12]
+[13]
 Underfull \hbox (badness 10000) in paragraph at lines 65--68
 
  []
@@ -1787,7 +1808,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[13]
+[14]
 Underfull \hbox (badness 10000) in paragraph at lines 87--92
 
  []
@@ -1810,7 +1831,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[14]
+[15]
 Underfull \hbox (badness 10000) in paragraph at lines 125--126
 
  []
@@ -1838,7 +1859,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[15]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 159--161
 
  []
@@ -1861,7 +1882,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[16]
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 169--172
 
  []
@@ -1879,7 +1900,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[17]) (./tex/function.tex
+[18]) (./tex/function.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 14.49998pt, for example:
@@ -1888,13 +1909,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[18]
+[19]
 Chapter 6.
 
 Package hyperref Warning: Difference (2) between bookmark levels is greater 
 (hyperref)                than one, level fixed on input line 6.
 
-[19
+[20
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 57--60
@@ -1910,13 +1931,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[20]
+[21]
 Chapter 7.
-) (./main.bbl [21
+) (./main.bbl [22
 
 ]
 Chapter 8.
-) (./tex/appendix.tex [22
+) (./tex/appendix.tex [23
 
 ]
 Appendix A.
@@ -1930,7 +1951,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--11
 
  []
 
-[23
+[24
 
 ])
 
@@ -1944,15 +1965,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 (fancyhdr)                \addtolength{\topmargin}{-2.49998pt}.
 
-[24] (./main.aux)
+[25] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 253636B32AF87A6F8254FEAAFEE283DB;3799.
+(rerunfilecheck)             Checksum: 0EB0526616E85D6CBBAE196928E97280;4058.
  ) 
 Here is how much of TeX's memory you used:
- 42696 strings out of 478268
- 850138 string characters out of 5846347
- 1259405 words of memory out of 5000000
- 59697 multiletter control sequences out of 15000+600000
+ 42701 strings out of 478268
+ 850222 string characters out of 5846347
+ 1260454 words of memory out of 5000000
+ 59700 multiletter control sequences out of 15000+600000
  513157 words of font info for 274 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,20n,94p,1155b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1997,10 +2018,10 @@ ts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2022/texmf-dist/fonts
 /type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2022/texmf-dist/fonts/t
 ype1/public/cm-super/sfti1095.pfb></usr/local/texlive/2022/texmf-dist/fonts/typ
 e1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (29 pages, 753430 bytes).
+Output written on main.pdf (30 pages, 756774 bytes).
 PDF statistics:
- 563 PDF objects out of 1000 (max. 8388607)
- 451 compressed objects within 5 object streams
- 115 named destinations out of 1000 (max. 500000)
- 73983 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 572 PDF objects out of 1000 (max. 8388607)
+ 459 compressed objects within 5 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 73991 words of extra memory for PDF output out of 74296 (max. 10000000)
 

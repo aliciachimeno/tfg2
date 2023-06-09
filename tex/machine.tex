@@ -32,6 +32,29 @@
 
 $$y_i = \beta_0 + \beta_1x_{1i} + \ldots + \beta_px_{pi} + \epsilon_i $$
 
+\subsection{Logistic Regression}
+\noindent A logistic regression algorithm is used for classification tasks where the goal is to predict the probability that an instance of belonging to a given class. We need to define the concept of sigmoid function that will be important along te work. \\ \\ A sigmoid function is a mathematical function that maps input values to a range between 0 and 1. We have the following sigmoid function, the logit function: 
+
+\[
+\text{logit}: \mathbb{R} \to (0,1)
+\quad \text{and is expressed as:} \quad
+\text{logit}(x) = \log\left(\frac{x}{x-1}\right)
+\]
+
+\noindent The transformed result, $\text{logit}(x)$, is expressed in logarithms of probabilities. The probabilities of the result (also known as odds ratios) can be written as:
+
+\[
+P(y_i = 1) = p_i \quad \text{and} \quad \text{logit}(p_i) = x_i \beta
+\]
+
+The logistic model can be alternatively written using the inverse logit:
+
+\[
+P(y_i = 1 | x_i) = \text{logit}^{-1}(x_i \beta)
+\]
+
+\noindent where $y_i$ is the binary response, $\text{logit}^{-1}$ is the inverse logit function, and $x_i \beta$ is the linear predictor.
+
 
 \subsection{A learning problem}
 \noindent Consider the problem of assessing the eligibility of a consumer for a credit. We are provided with the following set of data: \\ 
