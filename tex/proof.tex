@@ -8,24 +8,19 @@
 		Then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not an algebraic polynomial. 
 		
 	\end{theorem}
-\section{Pre-pre}
-
-\begin{definition} Let  $\mathcal{M}$ denote the set of functions which are in $L_{loc}^{\infty}(\mathbb{R})$ and have the following property. The closure of the set of points of discontinuity of any function in $\mathcal{M}$ is of zero Lebesgue measure. 
-\end{definition}
-\noindent This implies that for any $\sigma \in$ $\mathcal{M}$, interval $[a,b] .$ and $\delta >0$, there exists a finite number of open intervals, the union of which we denote by U, of measure $\delta$, such that $\sigma$ is uniformly continuous on $[a,b]/U$. 
 
 
 	\section{Proof}
 	\subsection{Lemmas to prove  $\Leftarrow$ }
-	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that the set $\Sigma_n $ is dense in $\mathcal{C}(\mathbb{R}^n)$, we need to follow the steps : find. For that we have \\  \\ 
+	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that the set $\Sigma_n $ is dense in $\mathcal{C}(\mathbb{R}^n)$, we need to following Lemmas. \\ \\
 	%\subsubsection{$\sigma$ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi$ is not a polynomial.}
 	\noindent In the following two lemmas, we will demonstrate that under the assumption that $\sigma$ is not a polynomial, it follows that $\sigma \ast \varphi$ is not a polynomial. To prove this, we will show the contrapositive: if the convolution is a polynomial, then $\sigma$ is a polynomial. 
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $, then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
 	\begin{proof}
-		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, for some $a<b$. \\ \\ By (\ref{prop:frech}) we have that $(\mathcal{C}^\infty_0[a,b],\rho)$ is a complete metric space.  \\ \\  Consider the following set, \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ \\ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, by Baire's Category Theorem (\ref{baire}) then there exists an integer $m$ such that $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
-		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not depend on the interval $[a,b]$. This can be seen as follows. By transition m depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
+		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, for some $a<b$. \\ \\ By (\ref{prop:frech}) we have that $(\mathcal{C}^\infty_0[a,b],\rho)$ is a complete metric space.  \\ \\  Consider the following set, \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ \\ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, by Baire's Category Theorem (\ref{baire}), this set is of category $II$, i.e. $\mathcal{C}_0^\infty[a,b]$  cannot be written as a countable union of nowhere-dense sets. We have $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. \textcolor{red}{aqui no entenc }Therefore, some $V_m$ contains a nonempty open set.  $V_m$ is a vector space thus $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
+		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not depend on the interval $[a,b]$. This can be seen as follows. By translation $m$ depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
 	\end{proof}
 	\begin{lema} % L2: step 7
 		If $\sigma \ast \varphi$ is a polynomial such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$, then $\sigma$ is a polynomial of degree at most $m$. 
@@ -34,7 +29,7 @@
 	If $\sigma \ast \varphi$ is a polynomial of degree $m$.
 	For all $\varphi \in \mathcal{C}^\infty_0$, using (\ref{prop:2}) we have that
 	$$(\sigma \ast \varphi)^{(m+1)} \, (x)=\int \sigma(x-y)\varphi^{(m+1)}(y) \, dy= 0$$  
-	From standard results in Distribution Theory [e.g., Friedman(1963, 57-59)], $\sigma $ is itself a polynomial of degree at most m (a.e.).
+	From standard results in Distribution Theory \textcolor{red}{aqui vam dir de ficar nomes la referencia}[e.g., Friedman(1963, 57-59)], $\sigma $ is itself a polynomial of degree at most m (a.e.).
 	\end{proof} 
 \noindent We showed indeed that if $\sigma$ is not a polynomial, then it follows that the convolution $\sigma \ast \varphi$ is not a polynomial. \\ \\
 
@@ -123,7 +118,8 @@ for all $x\in [-\alpha,\alpha ]$
 		We suppose that  $\sigma \in \mathcal{C}^{\infty}$ and recall by the theorem hypothesis $\sigma$ is not a polynomial. 
 		 We can write any function $f$ of the set $\Sigma_1$ as $$f=\sum_i \beta_i \sigma_i(w_i x+\theta_i)= \beta_1 \sigma_1(w_1 x+\theta_1)+ ... $$ 
 		We can see that the function $$\frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h} \in \Sigma_1$$ because is a linear combination, where $\beta_1= \frac{1}{h}, \beta_2=\frac{-1}{h}$. \\ \\  By hypothesis, $\sigma \in \mathcal{C}^{\infty}$. By definition of derivative we have
-		$$ \frac{d}{dw}\sigma(wx+\theta)= \lim_{h \to 0} \frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h}  \in \overline{\Sigma_1} \footnote{$\overline{\Sigma_1}$ denotes the clausure of the set $\Sigma_1$} $$
+		$$ \frac{d}{dw}\sigma(wx+\theta)= \lim_{h \to 0} \frac{\sigma([w+h]x + \theta) - \sigma(wx+\theta)}{h}  \in \overline{\Sigma_1} %\footnote{$\overline{\Sigma_1}$ denotes the clausure of the set $\Sigma_1$}
+		$$
 		because the limit of a set belongs to the closure of the set. \\  \\ 
 		By the same argument, $$\frac{d^k}{dw^k} \sigma(wx+\theta) \in \overline{\Sigma_1}$$  for all $k\in \mathbb{N}, w,\theta \in \mathbb{R}$.\\ \\ 
 		 If we differentiate this expression k times, we obtain 
@@ -144,7 +140,7 @@ for all $x\in [-\alpha,\alpha ]$
 		If for some $\varphi \in \mathcal{C}^\infty_0 $ we have that $\sigma \ast \varphi $ is not a polynomial, then $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
 	\end{lema}
 	 \begin{proof}
-	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$ for each $\varphi \in \mathcal{C}^\infty_0$ . Clearly, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $\theta \in \mathbb{R}$. For $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$, from results in distribution (\ref{prop:29}) we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $.
+	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$ for each $\varphi \in \mathcal{C}^\infty_0$ . It thus follows that, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $ w, \theta \in \mathbb{R}$. Now for $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$, we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $, see results in distributions \ref{prop:29}.
 	 From Lemma 4 applied in $\sigma= \sigma \ast \varphi$, if $\sigma \ast \varphi \in  \mathcal{C}^\infty $, then $\Sigma_1$ dense in $\mathcal{C} (\mathbb{R})$. 
 	 \end{proof}
 % \subsubsection{{$\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }}
@@ -179,7 +175,7 @@ for all $x\in [-\alpha,\alpha ]$
 	\begin{enumerate}
 		\item[$\Rightarrow$] 
 		To prove this implication statement, we aim to show that if $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$, then $\sigma$ is not a polynomial.
-		 We will proceed to prove the contrapositive statement, assuming that $\sigma$ is indeed a polynomial, and demonstrate that in this case, $\Sigma_n$ cannot be dense in $\mathcal{C}(\mathbb{R}^n)$. \\ \\ Let $\sigma$ be a polynomial of degree k, then $\sigma(wx+\theta)$ is a polynomial  of degree k for every $w,\theta$. Recall that $$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$  that is the set of algebraic polynomials of degree at most k. To show that $\Sigma_n$ is not dens in $\mathcal{C}(\mathbb{R}^n)$, for the definition of density, we need (only) to find a function $f(x)\in \mathcal{C}(\mathbb{R}^n)$, $\epsilon > 0$ and $K$ such that  $\| p-f \| > \epsilon$ for all $p$ polynomial of degree k. For example, let $f(x)=cos(x)$, and let $p(x)= \sigma(wx+\theta)$ that has degree at most k. This implies has maximum k roots. We can find a interval where $cos(x)$ has k+1 roots. Therefore, $\Sigma_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. 
+		 We will proceed to prove the contrapositive statement, assuming that $\sigma$ is indeed a polynomial, and demonstrate that in this case, $\Sigma_n$ cannot be dense in $\mathcal{C}(\mathbb{R}^n)$. \\ \\ Let $\sigma$ be a polynomial of degree k, then $\sigma(wx+\theta)$ is a polynomial  of degree k for every $w,\theta$. Recall that $$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$  that is the set of algebraic polynomials of degree at most k. To show that $\Sigma_n$ is not dens in $\mathcal{C}(\mathbb{R}^n)$, for the definition of density, we need to find a function $f(x)\in \mathcal{C}(\mathbb{R}^n)$, $\epsilon > 0$ and $K$ such that  $\| p-f \| > \epsilon$ for all $p$ polynomial of degree k. For example, let $f(x)=cos(x)$, and let $p(x)= \sigma(wx+\theta)$ that has degree at most k. This implies has maximum k roots. We can find a interval where $cos(x)$ has k+1 roots. Therefore, $\Sigma_n$ is not dense in $\mathcal{C}(\mathbb{R}^n)$. 
 
 		\item[$\Leftarrow$]  In order to prove this implication, we need to show that if $\sigma$ is not an algebraic polynomial, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
 		
