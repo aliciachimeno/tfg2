@@ -27,12 +27,12 @@ A \emph{metric space} is a pair $(X,d)$, where $X$ is a set and $d$ is a distanc
 \end{definition}
 \begin{propo} \label{prop:frech}
 Let $\rho$ be a metric defined on the set $\mathcal{C}^\infty_0[a,b]$ as follows:
-$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)| $.  Then the metric space $(\mathcal{C}^\infty_0[a,b],\rho)$  is complete, also known as a Fréchet space.
+$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $$\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)|. $$  Then the metric space $(\mathcal{C}^\infty_0[a,b],\rho)$  is complete, also known as a Fréchet space.
 \end{propo}
 
 
 
-\noindent Lebesgue measure
+\subsection{Lebesgue measure}
 
 \begin{definition} A box in $\mathbb{R}^d$ is a set of the form 
 	$$ Q = [a_1,b_1]  \times ... \times [a_d,b_d] = \prod_{i=1}^d [a_i,b_i]$$
@@ -68,11 +68,31 @@ A set $E\subseteq \mathbb{R}^n $ is \emph{Lebesgue mesurable} (or mesurable) if 
 \begin{definition}We say that a set of functions $F\subset L_{loc}^{\infty}(\mathbb{R})$ is \emph{dense} in $C(\mathbb{R}^n)$ if for every function $g\in C(\mathbb{R}^n)$ and for every compact $K\subset \mathbb{R}^n$, there exist a sequence of functions $f_j\in F$ such that $$\lim_{j\rightarrow\infty} \|g-f_j\|_{L^\infty(K)}=0.$$ 
 \end{definition}
 
-
+\subsection{Convolution}
 \begin{definition}
 	Let $f,g$ be real-valued functions with compact support. We define the \emph{convolution} of $f$ with $g$ as $$(f\ast g)(x)=\int f(x-t)g(t) \, dt$$
 \end{definition}
 
+
+\begin{propo}
+	If $f$ is a smooth function that is compactly supported and $g$ is a distribution, then $f\ast g$ is a smooth function defined by
+	$${\displaystyle \int _{\mathbb {R} ^{d}}{f}(y)g(x-y)\,dy=(f*g)(x)\in C^{\infty }(\mathbb {R} ^{d}).} $$ \label{prop:29}
+\end{propo}
+\begin{propo} \label{prop:2}
+	$${\frac {\partial }{\partial x_{i}}}(f*g)={\frac {\partial f}{\partial x_{i}}}*g=f*{\frac {\partial g}{\partial x_{i}}}.$$
+\end{propo}
+
+\subsection{Baire's thm}
+
+\begin{definition} Let $A$ be a subset of the metric space $(X,d)$. $A$ is said to be \emph{nowhere dense} if for every (nonempty) open subset $U\subseteq X$, the intersection $U\cap\overline{A}$ is not dense in $U$, meaning that $U$ contains a point that is not in the closure of $A$.
+\end{definition}
+
+\begin{definition}
+	A set it is said to be category $I$ if it can be written as a countable union of nowhere-dense sets. Otherwise it is said to be of \emph{category $II$}
+\end{definition}
+\begin{theorem} (Baire's Category Theorem) \label{baire}
+	Any complete metric space is of category $II$.
+\end{theorem}
 
 
 

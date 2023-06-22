@@ -3,32 +3,7 @@
 	\chapter{About the theorem} \label{ch:function}
 
 
-\subsection{Why does it not contradict the Weierstrass approximation theorem? }
-
-
-\begin{theorem}(Weierstrass  approximation theorem). 
-	Let $f:[a,b]\rightarrow \mathbb{R} $ be a continuous function. Then, there exists polynomials $p_n\in \mathcal{R}[x]$ such that the sequence $(p_n)$ converge uniformly to $f$ on $[a,b]$. 
-\end{theorem} 
-
-\begin{corolari}
-	The set of polynomial functions $\mathcal{R}^n[x]$ is dense in the space of continuous functions on a compact set $K \subset \mathbb{R}^n$, $\mathcal{C}(K)$. So any continuous function on a compact set can be approximated arbitrarly well by a polynomial. 
-\end{corolari}
-
-\noindent The theorem states that: if $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ then $\sigma$ is not an algebraic polynomial. But why this statment does not contradict the Weierstrass approximation theorem ?
-This does not work because $\sigma$ has degree fixed $k$, then any element in the set $\Sigma_n$ has degree at most $k$. Hence, the set $\Sigma_n$ is a finite vector space and can not be dense in $\mathcal{C}(\mathbb{R}^n)$. Not all contiunous functions can be apparoximated with a polynimial of degree fixed, for example: 
-(comment per afegir : per exemple una funcio que sigui continua que no es pugui approximar per un polinomi de com a molt grau k , una k tingui grau mes gran que k polinomi de k+1 ?? )
-
-\subsection{Previous results}
-The activation functions that were reported thus far in the literature. 
-\begin{theorem} (Hornik Theorem 1). Standard multilayer feedforward networks with a bounded and nonconstant activation function can approximate any function in $L^p(\mu)$ arbitrary well, given a sufficiently large number of hidden units. 
-\end{theorem}
-
-\begin{theorem} (Hornik Theorem 2)  Standard multilayer feedforward networks with a continuous, bounded and nonconstant activation function can approximate any continuous function on $X$ arbitrarily well (with respect to the uniform distance) given a sufficiently large number of hidden units. 
-\end{theorem}
-
-\noindent
-The theorem generalizes Hornik's Theorem 2 by establishing necessary and sufficient conditions for universal approximation. Note that the theorem merely requires "nonpolynomiality" in the activation function. Unlike Hornik's result, the activation functions do not need to be continuous or smooth. This has an important biological interpretation because the activation functions of real neurons may well be discontinuous or even non-elementary.
-\subsection{Results}
+\section{Results}
 
 
 \begin{definition} The set $L^{p}(\mu)$ contains all mesurable functions $f$ such that: 

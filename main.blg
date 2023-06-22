@@ -4,45 +4,45 @@ The top-level auxiliary file: main.aux
 The style file: abbrvnat.bst
 Database file #1: biblio.bib
 Warning--I didn't find a database entry for "adams2009hitchhiker"
-You've used 1 entry,
+You've used 2 entries,
             2773 wiz_defined-function locations,
-            601 strings with 4791 characters,
-and the built_in function-call counts, 589 in all, are:
-= -- 49
-> -- 39
-< -- 0
-+ -- 13
-- -- 12
-* -- 56
-:= -- 96
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 7
-chr.to.int$ -- 1
-cite$ -- 2
-duplicate$ -- 21
-empty$ -- 42
-format.name$ -- 13
-if$ -- 114
+            610 strings with 5019 characters,
+and the built_in function-call counts, 1011 in all, are:
+= -- 93
+> -- 49
+< -- 1
++ -- 17
+- -- 15
+* -- 89
+:= -- 163
+add.period$ -- 9
+call.type$ -- 2
+change.case$ -- 11
+chr.to.int$ -- 2
+cite$ -- 4
+duplicate$ -- 41
+empty$ -- 82
+format.name$ -- 17
+if$ -- 205
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 13
-num.names$ -- 4
-pop$ -- 12
+missing$ -- 2
+newline$ -- 21
+num.names$ -- 8
+pop$ -- 16
 preamble$ -- 1
-purify$ -- 6
+purify$ -- 9
 quote$ -- 0
-skip$ -- 17
+skip$ -- 30
 stack$ -- 0
-substring$ -- 27
-swap$ -- 1
+substring$ -- 50
+swap$ -- 2
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 11
+type$ -- 22
 warning$ -- 0
-while$ -- 5
+while$ -- 9
 width$ -- 0
-write$ -- 20
+write$ -- 39
 (There was 1 warning)

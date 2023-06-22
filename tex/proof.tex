@@ -5,22 +5,36 @@
 	\section{Theorem}
 	\begin{theorem} Let $ \sigma \in  \mathcal{M}$. Set
 		$$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$
-		Then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not an algebraic polynomial. 
-		
+		Then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not a polynomial. 
+	
 	\end{theorem}
 
 
+\subsection{Previous results}
+\noindent Previous research on the approximation capabilities of feedforward networks can be found. These studies show that if the network's activation functions obey an explicit set of assumptions then the network can indeed be shown to be a universal approximator. For example \cite{HORNIK1991251}  has proven two general results, as follows:
+
+\begin{theorem} (Hornik Theorem 1). Multilayer feedforward networks with a bounded and nonconstant activation function can approximate any function in $L^p(\mu)$ arbitrary well, given a sufficiently large number of hidden units. 
+\end{theorem}
+
+\begin{theorem} (Hornik Theorem 2) Multilayer feedforward networks with a continuous, bounded and nonconstant activation function can approximate any continuous function on $X$ arbitrarily well (with respect to the uniform distance) given a sufficiently large number of hidden units. 
+\end{theorem}
+
+\noindent
+The theorem generalizes Hornik's Theorem 2 by establishing necessary and sufficient conditions for universal approximation. Note that the theorem merely requires "nonpolynomiality" in the activation function. Unlike Hornik's result, the activation functions do not need to be continuous or smooth. This has an important biological interpretation because the activation functions of real neurons may well be discontinuous or even non-elementary.
+
 	\section{Proof}
-	\subsection{Lemmas to prove  $\Leftarrow$ }
-	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that the set $\Sigma_n $ is dense in $\mathcal{C}(\mathbb{R}^n)$, we need to following Lemmas. \\ \\
+	\subsection{If $\sigma$ is not a polynomial then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }
+	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that, we need to following Lemmas. \\ \\
 	%\subsubsection{$\sigma$ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi$ is not a polynomial.}
-	\noindent In the following two lemmas, we will demonstrate that under the assumption that $\sigma$ is not a polynomial, it follows that $\sigma \ast \varphi$ is not a polynomial. To prove this, we will show the contrapositive: if the convolution is a polynomial, then $\sigma$ is a polynomial. 
 	\begin{lema}  % L1 :step 6
-		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $, then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an m $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
+		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $, then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an $m$ $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
 	\begin{proof}
-		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, for some $a<b$. \\ \\ By (\ref{prop:frech}) we have that $(\mathcal{C}^\infty_0[a,b],\rho)$ is a complete metric space.  \\ \\  Consider the following set, \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}$$ \\ We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ This set fulfills the following properties, $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, by Baire's Category Theorem (\ref{baire}), this set is of category $II$, i.e. $\mathcal{C}_0^\infty[a,b]$  cannot be written as a countable union of nowhere-dense sets. We have $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. \textcolor{red}{aqui no entenc }Therefore, some $V_m$ contains a nonempty open set.  $V_m$ is a vector space thus $V_m=\mathcal{C}_0^\infty[a,b]$. \\ \\ 
-		For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not depend on the interval $[a,b]$. This can be seen as follows. By translation $m$ depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
+		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, for some $a<b$. \\ \\ By Proposition \ref{prop:frech} we have that $(\mathcal{C}^\infty_0[a,b],\rho)$ is a complete metric space.  \\ \\  Consider the following set, \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}.$$ \\ 
+		We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ \\ \\ \\ \\ The set $ V_k$ fulfills the following properties: $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. \\ \\ 
+	\noindent As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, by Baire's Category Theorem \ref{baire}, this set is of category $II$, i.e. $\mathcal{C}_0^\infty[a,b]$  cannot be written as a countable union of nowhere-dense sets. Recall that $\mathcal{C}_0^\infty[a,b]$ can be written as a countable union of $V_k$ $\mathcal{C}_0^\infty[a,b]=\cup_{k=0}^\infty V_k$, therefore some $V_m $ is not a nowhere-dense set, that is, there exists an open set $U$ of $ C_0^\infty[a,b]$ that is contained in the closure of $V_m$, but, as $V_m$ is closed, we have that $U$ is contained in $V_m$. Therefore, some $V_m$ contains a nonempty open set.  By results in topology, any open set of a vector space contains a basis of the vector space, therefore 	$V_m$ is a vector space thus $V_m=\mathcal{C}_0^\infty[a,b]$. \\ 
+		
+		\noindent For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not depend on the interval $[a,b]$. This can be seen as follows. By translation $m$ depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $$\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
 	\end{proof}
 	\begin{lema} % L2: step 7
 		If $\sigma \ast \varphi$ is a polynomial such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$, then $\sigma$ is a polynomial of degree at most $m$. 
@@ -29,10 +43,15 @@
 	If $\sigma \ast \varphi$ is a polynomial of degree $m$.
 	For all $\varphi \in \mathcal{C}^\infty_0$, using (\ref{prop:2}) we have that
 	$$(\sigma \ast \varphi)^{(m+1)} \, (x)=\int \sigma(x-y)\varphi^{(m+1)}(y) \, dy= 0$$  
-	From standard results in Distribution Theory \textcolor{red}{aqui vam dir de ficar nomes la referencia}[e.g., Friedman(1963, 57-59)], $\sigma $ is itself a polynomial of degree at most m (a.e.).
+	From standard results in Distribution Theory \textcolor{red}{aqui vam dir de ficar nomes la referencia}[e.g., Friedman(1963, 57-59)], $\sigma $ is itself a polynomial of degree at most $m$ (a.e.).
 	\end{proof} 
-\noindent We showed indeed that if $\sigma$ is not a polynomial, then it follows that the convolution $\sigma \ast \varphi$ is not a polynomial. \\ \\
 
+\begin{prop}
+If $\sigma$ is not a polinomial then $\sigma \ast \varphi$ is not a polynomial for some $\varphi \in \mathcal{C}^\infty_0$. 
+\end{prop}
+\begin{proof}
+We will show the contrapositive. Suppose that the convolution $\sigma \ast \varphi$ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0$, by Lemma 1 the degree of the convolution is finite. Now we have that $\sigma \ast \varphi$ is a polynomial of finite degree, by Lemma 2 we have that $\sigma$ is a polynomial. 
+\end{proof}
 
 %\subsubsection{$\sigma \ast \varphi \in \overline{\Sigma_1}$}
 	\begin{lema} % L3: step 4
@@ -50,15 +69,18 @@
 		Consider $$h_m= \sum_{i=1}^m\varphi(y_i)\Delta y_i \sigma(x-y_i)$$ 
 		The sequence $(h_m)$ satisfies $h_j\in \Sigma_1$ for $j=1,...,m$. ($w_i=1,\theta_i=-y_i, \beta_i=\varphi(y_i)\Delta y_i$).\\ \\ 
 		Where $y_i=-\alpha + \frac{2i\alpha}{m}$, $\Delta y_i=\frac{2\alpha}{m}$ for $i=1,...,m$. Partition of the interval $[-\alpha,\alpha]$ \\ \\ We want to show that $h_m \rightrightarrows \sigma \ast \varphi $ in $[-\alpha,\alpha]$.  \\ \\
-		Given $\epsilon >0$, we choose $\delta >0$ such that $10\delta \| \sigma\|_{L^\infty\{-2\alpha,2\alpha\}}\|\varphi \|_{L^\infty} \leq \frac{\epsilon}{3}$. Note that ... \\ \\ 
+		Given $\epsilon >0$, we choose $\delta >0$ such that $$10\delta \| \sigma\|_{L^\infty\{-2\alpha,2\alpha\}}\|\varphi \|_{L^\infty} \leq \frac{\epsilon}{3}$$ Note that ... \\ \\ 
 		We know that $\sigma \in M$. Hence, for this given $\delta>0$ and $[-\alpha,\alpha]$ interval, there exists $r(\delta)$ finite number of intervals the measure of whose union $\mathscr{U}$ is $\delta$ such that $\sigma$ is uniformly continuous on $[-2\alpha,2\alpha]$. We now choose $m_i$ sufficiently large so that
 		\begin{enumerate}
 			\item $m_1 \delta > \alpha r(\delta)$. We can do this by Archimedes' principle.
-			\item From the uniform continuity of $\varphi$.
-			\item From the previous, $\sigma$ is uniformly continuous on  $[-2\alpha,2\alpha]$. 
+			\item From the uniform continuity of $\varphi$. 
+			
+			If $|s-t| \leq \frac{2 \alpha }{m_2}$ then $$|\varphi(s)- \varphi(t)| \leq \frac{\epsilon}{2 \alpha \| \sigma\|_{L^\infty[-2\alpha,2\alpha]}}$$
+			
+			\item From the previous, $\sigma$ is uniformly continuous on  $[-2\alpha,2\alpha]/ U$. We chose m such that, if $s,t \in [-2\alpha, 2\alpha]/U$ and $|s-t|\leq \frac{2\alpha}{m_3}$ then $$|\sigma(s)-\sigma(t)| \leq \frac{\epsilon}{\|\varphi\|_L}$$
 		\end{enumerate}
 		We choose $m$ such that $m=max\{m_1,m_2,m_3\}$. \\ \\ 
-		Now, fix $x\in [-\alpha,\alpha] $. Set $\Delta_i= [y_{i-1},y_i]$ where $y_0= \alpha$ .. dibuix. \\ \\
+		Now, fix $x\in [-\alpha,\alpha] $. Set $\Delta_i= [y_{i-1},y_i]$ where $y_0= \alpha$. \\ \\
 		First, recall that,\\
 		$$\int \sigma(x-y)\varphi(y)dy = \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy$$
 		Consider the following difference 
@@ -71,7 +93,7 @@
 		&\leq  \sum_{i=1}^m \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy 
 	\end{split}
 \end{equation*}
-		If $x-\Delta_i \cap U = \varnothing $. Since $x-y \notin U$ , $x-y_i \notin U$ and $x-y_i \in [-2\alpha,2\alpha]$. For choice of m in property 2, we have\\ 
+		If $x-\Delta_i \cap U = \varnothing $. Since $x-y \notin U$ , $x-y_i \notin U$ and $x-y_i \in [-2\alpha,2\alpha]$. For choice of $m$ in property 2, we have\\ 
 		\begin{equation*}
 			\begin{split}
 				\sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy  \leq  \frac{\epsilon}{\| \varphi\|_{L_1}}  \sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| & \\
@@ -180,9 +202,25 @@ for all $x\in [-\alpha,\alpha ]$
 		\item[$\Leftarrow$]  In order to prove this implication, we need to show that if $\sigma$ is not an algebraic polynomial, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
 		
 		
-		 By hypothesis $\sigma$ is not a polynomial, for Lemma 1 and Lemma 2 this implies that $\sigma \ast \varphi$ is not a polynomial. For Lemma 3 we have that $\sigma \ast \varphi \in \overline{\Sigma_1}$. We showed in Lemma 5 that $\sigma \ast \varphi \in \mathcal{C}^\infty$ and for Lemma 4 and  Lemma 5 we have that $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$. Finally, for Lemma 6 $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
+		 By hypothesis $\sigma$ is not a polynomial, by Proposition 1 this implies that $\sigma \ast \varphi$ is not a polynomial. For Lemma 3 we have that $\sigma \ast \varphi \in \overline{\Sigma_1}$. We showed in Lemma 5 that $\sigma \ast \varphi \in \mathcal{C}^\infty$ and for Lemma 4 and  Lemma 5 we have that $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$. Finally, for Lemma 6 $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
 	\end{enumerate}
 \end{proof}
+
+
+\section{About the theorem}
+\subsection{Why does it not contradict the Weierstrass approximation theorem? }
+\begin{theorem}(Weierstrass  approximation theorem). 
+	Let $f:[a,b]\rightarrow \mathbb{R} $ be a continuous function. Then, there exists polynomials $p_n\in \mathcal{R}[x]$ such that the sequence $(p_n)$ converge uniformly to $f$ on $[a,b]$. 
+\end{theorem} 
+
+\begin{corolari}
+	The set of polynomial functions $\mathcal{R}^n[x]$ is dense in the space of continuous functions on a compact set $K \subset \mathbb{R}^n$, $\mathcal{C}(K)$. So any continuous function on a compact set can be approximated arbitrarly well by a polynomial. 
+\end{corolari}
+
+\noindent The theorem states that: if $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ then $\sigma$ is not an algebraic polynomial. But why this statment does not contradict the Weierstrass approximation theorem ?
+This does not work because $\sigma$ has degree fixed $k$, then any element in the set $\Sigma_n$ has degree at most $k$. Hence, the set $\Sigma_n$ is a finite vector space and can not be dense in $\mathcal{C}(\mathbb{R}^n)$. Not all contiunous functions can be apparoximated with a polynimial of degree fixed, for example: 
+(comment per afegir : per exemple una funcio que sigui continua que no es pugui approximar per un polinomi de com a molt grau k , una k tingui grau mes gran que k polinomi de k+1 ?? )
+
 
 	\cite{leshno1993multilayer}
 \end{document}
