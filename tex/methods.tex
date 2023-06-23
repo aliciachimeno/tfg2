@@ -2,11 +2,21 @@
 \begin{document}
 \chapter{Function Approximation} \label{ch:methods}
 \noindent Creating a machine learning model to predict/classify from a given data is a similar process than when we calculate a function from a given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial, Chebyshev polynomial, the method of least squares, or spline approximation. In this chapter we are going to talk about ...
-\section{????}
-\noindent In this section we present some mathematical definitions and results of function approximation. 
+\\ \\ 
+\noindent In this chapter we present some mathematical definitions and results of function approximation. 
 If we want to approximate functions, we need to define the following notions: distance between functions, density,
+\section{Definitions and some results}
 
+\begin{definition} We dentoe by $\mathcal{C}(\mathbb{R}^n)$ the set of continuous functions defined on $\mathbb{R}^n$.
+\end{definition}
+\begin{definition}
+	The support of a function $u$ is denoted by $$supp(u)= \overline{\{x | u(x)\neq 0\}}$$
+\end{definition}
+\begin{definition} We denote by
+	$ \mathcal{C}^\infty_0$ the set of infinitely differentiable functions $\mathcal{C}^\infty$, also called smooth functions, with compact support. 
+\end{definition}
 
+\subsection{Metric spaces}
 \begin{definition}\label{thm:first}
 	A \emph{metric} (or \emph{distance}) on a set $X$ is a function $d:X\times X\rightarrow \mathbb{R} $ such that for all $s,t, u\in X$ the following properties are satisfied:
 	\begin{enumerate}
@@ -14,29 +24,65 @@ If we want to approximate functions, we need to define the following notions: di
 		\item $d(s,t)=d(t,s)$.
 		\item $d(s,t)\leq d(s,u)+d(u,t)\quad$(\emph{triangle inequality}).
 	\end{enumerate}
+\begin{definition}
 A \emph{metric space} is a pair $(X,d)$, where $X$ is a set and $d$ is a distance in $X$.
+\end{definition}
 \end{definition}
 \noindent  If we take $X$ to be a set of functions, the metric $d(f,g)$ will enable us to measure the distance between functions $f,g \in X$.
 
+\begin{propo}
+Let $(X, d)$ be a metric space and $\mathcal{B}$ be a basis of open sets for $X$. Then, for all open set $U$ in $X$, we have:
 
-\begin{definition} We dentoe by $\mathcal{C}(\mathbb{R}^n)$ the set of continuous functions defined on $\mathbb{R}^n$.
-\end{definition}
+$$U = \bigcup \{B_x : x \in U, B_x \subseteq U, B_x \in \mathcal{B}\}$$
 
-\begin{definition} We denote by
-	$ \mathcal{C}^\infty_0$ the set of infinitely differentiable functions (also called smooth functions), $\mathcal{C}^\infty$, with compact support. Recall that the support of a function $u$ is denoted by $$supp(u)= \overline{\{x | u(x)\neq 0\}}$$
-\end{definition}
-\begin{propo} \label{prop:frech}
-Let $\rho$ be a metric defined on the set $\mathcal{C}^\infty_0[a,b]$ as follows:
-$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $$\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)|. $$  Then the metric space $(\mathcal{C}^\infty_0[a,b],\rho)$  is complete, also known as a Fréchet space.
+This proposition states that any open set $U$ in a metric space $X$ can be expressed as the union of basis elements $B_x$.
 \end{propo}
 
 
+\begin{definition}Let $(X, d)$ be a metric space. The closure of a set A is defined as follows:
+	$$closure(A) = \overline{A}=\{t \, |  \, \forall \epsilon> 0, \exists a \in A, \, d(a, t) < \epsilon\}.$$
+\end{definition}
 
-\subsection{Lebesgue measure}
+\begin{propo} \label{prop:23} Let $(X, d)$ be a metric space and $A \subseteq X$. Then, $a \in \overline{A}$ if and only if there exists a sequence $(a_n)$ in $A$ such that for every $\epsilon > 0$, there exists $N \in \mathbb{N}$ such that $d(a_n, a) < \epsilon$ for all $n \geq N$.
+\end{propo}
+
+\begin{propo} \label{prop:frech}
+	Let $\rho$ be a metric defined on the set $\mathcal{C}^\infty_0[a,b]$ as follows:
+	$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $$\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)|. $$  Then the metric space $(\mathcal{C}^\infty_0[a,b],\rho)$  is complete, also known as a Fréchet space.
+\end{propo}
+
+\noindent Proof in \cite{196785}
+
+
+\subsection{Baire's Theorem}
+
+\begin{definition} Let $(X,d)$ be a metric space and $A\subseteq X$ subset. $A$ is said to be \emph{nowhere dense} if for every (nonempty) open subset $U\subseteq X$, the intersection $U\cap\overline{A}$ is not dense in $U$, meaning that $U$ contains a point that is not in the closure of $A$.
+\end{definition}
+
+\begin{definition}
+	A set it is said to be category $I$ if it can be written as a countable union of nowhere-dense sets. Otherwise it is said to be of \emph{category $II$}
+\end{definition}
+\begin{theorem} (Baire's Category Theorem) \label{baire}
+	Any complete metric space is of category $II$.
+\end{theorem}
+
+
+\subsection{Lebesgue space}
+
+
+\begin{definition}
+	Let $\Sigma$ be a $\sigma$-algebra over a set $\Omega$. A \emph{measure} over $\Omega$ is any function $$\mu:\Sigma\longrightarrow[0,\infty]$$ satisfying the following properties:
+	\begin{enumerate}
+		\item $\mu(\varnothing)=0$.
+		\item\label{RFA:sigmaadditivity} \emph{$\sigma$-additivity}: If $(A_n)\in\Sigma$ are pairwise disjoint, then: $$\mu\left(\bigsqcup_{n=1}^\infty A_n\right)=\sum_{n=1}^\infty \mu(A_n)$$
+	\end{enumerate}
+\end{definition}
 
 \begin{definition} A box in $\mathbb{R}^d$ is a set of the form 
 	$$ Q = [a_1,b_1]  \times ... \times [a_d,b_d] = \prod_{i=1}^d [a_i,b_i]$$
-	The volume of the box is $$ vol(Q)= (b_1,a_1) ... (b_d-a_d)= \prod_{i=1}^d (b_i-a_i)$$
+	and the volume of the box is $$ vol(Q)= (b_1,a_1) ... (b_d-a_d)= \prod_{i=1}^d (b_i-a_i).$$
+	\end{definition}
+\begin{definition}
 	The \emph{exterior measure} (or outer measure) of a set $E\subseteq \mathbb{R}^d$ is $$ |E|^* = \inf\{\sum_k vol(Q_k)\} $$ 
 	where the infimum is taken over all finite or countable collection of boxes $\{Q_k\}$ such that $E \subseteq \cup_k Q_k$
 \end{definition}
@@ -46,14 +92,19 @@ A set $E\subseteq \mathbb{R}^n $ is \emph{Lebesgue mesurable} (or mesurable) if 
 \end{definition}
 
 \begin{definition}
+A set $N \subset \mathbb{R}^n $ is called a \textit{null set }if $|N|^*=0$
+\end{definition}
+
+\begin{definition}
 	We say that a property holds almost everywhere (a.e.) if the set of points that doesn’t hold it is null.
 \end{definition}
+
 \begin{definition}
-	A function $u$ defined almost everywhere on a measurable set $\Omega \in \mathbb{R}^n$ is said to be \emph{essentially bounded} on $\Omega$ if $|u(x)|$ is bounded almost everywhere on $\Omega$. We denote $u\in L^{\infty}(\Omega)$ with the norm $$\|u\|_{L^{\infty}(\Omega)}= inf(\lambda | \{ x : |u(x)| \geq \lambda \} = 0 ) = ess \sup_{x\in \Omega} |u(x)|$$
+	A function $u$ that is measurable on  $\Omega \in \mathbb{R}^n$ is said to be \emph{essentially bounded} on $\Omega$ if there is a constant $\lambda$ such that $|u(x)|\leq \lambda$ a.e on $\Omega$.  The greatest lower bound of such constants $\lambda$ is called the essential supremum of $|u|$ on $\Omega$ and is denoted by $\operatorname{ess} \sup_{x\in \Omega} |u(x)|$. We denote by $L^{\infty}(\Omega)$ the space of all functions $u$ that are essentially bounded on $\Omega$. We denote the norm on $L^{\infty}(\Omega)$ by $\| \|_{L^{\infty}(\Omega)}$ defined by
+
+$$	\|u\|_{L^{\infty}(\Omega)} = \operatorname{ess} \sup_{x\in \Omega} |u(x)|.$$
 
 \end{definition}
-
-\noindent We have that $L^{\infty}(\mathbb{R})$ is the space of essentially bounded functions.
 
 
 \begin{definition}
@@ -68,6 +119,12 @@ A set $E\subseteq \mathbb{R}^n $ is \emph{Lebesgue mesurable} (or mesurable) if 
 \begin{definition}We say that a set of functions $F\subset L_{loc}^{\infty}(\mathbb{R})$ is \emph{dense} in $C(\mathbb{R}^n)$ if for every function $g\in C(\mathbb{R}^n)$ and for every compact $K\subset \mathbb{R}^n$, there exist a sequence of functions $f_j\in F$ such that $$\lim_{j\rightarrow\infty} \|g-f_j\|_{L^\infty(K)}=0.$$ 
 \end{definition}
 
+
+
+\begin{definition} 
+	$\varphi$ : $I \rightarrow \mathbb{R}$ is uniformly continuous on $I$ if $\forall \epsilon > 0 \exists \delta >0 $ such that $|\varphi(x)- \varphi(y)| < \epsilon$ whenever $|x-y|< \delta$
+\end{definition}
+
 \subsection{Convolution}
 \begin{definition}
 	Let $f,g$ be real-valued functions with compact support. We define the \emph{convolution} of $f$ with $g$ as $$(f\ast g)(x)=\int f(x-t)g(t) \, dt$$
@@ -76,23 +133,13 @@ A set $E\subseteq \mathbb{R}^n $ is \emph{Lebesgue mesurable} (or mesurable) if 
 
 \begin{propo}
 	If $f$ is a smooth function that is compactly supported and $g$ is a distribution, then $f\ast g$ is a smooth function defined by
-	$${\displaystyle \int _{\mathbb {R} ^{d}}{f}(y)g(x-y)\,dy=(f*g)(x)\in C^{\infty }(\mathbb {R} ^{d}).} $$ \label{prop:29}
+	$${\displaystyle \int _{\mathbb {R} ^{d}}{f}(y)g(x-y)\,dy=(f*g)(x)\in C^{\infty }(\mathbb {R} ^{d}).} $$
+	See \cite{adams2003sobolev}
+	 \label{prop:29}
 \end{propo}
 \begin{propo} \label{prop:2}
 	$${\frac {\partial }{\partial x_{i}}}(f*g)={\frac {\partial f}{\partial x_{i}}}*g=f*{\frac {\partial g}{\partial x_{i}}}.$$
 \end{propo}
-
-\subsection{Baire's thm}
-
-\begin{definition} Let $A$ be a subset of the metric space $(X,d)$. $A$ is said to be \emph{nowhere dense} if for every (nonempty) open subset $U\subseteq X$, the intersection $U\cap\overline{A}$ is not dense in $U$, meaning that $U$ contains a point that is not in the closure of $A$.
-\end{definition}
-
-\begin{definition}
-	A set it is said to be category $I$ if it can be written as a countable union of nowhere-dense sets. Otherwise it is said to be of \emph{category $II$}
-\end{definition}
-\begin{theorem} (Baire's Category Theorem) \label{baire}
-	Any complete metric space is of category $II$.
-\end{theorem}
 
 
 

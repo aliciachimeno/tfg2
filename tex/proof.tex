@@ -4,14 +4,14 @@
 \noindent  The work revolves around the following theorem and its proof. 
 	\section{Theorem}
 	\begin{theorem} Let $ \sigma \in  \mathcal{M}$. Set
-		$$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}$$
+		$$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}.$$
 		Then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not a polynomial. 
 	
 	\end{theorem}
 
 
 \subsection{Previous results}
-\noindent Previous research on the approximation capabilities of feedforward networks can be found. These studies show that if the network's activation functions obey an explicit set of assumptions then the network can indeed be shown to be a universal approximator. For example \cite{HORNIK1991251}  has proven two general results, as follows:
+\noindent  There has been significant research on the approximation capabilities of feedforward networks prior to the proof of this theorem. Previous studies have demonstrated that if the activation functions of the network satisfy certain explicit assumptions, then the network can be proven to be a universal approximator. For instance, \cite{HORNIK1991251} have established two results, which are as follows:
 
 \begin{theorem} (Hornik Theorem 1). Multilayer feedforward networks with a bounded and nonconstant activation function can approximate any function in $L^p(\mu)$ arbitrary well, given a sufficiently large number of hidden units. 
 \end{theorem}
@@ -24,15 +24,16 @@ The theorem generalizes Hornik's Theorem 2 by establishing necessary and suffici
 
 	\section{Proof}
 	\subsection{If $\sigma$ is not a polynomial then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }
-	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that, we need to following Lemmas. \\ \\
+	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that, we need the following Lemmas. \\ 
 	%\subsubsection{$\sigma$ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi$ is not a polynomial.}
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $, then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an $m$ $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
 	\begin{proof}
-		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, for some $a<b$. \\ \\ By Proposition \ref{prop:frech} we have that $(\mathcal{C}^\infty_0[a,b],\rho)$ is a complete metric space.  \\ \\  Consider the following set, \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}.$$ \\ 
-		We want to show that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ \\ \\ \\ \\ The set $ V_k$ fulfills the following properties: $V_k \subset V_{k+1}$, $V_k $ is a closed subspace and $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$. \\ \\ 
-	\noindent As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, by Baire's Category Theorem \ref{baire}, this set is of category $II$, i.e. $\mathcal{C}_0^\infty[a,b]$  cannot be written as a countable union of nowhere-dense sets. Recall that $\mathcal{C}_0^\infty[a,b]$ can be written as a countable union of $V_k$ $\mathcal{C}_0^\infty[a,b]=\cup_{k=0}^\infty V_k$, therefore some $V_m $ is not a nowhere-dense set, that is, there exists an open set $U$ of $ C_0^\infty[a,b]$ that is contained in the closure of $V_m$, but, as $V_m$ is closed, we have that $U$ is contained in $V_m$. Therefore, some $V_m$ contains a nonempty open set.  By results in topology, any open set of a vector space contains a basis of the vector space, therefore 	$V_m$ is a vector space thus $V_m=\mathcal{C}_0^\infty[a,b]$. \\ 
+		We first prove the claim in the case of $\varphi \in \mathcal{C}^\infty_0[a,b]$, for some $a<b$. \\ \\ By Proposition \ref{prop:frech} we have that $(\mathcal{C}^\infty_0[a,b],\rho)$ is a complete metric space.  \\ \\  Consider the following set, \\ $$V_k= \{\varphi \in \mathcal{C}_0^\infty[a,b] \, | \,  deg(\sigma \ast \varphi ) \leq k\}.$$ \\
+		It is clear that this set $V_k\subseteq \mathcal{C}_0^\infty[a,b]. $ 
+		We want to show that $\mathcal{C}_0^\infty[a,b] = V_k.$ \\ \\  The set $ V_k$ fulfills the following properties: $V_k \subset V_{k+1}$, $V_k $ is a closed subspace, $\cup_{k=0}^\infty V_k = \mathcal{C}_0^\infty[a,b]$ and $V_k$ is a vector space. We can easily see that $\mathcal{C}_0^\infty[a,b]$ is also a vector space.\\ \\ 
+	\noindent As $\mathcal{C}_0^\infty[a,b]$ is a complete metric space, by Baire's Category Theorem \ref{baire}, this set is of category $II$, i.e. $\mathcal{C}_0^\infty[a,b]$  cannot be written as a countable union of nowhere-dense sets. Recall that $\mathcal{C}_0^\infty[a,b]$ can be written as a countable union of $V_k$, therefore some $V_m $ is not a nowhere-dense set, that is, there exists an open set $U\subseteq C_0^\infty[a,b]$ that is contained in the closure of $V_m$, but, as $V_m$ is closed, for that we have that $U\subseteq V_m$. For topology results, any open set of a vector space contains a basis of the vector space, in our case $U$ contains a baisis of $\mathcal{C}_0^\infty[a,b]$ , and $U\subseteq V_m$, therefore $V_m$ contains a baisis of $\mathcal{C}_0^\infty[a,b]$. Now we can conclude that $\mathcal{C}_0^\infty[a,b] \subseteq V_k.$ And consequently $\mathcal{C}_0^\infty[a,b] = V_k.$ This means that any $\varphi \in \mathcal{C}^\infty_0[a,b] $ also satisfies $ \varphi \in V_k$,  that means that the convolution $\sigma \ast \varphi $ has degree finite. \\ 
 		
 		\noindent For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not depend on the interval $[a,b]$. This can be seen as follows. By translation $m$ depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $$\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
 	\end{proof}
@@ -43,7 +44,7 @@ The theorem generalizes Hornik's Theorem 2 by establishing necessary and suffici
 	If $\sigma \ast \varphi$ is a polynomial of degree $m$.
 	For all $\varphi \in \mathcal{C}^\infty_0$, using (\ref{prop:2}) we have that
 	$$(\sigma \ast \varphi)^{(m+1)} \, (x)=\int \sigma(x-y)\varphi^{(m+1)}(y) \, dy= 0$$  
-	From standard results in Distribution Theory \textcolor{red}{aqui vam dir de ficar nomes la referencia}[e.g., Friedman(1963, 57-59)], $\sigma $ is itself a polynomial of degree at most $m$ (a.e.).
+	From standard results in Distribution Theory [pp 57 \cite{friedman1963generalized}], $\sigma $ is itself a polynomial of degree at most $m$ (a.e.).
 	\end{proof} 
 
 \begin{prop}
@@ -60,29 +61,34 @@ We will show the contrapositive. Suppose that the convolution $\sigma \ast \varp
 	\end{lema}
 	
 	\begin{proof} % proof step 4
-		We recall that set 
+		We recall the definition of the set 
 		\begin{equation}
-			\Sigma_1 = \text{span} \{ {\sigma(w\cdot x + \theta) : w\in \mathbb{R}, \theta \in \mathbb{R} \} } 
+			\Sigma_1 = \text{span} \{ {\sigma(w\cdot x + \theta) : w\in \mathbb{R}, \theta \in \mathbb{R} \} }.
 			\tag{1}
 			%\label{eq:ecuacion1}
 		\end{equation}
-		Consider $$h_m= \sum_{i=1}^m\varphi(y_i)\Delta y_i \sigma(x-y_i)$$ 
-		The sequence $(h_m)$ satisfies $h_j\in \Sigma_1$ for $j=1,...,m$. ($w_i=1,\theta_i=-y_i, \beta_i=\varphi(y_i)\Delta y_i$).\\ \\ 
-		Where $y_i=-\alpha + \frac{2i\alpha}{m}$, $\Delta y_i=\frac{2\alpha}{m}$ for $i=1,...,m$. Partition of the interval $[-\alpha,\alpha]$ \\ \\ We want to show that $h_m \rightrightarrows \sigma \ast \varphi $ in $[-\alpha,\alpha]$.  \\ \\
-		Given $\epsilon >0$, we choose $\delta >0$ such that $$10\delta \| \sigma\|_{L^\infty\{-2\alpha,2\alpha\}}\|\varphi \|_{L^\infty} \leq \frac{\epsilon}{3}$$ Note that ... \\ \\ 
-		We know that $\sigma \in M$. Hence, for this given $\delta>0$ and $[-\alpha,\alpha]$ interval, there exists $r(\delta)$ finite number of intervals the measure of whose union $\mathscr{U}$ is $\delta$ such that $\sigma$ is uniformly continuous on $[-2\alpha,2\alpha]$. We now choose $m_i$ sufficiently large so that
+	Without loss of generality, assume that $\text{supp }\varphi \subseteq [-\alpha,\alpha] $.
+	To show that $\sigma \ast \varphi \in \overline{\Sigma_1} $ we will use the characterization for elements in the closure. We will to prove that there exists a sequence in $\Sigma_1$ such that uniformly converges to $\sigma \ast \varphi$ on $[-\alpha,\alpha]$. Note that we usually denote for un$\rightrightarrows$) \\ 
+	
+	\noindent We shall consider the following sequence: 
+		$$h_m= \sum_{i=1}^m\varphi(y_i)\Delta y_i \sigma(x-y_i).$$ 
+		Which satisfies $h_j\in \Sigma_1$ for $j=1,...,m$. Note that we have $w_i=1,\theta_i=-y_i$ and $  \beta_i=\varphi(y_i)\Delta y_i$.\\ \\ 
+		
+		\noindent We will define a partition of the interval $[-\alpha,\alpha]$ to be the following, where $$y_i=-\alpha + \frac{2i\alpha}{m}\quad i=1,...,m$$ and $\Delta y_i=\frac{2\alpha}{m}$. \\ \\
+		Given $\epsilon >0$, we choose $\delta >0$ such that $$10\delta \| \sigma\|_{L^\infty\{-2\alpha,2\alpha\}}\|\varphi \|_{L^\infty} \leq \frac{\epsilon}{3}.$$
+		We know that $\sigma \in M$. Hence, for the previous choosen $\delta>0$ and $[-\alpha,\alpha]$ interval, there exists $r(\delta)$ finite number of intervals the measure of whose union $U$ is $\delta$ such that $\sigma$ is uniformly continuous on $[-2\alpha,2\alpha]/U$. We now choose $m_i$ sufficiently large so that
 		\begin{enumerate}
 			\item $m_1 \delta > \alpha r(\delta)$. We can do this by Archimedes' principle.
-			\item From the uniform continuity of $\varphi$. 
+			\item From the uniform continuity of $\varphi$ we know that
 			
-			If $|s-t| \leq \frac{2 \alpha }{m_2}$ then $$|\varphi(s)- \varphi(t)| \leq \frac{\epsilon}{2 \alpha \| \sigma\|_{L^\infty[-2\alpha,2\alpha]}}$$
+			if $|s-t| \leq \delta_2= \frac{2 \alpha }{m_2}$ then $$|\varphi(s)- \varphi(t)| \leq \epsilon_2= \frac{\epsilon}{2 \alpha \| \sigma\|_{L^\infty[-2\alpha,2\alpha]}}$$
 			
-			\item From the previous, $\sigma$ is uniformly continuous on  $[-2\alpha,2\alpha]/ U$. We chose m such that, if $s,t \in [-2\alpha, 2\alpha]/U$ and $|s-t|\leq \frac{2\alpha}{m_3}$ then $$|\sigma(s)-\sigma(t)| \leq \frac{\epsilon}{\|\varphi\|_L}$$
+			\item From the previous, $\sigma$ is uniformly continuous on  $[-2\alpha,2\alpha]/ U$. We chose m such that, if $s,t \in [-2\alpha, 2\alpha]/U$ and $|s-t|\leq \delta_3 = \frac{2\alpha}{m_3}$ then $$|\sigma(s)-\sigma(t)| \leq \epsilon_3= \frac{\epsilon}{\|\varphi\|_L}$$
 		\end{enumerate}
 		We choose $m$ such that $m=max\{m_1,m_2,m_3\}$. \\ \\ 
 		Now, fix $x\in [-\alpha,\alpha] $. Set $\Delta_i= [y_{i-1},y_i]$ where $y_0= \alpha$. \\ \\
 		First, recall that,\\
-		$$\int \sigma(x-y)\varphi(y)dy = \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy$$
+		$$\int \sigma(x-y)\varphi(y)dy = \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy.$$
 		Consider the following difference 
 
 \begin{equation*} 
@@ -90,7 +96,7 @@ We will show the contrapositive. Suppose that the convolution $\sigma \ast \varp
 		\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \int_{\Delta_i}& \sigma(x-y_i) \varphi(y)dy \Bigg|  \\
 		& = \left|  \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \int_{\Delta_i}\sigma(x-y_i)\varphi(y)dy \right|  \\
 		& =  \left|  \sum_{i=1}^m \int_{\Delta_i}\varphi(y)\Big( \sigma(x-y) - \sigma(x-y_i)\Big)dy \right| \\
-		&\leq  \sum_{i=1}^m \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy 
+		&\leq  \sum_{i=1}^m \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy.
 	\end{split}
 \end{equation*}
 		If $x-\Delta_i \cap U = \varnothing $. Since $x-y \notin U$ , $x-y_i \notin U$ and $x-y_i \in [-2\alpha,2\alpha]$. For choice of $m$ in property 2, we have\\ 
@@ -99,13 +105,13 @@ We will show the contrapositive. Suppose that the convolution $\sigma \ast \varp
 				\sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy  \leq  \frac{\epsilon}{\| \varphi\|_{L_1}}  \sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| & \\
 				& =  \frac{\epsilon}{3\| \varphi\|_{L_1}} \int \left|\varphi(y)\right| dy \\
 				& =  \frac{\epsilon}{3\| \varphi\|_{L_1}} \left|\varphi(y)\right|_{L_1}  \\
-				& = \frac{\epsilon}{3} 
+				& = \frac{\epsilon}{3} .
 			\end{split}
 		\end{equation*}
 		\\ 
-		\noindent If $x-\Delta_i \cap U \neq \varnothing$\\ \\ 
+		\noindent If $x-\Delta_i \cap U \neq \varnothing$ then we will denote such intervals by $\tilde{\Delta_i}.$\\ \\ 
 		$\sum_i |\tilde{\Delta_i}| = \sum_i|(x-\Delta_i \cap U)| \leq |U|+2|\Delta_i| r(\delta) \leq \delta + 2 \cdot \frac{2\alpha}{m} r(\delta) \leq \delta +4\delta = 5\delta$  \\ \\ 
-		True by our choice of m, satisfies $m\delta > \alpha r(\delta) \iff \delta > \frac{\alpha \cdot r(\delta)}{m}$
+		We used the property $m\delta > \alpha r(\delta) $  indeed $ \delta > \frac{\alpha \cdot r(\delta)}{m}$. 
 		
 		
 		\begin{equation*}
@@ -119,7 +125,7 @@ We will show the contrapositive. Suppose that the convolution $\sigma \ast \varp
 
 \begin{equation*} 
 	\begin{split}
-		\Bigg| \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i)& \varphi(y_i)\Delta y_i \Bigg| \\
+		\Bigg| \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i)\varphi(y)dy -  \sum_{i=1}^m &\sigma(x-y_i) \varphi(y_i)\Delta y_i \Bigg| \\
 		& =  \left|  \sum_{i=1}^m \int_{\Delta_i} \sigma(x-y_i) [\varphi(y)-\varphi(y_i)] dy \right| \\
 		& \leq  \sum_{i=1}^m \int_{\Delta_i}  \left| \sigma(x-y_i)\right| \left| \varphi(y) - \varphi(y_i)\right|dy  \\
 		& \leq  \sum_{i=1}^m \int_{\Delta_i}  \left| \sigma(x-y_i)\right| dy \left[ \frac{\epsilon/3}{2\alpha \| \sigma\|_{L^\infty[-2\alpha,2\alpha]}}\right]  \leq \frac{\epsilon}{3} 
@@ -128,7 +134,7 @@ We will show the contrapositive. Suppose that the convolution $\sigma \ast \varp
 Finally, we have the result $h_m \rightrightarrows \sigma \ast \varphi $ because
 
 $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i) \Delta y_i \Bigg| \leq \epsilon $$
-for all $x\in [-\alpha,\alpha ]$
+\\ for all $x\in [-\alpha,\alpha ].$
 	\end{proof}
 	
 	%\subsubsection{$\Sigma_1$ dense in $\mathcal{C}(\mathbb{R})$}
@@ -202,7 +208,7 @@ for all $x\in [-\alpha,\alpha ]$
 		\item[$\Leftarrow$]  In order to prove this implication, we need to show that if $\sigma$ is not an algebraic polynomial, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
 		
 		
-		 By hypothesis $\sigma$ is not a polynomial, by Proposition 1 this implies that $\sigma \ast \varphi$ is not a polynomial. For Lemma 3 we have that $\sigma \ast \varphi \in \overline{\Sigma_1}$. We showed in Lemma 5 that $\sigma \ast \varphi \in \mathcal{C}^\infty$ and for Lemma 4 and  Lemma 5 we have that $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$. Finally, for Lemma 6 $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
+		 By hypothesis, $\sigma$ is not a polynomial, by Proposition 1 this implies that $\sigma \ast \varphi$ is not a polynomial. For Lemma 3 we have that $\sigma \ast \varphi \in \overline{\Sigma_1}$. We showed in Lemma 5 that $\sigma \ast \varphi \in \mathcal{C}^\infty$ and for Lemma 4 and  Lemma 5 we have that $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$. Finally, for Lemma 6 $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
 	\end{enumerate}
 \end{proof}
 
@@ -220,6 +226,41 @@ for all $x\in [-\alpha,\alpha ]$
 \noindent The theorem states that: if $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ then $\sigma$ is not an algebraic polynomial. But why this statment does not contradict the Weierstrass approximation theorem ?
 This does not work because $\sigma$ has degree fixed $k$, then any element in the set $\Sigma_n$ has degree at most $k$. Hence, the set $\Sigma_n$ is a finite vector space and can not be dense in $\mathcal{C}(\mathbb{R}^n)$. Not all contiunous functions can be apparoximated with a polynimial of degree fixed, for example: 
 (comment per afegir : per exemple una funcio que sigui continua que no es pugui approximar per un polinomi de com a molt grau k , una k tingui grau mes gran que k polinomi de k+1 ?? )
+
+
+\subsection{Conclusions}
+
+\begin{remark}
+	The theorem only requires for the activation function to be nonpolynomial, we dont need continuity on sigma. For example, let $\sigma$ be continuous with a jump discontinuity at 0 such that: $$\lim_{x\to 0^-} \sigma(x)=0 \qquad \lim_{x \to 0^+} \sigma(x) =1$$
+	Given $f \in \mathcal{C}(\mathbb{R})$ and $K \subset \mathbb{R}$ compact, letting $w \rightarrow 0$ in $\sigma(wx)$ the function
+	
+	\[
+	h(x) = \begin{cases} 
+		0 & \text{for } x < 0 \\
+		1 & \text{for } x > 0 
+	\end{cases}
+	\]
+	$h\in \overline{\Sigma_1}$. \\ \\ 
+	Linear combinations of h and its translates can unifformly approximate any continuous function on any finite interval (and thus an), compact subset of R).
+	
+\end{remark}
+
+\subsection{Results}
+
+
+\begin{definition} The set $L^{p}(\mu)$ contains all mesurable functions $f$ such that: 
+	$$ \|f\|_{L^p}(\mu) = \Big( \int_{R^n} |f(x)|^p d\mu(x)\Big)^{1/p} < \infty $$
+	
+\end{definition}
+
+\begin{propo}
+	Let $\mu $ be a non-negative finite measure on $\mathbb{R}$ with compact support, absolutely continous with respect to Lebesgue measure. Then $\Sigma_n$ is dense in $L_p(\mu)$ , $1\leq p < \infty$, if and only of, $\sigma$ is not a polynomial.
+\end{propo}
+
+\begin{propo}
+	If $\sigma\in M$ is not a polynomial (a.e) then, $$ \Sigma_n(\mathcal{A})= span \{ \sigma(\lambda w \cdot x + \theta) : \lambda, \theta \in \mathbb{R}, w \in \mathcal{A} \}$$
+	is dense in $\mathcal{C}(\mathbb{R}^n)$ for some $\mathcal{A}\subset \mathbb{R}^n$ if and only if there does not exist a nontrivival polynomial vanishing on $\mathcal{A}$.
+\end{propo}
 
 
 	\cite{leshno1993multilayer}

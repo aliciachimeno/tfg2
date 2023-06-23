@@ -10,14 +10,6 @@
 The Riemann integral is a method for calculating the volume under a curve of a continuous function on a closed, bounded domain in $R^n$. The method involves dividing the domain into smaller subregions and approximating the volume of each subregion with a rectangular solid whose height is the function value at a specific point in the subregion. The Riemann sum is the sum of the volumes of all the rectangular solids, and as the size of the subregions approaches zero, the Riemann sum converges to the Riemann integral. \\ \\
 \end{definition}
 
-\begin{definition}
-	Let $\Sigma$ be a $\sigma$-algebra over a set $\Omega$. A \emph{measure} over $\Omega$ is any function $$\mu:\Sigma\longrightarrow[0,\infty]$$ satisfying the following properties:
-	\begin{enumerate}
-		\item $\mu(\varnothing)=0$.
-		\item\label{RFA:sigmaadditivity} \emph{$\sigma$-additivity}: If $(A_n)\in\Sigma$ are pairwise disjoint, then: $$\mu\left(\bigsqcup_{n=1}^\infty A_n\right)=\sum_{n=1}^\infty \mu(A_n)$$
-	\end{enumerate}
-\end{definition}
-
 \begin{definition}The closure of a set A of a metric space (X, d) is defined as follows:
 	$$closure(A) = \overline{A}=\{t \, |  \, \forall \epsilon> 0, \exists a \in A, \, d(a, t) < \epsilon\}.$$
 \end{definition}
