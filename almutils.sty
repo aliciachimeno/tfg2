@@ -76,11 +76,11 @@
 \def\arraystretch{1.2}%  1 is the default, change whatever you need
 
 \usepackage[a4paper, 
-	left=30mm,
-	right=30mm,
-	top=30mm,
-	bottom=30mm]{geometry}
-	
+left=30mm,
+right=30mm,
+top=30mm,
+bottom=30mm]{geometry}
+
 \addto\captionscatalan{%
 	\renewcommand{\figurename}{Figura}%
 }
@@ -162,27 +162,27 @@
 \setlength{\epigraphwidth}{0.9\linewidth}
 \setlength{\epigraphrule}{0pt}
 \newcommand{\say}[3]{\epigraph{#1}{--- #2, \textit{#3}}}
-    
+
 \newenvironment{eqs}[1][]
-  {\subequations\ifthenelse{\isempty{#1}}{}{\label{#1}}\align}
-  {\endalign\endsubequations}
+{\subequations\ifthenelse{\isempty{#1}}{}{\label{#1}}\align}
+{\endalign\endsubequations}
 
 \iffalse
 \begin{figure}
-    \centering
-    \begin{subfigure}{0.48\linewidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{}
-        \caption{}
-        \label{fig:my_label_1}
-    \end{subfigure}
-    \begin{subfigure}{0.48\linewidth}
-        \centering
-        \includegraphics[width=0.9\linewidth]{}
-        \caption{}
-        \label{fig:my_label_2}
-    \end{subfigure}
-    \caption{}
-    \label{fig:my_label}
+	\centering
+	\begin{subfigure}{0.48\linewidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{}
+		\caption{}
+		\label{fig:my_label_1}
+	\end{subfigure}
+	\begin{subfigure}{0.48\linewidth}
+		\centering
+		\includegraphics[width=0.9\linewidth]{}
+		\caption{}
+		\label{fig:my_label_2}
+	\end{subfigure}
+	\caption{}
+	\label{fig:my_label}
 \end{figure}
 \fi

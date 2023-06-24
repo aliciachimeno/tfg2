@@ -6,15 +6,15 @@
 	\section{Machine Learning Basics}
 	\noindent 
 	
-	\noindent  \textit{Machine Learning} focuses on the development of algorithms and models that enable computers to learn from data with the aim of making predictions without being explicitly programmed.\\ \\  
+	\noindent  \textit{Machine Learning} focuses on the development of algorithms and models that enable computers to learn from data with the aim of making predictions without being explicitly programmed. \\ \\ 
+	The machine learning model is built using one or more input variables which are also called \textbf{predictors} or independent variables. The output of this model is the \textbf{response} or dependent variable which we want to predict. Machine learning is about learning an approximate function that can be used to predict the value of response variable.\\ \\
 	We can think about learning as the way we understand it as a human. We can classify a learning problem based on the degree of feedback. Machine learning models fall into three primary categories:
 	\begin{itemize}
 		\item Supervised learning, where we have immidiate feedback.
 		\item Reinforcement learning, where we have indirect feedback. For example whenwe are playing the game of chess.
-		\item Unsupervised learning, where we have non feedback signal. For example,deducing which dog belongs to each owner.
+		\item Unsupervised learning, where we have non feedback signal. For example, deducing which dog belongs to each owner.
 	\end{itemize}
-	Machine learning models simplify reality for the purposes of understanding or prediction. This prediction can be either a numerical prediction or a classifications prediction. 
-	A number of machine learning algorithms are commonly used.
+	Machine learning models simplify reality for the purposes of understanding or prediction. This prediction can be either a numerical prediction or a classifications prediction. A number of machine learning algorithms are commonly used, for example to name a few: Linear Regression, Logistic Regression, Decision Trees, Random Forests, Support Vector Machines...
 	
 	
 	\subsection{Motivation }
@@ -50,24 +50,20 @@
 	
 	\noindent We are looking for the function $f$ such that $f(x_c)=y$.
 	\\ \\ 
-	
 	\noindent 
-	A fundamental problem of machine learning is the following. Given data of the form $\{(x_i,y_i)\}^m_{i=1} \subset \mathbb{R}^n \times \mathbb{R}$, drawn randomly from a probability distribution $\mu$, find a model P such that $P(x_i)=y_i$. An important aspect of machine learning is that \textit{many supervised learning tasks are about function learning.}. 
+	An important aspect of machine learning is that \textit{many supervised learning tasks are about function learning.} In general, a fundamental problem of machine learning is the following. Given data of the form $\{(x_i,y_i)\}^m_{i=1} \subset \mathbb{R}^n \times \mathbb{R}$, drawn randomly from a probability distribution $\mu$, find a model P such that $P(x_i)=y_i$. 
 	\begin{xmpl}
 		\noindent An example of a supervised learning task is digit recognition. The objective is to identify handwritten digits (0-9) based on input images. In this task, we aim to learn a probability distribution function denoted as $f$, which maps a set of pixel values ranging from 0 (black) to 255 (white), representing a 28x28 image, to a probability distribution over the digits 0 to 9.
 		
 		$$f: \{0,..., 255\}^{28 \times 28} \longrightarrow \text{probability distribution on } \{0,1,...,9\}$$
-		
+	Another important principle in Machine Learning is that sometimes \textit{function learning can be recast as a classification problem}.  
 	\end{xmpl}
 	\begin{xmpl} Example of a classification problem. We want to classify if an image is a dog or not a dog. We would like to produce a value which is correlated with the probability of this image being a dog or not a dog.  We can approach the problem in the following way. We want to find a function that takes very high values when dog-image and very low val ues when non dog images and takes the value 0 when its uncertain. 
 		$$d: \mathbb{R}^{\# \text{pixels in image}} \rightarrow \mathbb{R} $$
 		such that $\mathbb{P}(d(\text{image})) = \text{probability that the image is a dog.}$ \\ \\  
 		That is what we mean by many problems can be recast as function learning. Note that there is not a god-given reason why this function should exist. We know that certain points in space, and they have certain values associated to them, but we dont know that there is some big function. 
 	\end{xmpl}
-	
-	\noindent \textit{Important principle $II$}: Sometimes function learning can be recast as a classification problem.  
-	\\ \\ 
-	Binary classification problem. 
+\noindent
 	Rather learning $\mu : \mathbb{R}^{\# \text{bits}} \rightarrow \mathbb{R}$ where big values correspond to likely and small values to unlikely. It is better to learn $\mu : \mathbb{R}^{\# \text{bits}} \rightarrow $ probability distribution on $\{-1,0,1\}$. In number theory the function $\mu(n)$ it is called Möebius function 
 	
 	\[

@@ -55,56 +55,56 @@
 \settocbibname{References}
 
 \makeglossaries
- 
+
 \newacronym{uab}{UAB}{Universitat Autònoma de Barcelona}
 
 \renewcommand{\tilde}[1]{\widetilde{#1}}
 
 
 \begin{document}
-
-    \pagestyle{empty}
-    \subfile{tex/title.tex}
-    
-   % \clearpage\null\newpage
-    
-    \clearpage
-   % \subfile{tex/pre/dedicatoria.tex}
-    %\clearpage\pagestyle{empty}\null\newpage %pagina buida k sobre
-    
-    \pagestyle{plain}
-    \pagenumbering{roman}
-    \subfile{tex/pre/abstract.tex}
-    
-    %\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
- 
-
-    %\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
-    \printglossary[type=\acronymtype,title=Glossary,nonumberlist] \addcontentsline{toc}{chapter}{Glossary}
-    
-    %\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
-    \subfile{tex/pre/preface.tex}
-
-    %\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
-
+	
+	\pagestyle{empty}
+	\subfile{tex/title.tex}
+	
+	% \clearpage\null\newpage
+	
+	\clearpage
+	% \subfile{tex/pre/dedicatoria.tex}
+	%\clearpage\pagestyle{empty}\null\newpage %pagina buida k sobre
+	
+	\pagestyle{plain}
+	\pagenumbering{roman}
+	\subfile{tex/pre/abstract.tex}
+	
+	%\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
+	
+	
+	%\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
+	\printglossary[type=\acronymtype,title=Glossary,nonumberlist] \addcontentsline{toc}{chapter}{Glossary}
+	
+	%\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
+	\subfile{tex/pre/preface.tex}
+	
+	%\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
+	
 	\tableofcontents
 	
 	%\clearpage\pagestyle{empty}\null\newpage
 	
-    \pagestyle{fancy}
-    \pagenumbering{arabic}
-
-    \subfile{tex/intro.tex}
-     \subfile{tex/machine.tex}
-    \subfile{tex/methods.tex}
-    \subfile{tex/proof.tex}
-   % \subfile{tex/results.tex}
-    
-    %\subfile{tex/.tex}
-    
+	\pagestyle{fancy}
+	\pagenumbering{arabic}
 	
-    \bibliography{biblio}
-    \pagestyle{fancy}
-  %  \subfile{tex/appendix.tex}
-
+	\subfile{tex/intro.tex}
+	\subfile{tex/machine.tex}
+	\subfile{tex/methods.tex}
+	\subfile{tex/proof.tex}
+	% \subfile{tex/results.tex}
+	
+	%\subfile{tex/.tex}
+	
+	
+	\bibliography{biblio}
+	\pagestyle{fancy}
+	%  \subfile{tex/appendix.tex}
+	
 \end{document}
