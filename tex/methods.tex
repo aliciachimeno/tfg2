@@ -1,11 +1,12 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \chapter{Function Approximation} \label{ch:methods}
-\noindent Creating a machine learning model to predict/classify from a given data is a similar process than when we calculate a function from a given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial, Chebyshev polynomial, the method of least squares, or spline approximation. In this chapter we are going to talk about ...
-\\ \\ 
+\noindent Creating a machine learning model to predict/classify from a given data is a similar process than when we calculate a function from a given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial, Chebyshev polynomial, the method of least squares, or spline approximation. \\ \\ 
 \noindent In this chapter we present some mathematical definitions and results of function approximation. 
-If we want to approximate functions, we need to define the following notions: distance between functions, density,
+If we want to approximate functions, we need to define the following notions: metric spaces, distance between functions, density,
 \section{Definitions and some results}
+
+
 
 \begin{definition} We dentoe by $\mathcal{C}(\mathbb{R}^n)$ the set of continuous functions defined on $\mathbb{R}^n$.
 \end{definition}
@@ -141,6 +142,19 @@ $$	\|u\|_{L^{\infty}(\Omega)} = \operatorname{ess} \sup_{x\in \Omega} |u(x)|.$$
 	$${\frac {\partial }{\partial x_{i}}}(f*g)={\frac {\partial f}{\partial x_{i}}}*g=f*{\frac {\partial g}{\partial x_{i}}}.$$
 \end{propo}
 
+\subsection{Annihilator}
+
+\begin{definition} (Annihilator of a Subset of a Vector Space). Let V be a vector space over a field F, and $X\subseteq V$ subset. The \textit{annihilator of X} is defined as the set of all linear functionals $V \rightarrow F$ that evaluate to zero on every element of X:
+	
+	$$ X^0 = \{ \varphi \in V^* : \quad \text{for all} \,  x \in X \quad \varphi (x) = 0 \}$$
+\end{definition}
 
 
+\begin{definition} (Annihilator of a subset of $V^*$). Let $V$ be a finite-dimensional vector space over a field $F$, and let $F \subset V^*$. The annihilator of $F$ is defined as the set of all vectors in $V$ that are annihilated by every functional in $F$:
+	
+	\[
+	F^0 = \{x \in V :\quad \text{for all} \, \varphi \in F \quad\varphi(x) = 0\}
+	\]
+	
+\end{definition}
 \end{document}
