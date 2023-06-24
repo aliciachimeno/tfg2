@@ -1,4 +1,4 @@
-\begin{thebibliography}{5}
+\begin{thebibliography}{6}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -14,6 +14,13 @@ Fréchet spaces.
 R.~A. Adams, J.~J.~F. Fournier, and J.~J.~F. Fournier.
 \newblock \emph{Sobolev Spaces}.
 \newblock Elsevier, 2003.
+
+\bibitem[Chui and Lr(1992)]{chui_approximation}
+C.~K. Chui and X.~Lr.
+\newblock Approximation by ridge functions and neural networks with one hidden.
+\newblock \emph{Journal of approximation theory}, 10\penalty0 (2):\penalty0
+  131--141, 1992.
+\newblock \doi{10.1006/acha.2000.0346}.
 
 \bibitem[Friedman(1963)]{friedman1963generalized}
 A.~Friedman.

@@ -1,12 +1,14 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
+	
+
 	\chapter{Theorem and proof} \label{ch:proof}
 \noindent  The work revolves around the following theorem and its proof. 
 	\section{Theorem}
 	\begin{theorem} Let $ \sigma \in  \mathcal{M}$. Set
 		$$ \Sigma_n = span\{\sigma(w\cdot x + \theta) : w\in \mathbb{R}^n, \theta \in \mathbb{R} \}.$$
 		Then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ if and only if $\sigma$ is not a polynomial. 
-	
+	\label{teorema}
 	\end{theorem}
 
 
@@ -20,12 +22,13 @@
 \end{theorem}
 
 \noindent
-The theorem generalizes Hornik's Theorem 2 by establishing necessary and sufficient conditions for universal approximation. Note that the theorem merely requires "nonpolynomiality" in the activation function. Unlike Hornik's result, the activation functions do not need to be continuous or smooth. This has an important biological interpretation because the activation functions of real neurons may well be discontinuous or even non-elementary.
+The theorem \ref{teorema} generalizes Hornik's Theorem 2 by establishing necessary and sufficient conditions for universal approximation. Note that the theorem merely requires "nonpolynomiality" in the activation function. Unlike Hornik's result, the activation functions do not need to be continuous or smooth. This has an important biological interpretation because the activation functions of real neurons may well be discontinuous or even non-elementary.
 
 	\section{Proof}
 	\subsection{If $\sigma$ is not a polynomial then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }
-	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that, we need the following Lemmas. \\ 
+	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that, we need the following Lemmas and Propositions. \\ 
 	%\subsubsection{$\sigma$ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi$ is not a polynomial.}
+	\subsubsection{Step 1}
 	\begin{lema}  % L1 :step 6
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $, then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an $m$ $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
@@ -46,15 +49,15 @@ The theorem generalizes Hornik's Theorem 2 by establishing necessary and suffici
 	$$(\sigma \ast \varphi)^{(m+1)} \, (x)=\int \sigma(x-y)\varphi^{(m+1)}(y) \, dy= 0$$  
 	From standard results in Distribution Theory [pp 57 \cite{friedman1963generalized}], $\sigma $ is itself a polynomial of degree at most $m$ (a.e.).
 	\end{proof} 
-
+\vspace{\baselineskip} 
 \begin{prop}
 If $\sigma$ is not a polinomial then $\sigma \ast \varphi$ is not a polynomial for some $\varphi \in \mathcal{C}^\infty_0$. 
 \end{prop}
 \begin{proof}
 We will show the contrapositive. Suppose that the convolution $\sigma \ast \varphi$ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0$, by Lemma 1 the degree of the convolution is finite. Now we have that $\sigma \ast \varphi$ is a polynomial of finite degree, by Lemma 2 we have that $\sigma$ is a polynomial. 
 \end{proof}
-
-%\subsubsection{$\sigma \ast \varphi \in \overline{\Sigma_1}$}
+\vspace{\baselineskip} 
+\subsubsection{Step 2}
 	\begin{lema} % L3: step 4
 		For each $\varphi \in  \mathcal{C}^\infty_0$, $ \sigma \ast \varphi \in  \overline{\Sigma_1}$. 
 		
@@ -136,7 +139,7 @@ Finally, we have the result $h_m \rightrightarrows \sigma \ast \varphi $ because
 $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i) \Delta y_i \Bigg| \leq \epsilon $$
 \\ for all $x\in [-\alpha,\alpha ].$
 	\end{proof}
-	
+	\vspace{\baselineskip} 
 	%\subsubsection{$\Sigma_1$ dense in $\mathcal{C}(\mathbb{R})$}
 	\begin{lema} % L4: step 3
 		If $\sigma \in \mathcal{C}^{\infty}$, then $ \Sigma_1$ is dense in  $\mathcal{C}(\mathbb{R})$.
@@ -160,31 +163,35 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 		Thus, we evaluate at the point where the derivative does not vanish, we call it $\theta_k$.
 		$$  \sigma^{(k)}(\theta_k) \cdot x^{k}=\frac{d^k}{dw^k}\sigma(wx+\theta) \Bigr|_{w=0, \theta=\theta_k} \in  \overline{\Sigma_1} $$ 
 		This implies that $\overline{\Sigma_1}$ contains all polynomials, because the expression $\sigma^{(k)}(\theta_k) x^{k}$ generates all polynomials. By the Weierstrass theorem, we know that the polynomials are dense in $\mathcal{C}(\mathbb{R})$. This concludes that the set $\overline{\Sigma_1}$ contains a set which is dense in  $\mathcal{C}(\mathbb{R})$, therefore $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
-		
-		
-	\end{proof}
-	
-	\begin{lema} % L5: step 5
+	\end{proof} 
+\vspace{\baselineskip} 
+	\begin{prop} % L5: step 5
 		If for some $\varphi \in \mathcal{C}^\infty_0 $ we have that $\sigma \ast \varphi $ is not a polynomial, then $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
-	\end{lema}
+	\end{prop}
 	 \begin{proof}
-	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$ for each $\varphi \in \mathcal{C}^\infty_0$ . It thus follows that, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $ w, \theta \in \mathbb{R}$. Now for $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$, we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $, see results in distributions \ref{prop:29}.
+	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$ for each $\varphi \in \mathcal{C}^\infty_0$. It immedialy follows that, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $ w, \theta \in \mathbb{R}$ and $\varphi \in \mathcal{C}^\infty_0$.\\ \\
+	 Now, we shall see the results in distributions \ref{prop:29} to proof the following result. For $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$, we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $.
 	 From Lemma 4 applied in $\sigma= \sigma \ast \varphi$, if $\sigma \ast \varphi \in  \mathcal{C}^\infty $, then $\Sigma_1$ dense in $\mathcal{C} (\mathbb{R})$. 
 	 \end{proof}
-% \subsubsection{{$\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }}
- 
- \noindent We will prove that approximating a $\mathcal{C}(\mathbb{R})$ function  with one from the set $\Sigma_1$ implies approximating a function $\mathcal{C}(\mathbb{R}^n)$ from the set $\Sigma_n$. Therefore, it is only necessary to approximate a continuous function. We can see this from the density characterization:
+\vspace{\baselineskip} 
+\subsubsection{Step 3}
+\noindent We will prove that approximating a $\mathcal{C}(\mathbb{R})$ function  with one from the set $\Sigma_1$ implies approximating a function $\mathcal{C}(\mathbb{R}^n)$ from the set $\Sigma_n$. We can see this from the density characterization.
 
-	\begin{lema}  % L6: step 2
+	\begin{prop}  % L6: step 2
 			If $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. 
-		\end{lema}
+		\end{prop}
 	
 	\begin{proof} % proof  step 2
-			Consider the set $$V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}.$$ First, we shall see that $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$.  If we show that $V$ contains the polynomials, which are dense in $C(\mathbb{R}^n)$ for Weierstrass Theorem, that will be enough. \\ \\ 
-			In fact, the set $$ H := span\{ p(ax) : a \in \mathbb{R}^n, p \in R[x] \} \subseteq V.$$ 
-			We only need to show that $H=R[x]$, in other words, that the polynomials of degree k can be generated by $(a\cdot x)^k$.  \\ \\ 
-		
-			Let $g\in \mathcal{C}(\mathbb{R}) $, for any compact subset $K \subset \mathbb{R}^n  $, $V$ dense in $\mathcal{C}(K)$. That is, given $\epsilon >0$, there exist $f_i\in  \mathcal{C}(\mathbb{R})$ and $a_i \in \mathbb{R}^n $    {\scriptsize $i=1,...,k$}  such that
+			Consider the set $$V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}.$$ First, we shall see that $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$.  If we show that $V$ contains the polynomials, which are dense in $C(\mathbb{R}^n)$ for Weierstrass Theorem, that will be enough. We inspire the proof with \cite{chui_approximation}. \\ \\
+			\noindent In fact, the set $$ H = \langle (a x)^k\rangle = span\{ p(ax) : a \in \mathbb{R}^n, p \in \mathbb{R}[x] \} \subseteq V.$$ \\
+			We only need to show that $H=\mathbb{R}[x]$, in other words, that the polynomials of degree k can be generated by $(a\cdot x)^k$. For isomorphism theorem we know that
+			
+			 $$\mathbb{R}[x]^*/\text{ann(H)}\cong H^*$$
+			 \\ 
+			 For $$D^{m_1} x^{m_2}= \delta_{m1,m2}k!, $$ we see that $\mathbb{R}[x]^*$ can be generated by $\langle D^{m_1}\rangle _{|m_1|=k}$. Consider any element of $\mathbb{R}[x]^*$, let it be $\sum \alpha_j D^{m_j}$ which moreover annihilates in H. That is $(\sum \alpha_j D^{m_j} ) x^{m_j}=\alpha_j k! = 0$. This implies that $\text{for all } j,\, \alpha_j =0$ and then the element $\sum \alpha_j D^{m_j}=0$
+			 For that reason, it means that $ann(H)=0$ which implies that $\mathbb{R}[x]^*\cong H^*$ that is what we wanted to see. For that we have the set $V$ dense in $\mathcal{C}(\mathbb{R})$.
+			\\ \\ 
+			\noindent Let $g\in \mathcal{C}(\mathbb{R}) $, for any compact subset $K \subset \mathbb{R}^n  $, $V$ dense in $\mathcal{C}(K)$. That is, given $\epsilon >0$, there exist $f_i\in  \mathcal{C}(\mathbb{R})$ and $a_i \in \mathbb{R}^n $    {\scriptsize $i=1,...,k$}  such that
 			
 			$$ \big| g(x)-\sum_{i=1}^k f_i(a^i \cdot x) \big| < \frac{\epsilon}{2}$$
 			for all $x\in K$. We now consider the set of all the points in the compact $K$ multiplied by the vector $a^i$. That is $\{a^i \cdot x | x \in K\}$ $\subseteq[\alpha_i,\beta_i] $ for some finite interval $[\alpha_i,\beta_i]$, $i=1,...,k$. By hipothesis $\Sigma_1 $ dense in $\mathcal{C}(\mathbb{R})$ , specifically $\Sigma_1 $ is dense in $[\alpha_i,\beta_i ]$ $ \, i=1,...,k$. Hence there exist constants $c_{ij}, w_{ij}$ and $\theta_{ij}$, $j=1,...,m_i$, $i=1,...,k$ such that 
@@ -194,9 +201,9 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 			Therefore, 
 			$$ \big| g(x) - \sum_{i=1}^k \sum_{j=1}^m c_{ij} \sigma(w_{ij}(a^i \cdot x) + \theta_{ij})  \big| < \epsilon$$
 		\end{proof}
-	\noindent We showed that to approximate a $\mathcal{C}(\mathbb{R}^n)$ function we only need to approximate a $\mathcal{C} (\mathbb{R})$ function with the set $\Sigma_1$. 
 
-\section{Proof of Theorem 28}
+
+\section{Proof of Theorem \ref{teorema}}
 	\begin{proof}~ % proof del teorema
 
 	\begin{enumerate}
@@ -207,14 +214,15 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 		\item[$\Leftarrow$]  In order to prove this implication, we need to show that if $\sigma$ is not an algebraic polynomial, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
 		
 		
-		 By hypothesis, $\sigma$ is not a polynomial, by Proposition 1 this implies that $\sigma \ast \varphi$ is not a polynomial. For Lemma 3 we have that $\sigma \ast \varphi \in \overline{\Sigma_1}$. We showed in Lemma 5 that $\sigma \ast \varphi \in \mathcal{C}^\infty$ and for Lemma 4 and  Lemma 5 we have that $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$. Finally, for Lemma 6 $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$.
+		 By hypothesis, $\sigma$ is not a polynomial, by Proposition 1 this implies that $\sigma \ast \varphi$ is not a polynomial for some $\varphi \in \mathcal{C}_0^\infty$. By Proposition 2 if $\sigma \ast \varphi$ is not a polynomial for some $\varphi$, then $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$. Finally in Proposition 3 we showed that this implied that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n).$
+		 
 	\end{enumerate}
 \end{proof}
 
 
 \section{About the theorem}
 \subsection{Why does it not contradict the Weierstrass approximation theorem? }
-\begin{theorem}(Weierstrass  approximation theorem). 
+\begin{theorem}(Weierstrass  approximation theorem)
 	Let $f:[a,b]\rightarrow \mathbb{R} $ be a continuous function. Then, there exists polynomials $p_n\in \mathcal{R}[x]$ such that the sequence $(p_n)$ converge uniformly to $f$ on $[a,b]$. 
 \end{theorem} 
 

@@ -148,7 +148,7 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
 	  	\label{eq:sig}
 	  \end{equation}
   
-   \noindent represents what we may call a \textit{single layer of a deep learning model}, also called an \textit{artificial neuron}.  Observe that the artificial neuron is composed of an affine transformation $ z=w^Tx + \theta$ followed by a (generally) non-linear transformation $\sigma(z)$. In more detail, $x \in \mathbb{R}^n$ is the input vector and represents a set of $n$ features or predictors, $w\in  \mathbb{R}^n$ is the weights vector. Each element of the weights vector $w_i$ corresponds to the weight or importance assigned to the corresponding input feature $x_i$. $\theta$ is the bias and $\sigma$ is the activation function. The result variable is an scalar output $y \in \mathbb{R}$. 
+   \noindent represents what we may call a \textit{single layer of a deep learning model}, also called an \textit{artificial neuron}.  Observe that the artificial neuron is composed of an affine transformation $ z=w^Tx + \theta$ followed by a (generally) non-linear transformation $\sigma(z)$. \\ \\ In more detail, $x \in \mathbb{R}^n$ is the input vector and represents a set of $n$ features or predictors, $w\in  \mathbb{R}^n$ is the weights vector where each element of the weights vector $w_i$ corresponds to the importance assigned to the corresponding input feature $x_i$. $\theta$ is the bias and $\sigma$ is the activation function. The result variable is an scalar output $y \in \mathbb{R}$. 
  
    
    \begin{figure}[h]
@@ -158,20 +158,28 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
    
   
  \subsection{Activation Function}
- \noindent The introduction of the activation function in ANN was inspired by biological neural networks whose purpose is to decide whether a particular neuron fires or not. The simple addition of such a nonlinear function can tremendously help the network to exploit more, thereby learning faster. There are various activation functions proposed in the literature, and it is difficult to find the optimal activation function that can tackle any problem. \\ \\ 
-	 	\noindent Note that a logistic regression is an artificial neuron where the activation function  $\sigma$ is $\text{logit}^{-1}$. A few very popular activation function are the Hyperbolic Tangent and the ReLu: 
+ 
+ 
+ 
+ 
+ \noindent The introduction of the activation function in ANN was inspired by biological neural networks whose purpose is to decide whether a particular neuron fires or not. The simple addition of such function can tremendously help the network to exploit more, thereby learning faster. There are various activation functions proposed in the literature, and it is difficult to find the optimal activation function that can tackle any problem. \\ \\ 
+	 	\noindent Note that a logistic regression is an artificial neuron where the activation function  $\sigma$ is $\text{logit}^{-1}$. Two widely popular activation functions are the Hyperbolic Tangent and Rectified Linear Unit (ReLU):
+	 	
+	
+	
+	\[
+	\text{Hyperbolic Tangent (\text{tanh}): } \mathbb{R} \to (-1,1)
+	\]
+	
 	
 
-	 \[
-	 \text{tanh}: \mathbb{R} \to (-1,1)
-	 \]
 	 and 
 	  \[
 	 \text{ReLU}: \mathbb{R} \to (0,\infty)
 	 \quad \text{and is expressed as:} \quad
 	 \text{ReLU}(x) = \max(0,x)
 	 \]
-	 
+	 \subsection{Def}
 	 \noindent  We now get into more details on the precise definition of a deep neural network, which is after all a purely mathematical object. 
 	 \begin{definition} A \textit{multilayer feedforward network} is the function
 	 	$$f(x)=\sum_{j=1}^k \beta_j \cdot \sigma(w_j \cdot x - \theta_j)$$
