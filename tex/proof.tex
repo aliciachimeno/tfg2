@@ -223,27 +223,25 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 \end{corolari}
 
 \noindent The theorem states that: if $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ then $\sigma$ is not an algebraic polynomial. But why this statment does not contradict the Weierstrass approximation theorem ?
-This does not work because $\sigma$ has degree fixed $k$, then any element in the set $\Sigma_n$ has degree at most $k$. Hence, the set $\Sigma_n$ is a finite vector space and can not be dense in $\mathcal{C}(\mathbb{R}^n)$. Not all contiunous functions can be apparoximated with a polynimial of degree fixed, for example: 
+This does not work because $\sigma$ has degree fixed $k$, then any element in the set $\Sigma_n$ has degree at most $k$. Hence, the set $\Sigma_n$ is a finite vector space and can not be dense in $\mathcal{C}(\mathbb{R}^n)$. Not all contiunous functions can be approximated with a polynimial of degree fixed, for example: 
 (comment per afegir : per exemple una funcio que sigui continua que no es pugui approximar per un polinomi de com a molt grau k , una k tingui grau mes gran que k polinomi de k+1 ?? )
 
 
 \subsection{Conclusions}
 
-\begin{remark}
-	The theorem only requires for the activation function to be nonpolynomial, we dont need continuity on sigma. For example, let $\sigma$ be continuous with a jump discontinuity at 0 such that: $$\lim_{x\to 0^-} \sigma(x)=0 \qquad \lim_{x \to 0^+} \sigma(x) =1$$
-	Given $f \in \mathcal{C}(\mathbb{R})$ and $K \subset \mathbb{R}$ compact, letting $w \rightarrow 0$ in $\sigma(wx)$ the function
+
+	\noindent The theorem only requires for the activation function to be nonpolynomial, we do nott need continuity on sigma. For example, let $\sigma$ be continuous with a jump discontinuity at 0 such that: $$\lim_{x\to 0^-} \sigma(x)=0 \qquad \lim_{x \to 0^+} \sigma(x) =1$$
+	Given $f \in \mathcal{C}(\mathbb{R})$ and $K \subset \mathbb{R}$ compact, it is possible to approximate $f$ from $\Sigma_1 $ on $K$. Let $h\in \overline{\Sigma_1}$ defined as $\sigma(wx)$ letting $w \rightarrow 0$, the function:
 	
 	\[
 	h(x) = \begin{cases} 
 		0 & \text{for } x < 0 \\
 		1 & \text{for } x > 0 
 	\end{cases}
-	\]
-	$h\in \overline{\Sigma_1}$. \\ \\ 
+	\] \\ \\ 
 	Linear combinations of h and its translates can unifformly approximate any continuous function on any finite interval (and thus an), compact subset of R).
-	
-\end{remark}
-
+	\\ \\
+	Our finding that activation function need not be continuous or smooth also has an important biological interpretation, because the activation functions of real neurons may well be discontinuous,or even nonelementary.¡
 \subsection{Results}
 
 

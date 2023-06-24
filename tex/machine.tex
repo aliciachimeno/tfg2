@@ -128,35 +128,40 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
 
 
 
-\section{Neural Networks}
+\section{Multilayer Feedforward Networks}
 	
 	 
-	 \noindent \textit{Neural Networks} are the quintessential deep learning models, especially \textit{multilayer feedforward networks}. They are widely used for nonlinear function approximation. The goal of a deep neural network is to approximate some function $f^*$. For example, for a classifier, $y = f^*(x)$ maps an input $x$ to a category $y$.  \\ \\ 
+	 \noindent \textit{Artificial Neural Networks} (ANN) are the quintessential deep learning models, especially \textit{multilayer feedforward networks}. They are widely used for nonlinear function approximation. The goal of a artificial neural network is to approximate some function $f^*$. For example, for a classifier, $y = f^*(x)$ maps an input $x$ to a category $y$.  \\ \\ 
 	 %A feedforward network defines a mapping $y = f(x;\theta)$ and learns the value of the parameters $\theta$ that result in the best function approximation. \\ \\ 
 	 \noindent The term \textit{neural} refers  to the fact that this model was originally inspired by how biological neurons process information. These artificial neurons mimic the processing of information in biological neurons. \\ \\ 
 	 \noindent The term \textit{feedforward} indicates the direction of information flow within the network, moving only forward in contraposition to backwards. Each layer processes the input data and passes its output to the next layer, creating a sequence of transformations until the final output is produced. $f(f_1(f_2(f_3)))$ \\ \\
-	 \noindent The term \textit{network} refers to the interconnected structure of artificial neurons\footnote{A single layer of a deep learning model is also called an\textit{ artificial neuron}. }. An multilayer network consists of multiple layers, including an input layer, one or more hidden layers, and an output layer. \\ \\ %The neurons within each layer are connected to the neurons in the subsequent layer, forming a network of connections. The connections between neurons are represented by weights, which determine the strength and influence of each neuron's output on the inputs of the subsequent layer. \\ \\ 
+	 \noindent The term \textit{network} refers to the interconnected structure of artificial neurons. An multilayer network consists of multiple layers, including an input layer, one or more hidden layers, and an output layer. \\ \\ %The neurons within each layer are connected to the neurons in the subsequent layer, forming a network of connections. The connections between neurons are represented by weights, which determine the strength and influence of each neuron's output on the inputs of the subsequent layer. \\ \\ 
 	 \noindent The architecture of the network entails determining its \textit{depth}, \textit{width}, and \textit{activation functions} used. Depth is the number of hidden layers. Width is the number of units (nodes) on each hidden layer. 
-	 
-	 \begin{figure}[h]
-	 	\centering
-	 	\includegraphics[width=0.6\linewidth]{imgs/neu}
-	 \end{figure} \mbox{} \par
 	 
 	 
 	 %they are composed of interconnected processing units called artificial neurons, which are organized in layers and are capable of learning and generalizing from data.	
 	 \section{Architecture of a Multilayer Feedforward Network}
-	 
-	 \subsection{Logistic Regression is an Artificial Neuron}
-	 \noindent Recall that the logistic regression model is represented as: 
-	 \begin{equation}
-	 	y=\sigma(w^Tx + \theta) \tag{2}
-	 	\label{eq:sig}
-	 \end{equation}
-	 \noindent where the function $\sigma()$ needs to be $\text{logit}^{-1}$.  \\ \\
-	 This function $\sigma$ we call it the activation function and in other cases can be a diferent function. A few very popular activation function are the Hyperbolic Tangent and the ReLu: 
-	 
-	 
+	 \subsection{Artificial neuron}
+	 \noindent The equation
+	  \begin{equation}
+	  	y=\sigma(w^Tx + \theta) \tag{2}
+	  	\label{eq:sig}
+	  \end{equation}
+  
+   \noindent represents what we may call a \textit{single layer of a deep learning model}, also called an \textit{artificial neuron}.  Observe that the artificial neuron is composed of an affine transformation $ z=w^Tx + \theta$ followed by a (generally) non-linear transformation $\sigma(z)$. In more detail, $x \in \mathbb{R}^n$ is the input vector and represents a set of $n$ features or predictors, $w\in  \mathbb{R}^n$ is the weights vector. Each element of the weights vector $w_i$ corresponds to the weight or importance assigned to the corresponding input feature $x_i$. $\theta$ is the bias and $\sigma$ is the activation function. The result variable is an scalar output $y \in \mathbb{R}$. 
+ 
+   
+   \begin{figure}[h]
+   	\centering
+   	\includegraphics[width=0.8\linewidth]{imgs/neu}
+   \end{figure} \mbox{} \par
+   
+  
+ \subsection{Activation Function}
+ \noindent The introduction of the activation function in ANN was inspired by biological neural networks whose purpose is to decide whether a particular neuron fires or not. The simple addition of such a nonlinear function can tremendously help the network to exploit more, thereby learning faster. There are various activation functions proposed in the literature, and it is difficult to find the optimal activation function that can tackle any problem. \\ \\ 
+	 	\noindent Note that a logistic regression is an artificial neuron where the activation function  $\sigma$ is $\text{logit}^{-1}$. A few very popular activation function are the Hyperbolic Tangent and the ReLu: 
+	
+
 	 \[
 	 \text{tanh}: \mathbb{R} \to (-1,1)
 	 \]
@@ -167,10 +172,6 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
 	 \text{ReLU}(x) = \max(0,x)
 	 \]
 	 
-	 The form of \eqref{eq:sig} represents what we may call a single layer of a deep learning model, also called an \textit{artificial neuron}. 
-	 
-	
-	 Observe that the artificial neuron is composed of an affine transformation $ z=w^Tx + \theta$ followed by a (generally) non-linear transformation $\sigma(z)$. \\ \\ 
 	 \noindent  We now get into more details on the precise definition of a deep neural network, which is after all a purely mathematical object. 
 	 \begin{definition} A \textit{multilayer feedforward network} is the function
 	 	$$f(x)=\sum_{j=1}^k \beta_j \cdot \sigma(w_j \cdot x - \theta_j)$$
