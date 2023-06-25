@@ -1,12 +1,11 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \chapter{Function Approximation} \label{ch:methods}
-\noindent Creating a machine learning model to predict/classify from a given data is a similar process than when we calculate a function from a given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial, Chebyshev polynomial, the method of least squares, or spline approximation. \\ \\ 
-\noindent In this chapter we present some mathematical definitions and results of function approximation. 
-If we want to approximate functions, we need to define the following notions: metric spaces, distance between functions, density,
+\noindent Creating a machine learning model to predict or classify from a given data is a similar process than when we calculate a function from given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial or Chebyshev polynomial or also the splines approximation. 
+
 \section{Definitions and some results}
-
-
+\noindent In this chapter we present some mathematical definitions and known results of function approximation. 
+If we want to approximate functions, we need to recall the following notions: metric spaces, distance between functions and density. Also we will introduce the Lebesgue space and the Baire's theorem which will be crucial for our understanding of the proof. 
 
 \begin{definition} We dentoe by $\mathcal{C}(\mathbb{R}^n)$ the set of continuous functions defined on $\mathbb{R}^n$.
 \end{definition}
@@ -34,9 +33,9 @@ A \emph{metric space} is a pair $(X,d)$, where $X$ is a set and $d$ is a distanc
 \begin{propo}
 Let $(X, d)$ be a metric space and $\mathcal{B}$ be a basis of open sets for $X$. Then, for all open set $U$ in $X$, we have:
 
-$$U = \bigcup \{B_x : x \in U, B_x \subseteq U, B_x \in \mathcal{B}\}$$
+$$U = \bigcup \{B_x : x \in U, B_x \subseteq U, B_x \in \mathcal{B}\}.$$
 
-This proposition states that any open set $U$ in a metric space $X$ can be expressed as the union of basis elements $B_x$.
+\noindent This proposition states that any open set $U$ in a metric space $X$ can be expressed as the union of basis elements $B_x$.
 \end{propo}
 
 
@@ -47,21 +46,22 @@ This proposition states that any open set $U$ in a metric space $X$ can be expre
 \begin{propo} \label{prop:23} Let $(X, d)$ be a metric space and $A \subseteq X$. Then, $a \in \overline{A}$ if and only if there exists a sequence $(a_n)$ in $A$ such that for every $\epsilon > 0$, there exists $N \in \mathbb{N}$ such that $d(a_n, a) < \epsilon$ for all $n \geq N$.
 \end{propo}
 
-\begin{propo} \label{prop:frech}
+\begin{propo} [Prop. 7][\cite{frech}]
 	Let $\rho$ be a metric defined on the set $\mathcal{C}^\infty_0[a,b]$ as follows:
 	$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $$\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)|. $$  Then the metric space $(\mathcal{C}^\infty_0[a,b],\rho)$  is complete, also known as a Fréchet space.
 \end{propo}
 
-\noindent Proof in \cite{196785}
+
 
 
 \subsection{Baire's Theorem}
+\noindent The Baire's theorem is used in the proof, which is why we are going to give a brief overview.
 
 \begin{definition} Let $(X,d)$ be a metric space and $A\subseteq X$ subset. $A$ is said to be \emph{nowhere dense} if for every (nonempty) open subset $U\subseteq X$, the intersection $U\cap\overline{A}$ is not dense in $U$, meaning that $U$ contains a point that is not in the closure of $A$.
 \end{definition}
 
 \begin{definition}
-	A set it is said to be category $I$ if it can be written as a countable union of nowhere-dense sets. Otherwise it is said to be of \emph{category $II$}
+	A set it is said to be category $I$ if it can be written as a countable union of nowhere-dense sets. Otherwise it is said to be of \emph{category $II$.}
 \end{definition}
 \begin{theorem} (Baire's Category Theorem) \label{baire}
 	Any complete metric space is of category $II$.
@@ -123,7 +123,7 @@ $$	\|u\|_{L^{\infty}(\Omega)} = \operatorname{ess} \sup_{x\in \Omega} |u(x)|.$$
 
 
 \begin{definition} 
-	$\varphi$ : $I \rightarrow \mathbb{R}$ is uniformly continuous on $I$ if $\forall \epsilon > 0 \exists \delta >0 $ such that $|\varphi(x)- \varphi(y)| < \epsilon$ whenever $|x-y|< \delta$
+	$\varphi$ : $I \rightarrow \mathbb{R}$ is uniformly continuous on $I$ if $\forall \epsilon > 0 \exists \delta >0 $ such that $|\varphi(x)- \varphi(y)| < \epsilon$ whenever $|x-y|< \delta.$
 \end{definition}
 
 \subsection{Convolution}
@@ -144,13 +144,13 @@ $$	\|u\|_{L^{\infty}(\Omega)} = \operatorname{ess} \sup_{x\in \Omega} |u(x)|.$$
 
 \subsection{Annihilator}
 
-\begin{definition} (Annihilator of a Subset of a Vector Space). Let V be a vector space over a field F, and $X\subseteq V$ subset. The \textit{annihilator of X} is defined as the set of all linear functionals $V \rightarrow F$ that evaluate to zero on every element of X:
+\begin{definition}  Let V be a vector space over a field F, and $X\subseteq V$ subset. The \textit{annihilator of X} is defined as the set of all linear functionals $V \rightarrow F$ that evaluate to zero on every element of X:
 	
 	$$ \text{ann}(X) = \{ \varphi \in V^* : \quad \text{for all} \,  x \in X \quad \varphi (x) = 0 \}$$
 \end{definition}
 
 
-\begin{definition} (Annihilator of a subset of $V^*$). Let $V$ be a finite-dimensional vector space over a field $F$, and let $F \subset V^*$. The annihilator of $F$ is defined as the set of all vectors in $V$ that are annihilated by every functional in $F$:
+\begin{definition}  Let $V$ be a finite-dimensional vector space over a field $F$, and let $F \subset V^*$. The annihilator of $F$ is defined as the set of all vectors in $V$ that are annihilated by every functional in $F$:
 	
 	\[
 	\text{ann}(F) = \{x \in V :\quad \text{for all} \, \varphi \in F \quad\varphi(x) = 0\}

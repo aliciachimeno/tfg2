@@ -22,14 +22,18 @@
 \end{theorem}
 
 \noindent
-The theorem \ref{teorema} generalizes Hornik's Theorem 2 by establishing necessary and sufficient conditions for universal approximation. Note that the theorem merely requires "nonpolynomiality" in the activation function. Unlike Hornik's result, the activation functions do not need to be continuous or smooth. This has an important biological interpretation because the activation functions of real neurons may well be discontinuous or even non-elementary.
+The Theorem \ref{teorema} generalizes Hornik's Theorem 2 by establishing necessary and sufficient conditions for universal approximation. Note that the theorem merely requires "nonpolynomiality" in the activation function. Unlike Hornik's result, the activation functions do not need to be continuous or smooth. This has an important biological interpretation because the activation functions of real neurons may well be discontinuous or even non-elementary.
 
 	\section{Proof}
 	\subsection{If $\sigma$ is not a polynomial then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ }
-	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that, we need the following Lemmas and Propositions. \\ 
-	%\subsubsection{$\sigma$ is not a polynomial $\Rightarrow $ $\sigma \ast \varphi$ is not a polynomial.}
+	\noindent Consider that $\sigma$ is not an algebraic polynomial and we aim to show that $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. In order to show that, we devided the proof in 3 steps, each one aims to proof one proposition that needs some previous Lemmas. 
+	
 	\subsubsection{Step 1}
-	\begin{lema}  % L1 :step 6
+	\begin{propo} \label{prop1}
+		If $\sigma$ is not a polinomial then $\sigma \ast \varphi$ is not a polynomial for some $\varphi \in \mathcal{C}^\infty_0$.  
+	\end{propo}
+	\noindent To proof this proposition we need the following two lemmas. 
+	\begin{lema}  \label{lemma1}
 		If we have that $\sigma \ast \varphi $ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0 $, then the degree of the polynomial $\sigma \ast \varphi $ is finite, i.e. there exists an $m$ $\in \mathbb{N}$ such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$. 
 	\end{lema}
 	\begin{proof}
@@ -40,7 +44,7 @@ The theorem \ref{teorema} generalizes Hornik's Theorem 2 by establishing necessa
 		
 		\noindent For the general case where $\varphi \in \mathcal{C}_0^\infty$, we note that the number $m$ does not depend on the interval $[a,b]$. This can be seen as follows. By translation $m$ depends at most of the length of the interval. Let $[A,B]$ be any interval. For $\varphi \in \mathcal{C}^\infty_0[A,B]$ we can find $\varphi_i \in \mathcal{C}^\infty_0[a_i,b_i]$ for $i=1,...,k$ such that $[A,B] \subset \cup_{i=1}^k[a_i,b_i]$ where $b_i -a_i =b-a$ and $\varphi=\sum_{i=1}^k \varphi_i$ Thus $$\sigma \ast \varphi = \sum_{i=1}^k \sigma \ast \varphi_i$$ and for every $i=1,...,k $ we have that $\sigma \ast \varphi$ is a polynomial of degree less than or equal to m. Therefore $deg(\sigma \ast \varphi) \leq m$.
 	\end{proof}
-	\begin{lema} % L2: step 7
+	\begin{lema}  \label{lemma2}
 		If $\sigma \ast \varphi$ is a polynomial such that $ deg (\sigma \ast \varphi) \leq m$ for all $\varphi \in \mathcal{C}^\infty_0$, then $\sigma$ is a polynomial of degree at most $m$. 
 	\end{lema}
 	\begin{proof} 
@@ -50,15 +54,18 @@ The theorem \ref{teorema} generalizes Hornik's Theorem 2 by establishing necessa
 	From standard results in Distribution Theory [pp 57 \cite{friedman1963generalized}], $\sigma $ is itself a polynomial of degree at most $m$ (a.e.).
 	\end{proof} 
 \vspace{\baselineskip} 
-\begin{prop}
-If $\sigma$ is not a polinomial then $\sigma \ast \varphi$ is not a polynomial for some $\varphi \in \mathcal{C}^\infty_0$. 
-\end{prop}
-\begin{proof}
-We will show the contrapositive. Suppose that the convolution $\sigma \ast \varphi$ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0$, by Lemma 1 the degree of the convolution is finite. Now we have that $\sigma \ast \varphi$ is a polynomial of finite degree, by Lemma 2 we have that $\sigma$ is a polynomial. 
+
+\begin{proof}[Proof of Proposition \ref{prop1}]
+We will show the contrapositive. Suppose that the convolution $\sigma \ast \varphi$ is a polynomial for all $\varphi \in \mathcal{C}^\infty_0$, by Lemma \ref{lemma1} the degree of the convolution is finite. Now we have that $\sigma \ast \varphi$ is a polynomial of finite degree, by Lemma \ref{lemma2} we have that $\sigma$ is a polynomial. 
 \end{proof}
 \vspace{\baselineskip} 
 \subsubsection{Step 2}
-	\begin{lema} % L3: step 4
+
+	\begin{propo}  \label{prop2}
+	If for some $\varphi \in \mathcal{C}^\infty_0 $ we have that $\sigma \ast \varphi $ is not a polynomial, then $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
+\end{propo}
+
+	\begin{lema}  \label{lemma3}
 		For each $\varphi \in  \mathcal{C}^\infty_0$, $ \sigma \ast \varphi \in  \overline{\Sigma_1}$. 
 		
 	\end{lema}
@@ -103,29 +110,24 @@ We will show the contrapositive. Suppose that the convolution $\sigma \ast \varp
 		&\leq  \sum_{i=1}^m \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy.
 	\end{split}
 \end{equation*}
-		If $x-\Delta_i \cap U = \varnothing $. Since $x-y \notin U$ , $x-y_i \notin U$ and $x-y_i \in [-2\alpha,2\alpha]$. For choice of $m$ in property 2, we have\\ 
-		\begin{equation*}
-			\begin{split}
-				\sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy  \leq  \frac{\epsilon}{\| \varphi\|_{L_1}}  \sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| & \\
-				& =  \frac{\epsilon}{3\| \varphi\|_{L_1}} \int \left|\varphi(y)\right| dy \\
-				& =  \frac{\epsilon}{3\| \varphi\|_{L_1}} \left|\varphi(y)\right|_{L_1}  \\
-				& = \frac{\epsilon}{3} .
-			\end{split}
-		\end{equation*}
-	\\
+		If $x-\Delta_i \cap U = \varnothing $. Since $x-y \notin U$ , $x-y_i \notin U$ and $x-y_i \in [-2\alpha,2\alpha]$. For choice of $m$ in property 2, we have
+		
+		\begin{multline*}
+			\sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy  \leq  \frac{\epsilon}{\| \varphi\|_{L_1}}  \sum_{i=1}^m  \int_{\Delta_i} \left| \varphi(y)\right| \\ =  \frac{\epsilon}{3\| \varphi\|_{L_1}} \int \left|\varphi(y)\right| dy =  \frac{\epsilon}{3\| \varphi\|_{L_1}} \left|\varphi(y)\right|_{L_1}  = \frac{\epsilon}{3} . 
+		\end{multline*}
+	\\ 
 		\noindent If $x-\Delta_i \cap U \neq \varnothing$ then we will denote such intervals by $\tilde{\Delta_i}.$\\ \\ 
 		$\sum_i |\tilde{\Delta_i}| = \sum_i|(x-\Delta_i \cap U)| \leq |U|+2|\Delta_i| r(\delta) \leq \delta + 2 \cdot \frac{2\alpha}{m} r(\delta) \leq \delta +4\delta = 5\delta$  \\ \\ 
 		We used the property $m\delta > \alpha r(\delta) $,  indeed $ \delta > \frac{\alpha \cdot r(\delta)}{m}$. 
 		
 		
-		\begin{equation*}
+		\begin{multline*}
 			\begin{split}
-				\sum_{i=1}^m  \int_{\tilde{\Delta_i}} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy & \\
-				&  \leq  \sum_{i=1}^m  \int_{\tilde{\Delta_i}} \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \\
-				& = \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \sum_i| \tilde{\Delta_i} | \\
-				& \leq \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \, 5 \delta \leq \epsilon /3
+				\sum_{i=1}^m  \int_{\tilde{\Delta_i}} \left| \varphi(y)\right| \left| \sigma(x-y)-\sigma(x-y_i)\right|dy  \leq  \sum_{i=1}^m  \int_{\tilde{\Delta_i}} \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \\
+				 = \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \sum_i| \tilde{\Delta_i} | \\
+				 \leq \| \varphi\|_{L^{\infty}} \, 2 \| \sigma \|_{L^{\infty}[-2\alpha,2\alpha]} \, 5 \delta \leq \frac{\epsilon}{3}
 			\end{split}
-		\end{equation*}
+		\end{multline*}
 		Moreover, 
 \begin{equation*} 
 	\begin{split}
@@ -142,7 +144,7 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 	\end{proof}
 	\vspace{\baselineskip} 
 	%\subsubsection{$\Sigma_1$ dense in $\mathcal{C}(\mathbb{R})$}
-	\begin{lema} % L4: step 3
+	\begin{lema}  \label{lemma4}
 		If $\sigma \in \mathcal{C}^{\infty}$, then $ \Sigma_1$ is dense in  $\mathcal{C}(\mathbb{R})$.
 	\end{lema}
 	
@@ -166,21 +168,18 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 		This implies that $\overline{\Sigma_1}$ contains all polynomials, because the expression $\sigma^{(k)}(\theta_k) x^{k}$ generates all polynomials. By the Weierstrass theorem, we know that the polynomials are dense in $\mathcal{C}(\mathbb{R})$. This concludes that the set $\overline{\Sigma_1}$ contains a set which is dense in  $\mathcal{C}(\mathbb{R})$, therefore $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
 	\end{proof} 
 \vspace{\baselineskip} 
-	\begin{prop} % L5: step 5
-		If for some $\varphi \in \mathcal{C}^\infty_0 $ we have that $\sigma \ast \varphi $ is not a polynomial, then $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$.
-	\end{prop}
-	 \begin{proof}
-	 From Lemma 3, $\sigma \ast \varphi \in  \overline{\Sigma_1}$ for each $\varphi \in \mathcal{C}^\infty_0$. It immedialy follows that, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $ w, \theta \in \mathbb{R}$ and $\varphi \in \mathcal{C}^\infty_0$.\\ \\
+	 \begin{proof}[Proof of Proposition \ref{prop2}]
+	 From Lemma \ref{lemma3}, $\sigma \ast \varphi \in  \overline{\Sigma_1}$ for each $\varphi \in \mathcal{C}^\infty_0$. It immedialy follows that, $\sigma \ast \varphi (wx+\theta ) \in  \overline{\Sigma_1}$, for each $ w, \theta \in \mathbb{R}$ and $\varphi \in \mathcal{C}^\infty_0$.\\ 
 	 Now, we shall see the results in distributions \ref{prop:29} to proof the following result. For $\sigma$ and $\varphi \in \mathcal{C}^\infty_0$, we have that $\sigma \ast \varphi \in  \mathcal{C}^\infty $.
-	 From Lemma 4 applied in $\sigma= \sigma \ast \varphi$, if $\sigma \ast \varphi \in  \mathcal{C}^\infty $, then $\Sigma_1$ dense in $\mathcal{C} (\mathbb{R})$. 
+	 From Lemma \ref{lemma4} applied in $\sigma= \sigma \ast \varphi$, if $\sigma \ast \varphi \in  \mathcal{C}^\infty $, then $\Sigma_1$ dense in $\mathcal{C} (\mathbb{R})$. 
 	 \end{proof}
 \vspace{\baselineskip} 
 \subsubsection{Step 3}
 \noindent We will prove that approximating a $\mathcal{C}(\mathbb{R})$ function  with one from the set $\Sigma_1$ implies approximating a function $\mathcal{C}(\mathbb{R}^n)$ from the set $\Sigma_n$. We can see this from the density characterization.
 
-	\begin{prop}  % L6: step 2
+	\begin{propo}  % L6: step 2
 			If $\Sigma_1$ is dense in $\mathcal{C}(\mathbb{R})$, then $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$. 
-		\end{prop}
+		\end{propo}
 	
 	\begin{proof} % proof  step 2
 			The following proof is inspired by \cite{chui_approximation}.\\ \\ Consider the set $$V:= span\{ f(ax) : a \in \mathbb{R}^n, f \in \mathcal{C}(\mathbb{R}) \}.$$ First, we shall see that $V$ is dense in $\mathcal{C}(\mathbb{R}^n)$.  If we show that $V$ contains the polynomials, which are dense in $C(\mathbb{R}^n)$ for Weierstrass Theorem, that will be enough. \\ \\
@@ -223,7 +222,10 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 
 
 \section{About the theorem}
+
 \subsection{Why does it not contradict the Weierstrass approximation theorem? }
+
+\noindent In mathematical analysis, we prove the Weierstrass approximation theorem, which we will now recall. 
 \begin{theorem}(Weierstrass  approximation theorem)
 	Let $f:[a,b]\rightarrow \mathbb{R} $ be a continuous function. Then, there exists polynomials $p_n\in \mathcal{R}[x]$ such that the sequence $(p_n)$ converge uniformly to $f$ on $[a,b]$. 
 \end{theorem} 
@@ -232,15 +234,19 @@ $$\Bigg| \int \sigma(x-y)\varphi(y)dy -  \sum_{i=1}^m \sigma(x-y_i) \varphi(y_i)
 	The set of polynomial functions $\mathcal{R}^n[x]$ is dense in the space of continuous functions on a compact set $K \subset \mathbb{R}^n$, $\mathcal{C}(K)$. So any continuous function on a compact set can be approximated arbitrarly well by a polynomial. 
 \end{corolari}
 
-\noindent The theorem states that: if $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ then $\sigma$ is not an algebraic polynomial. But why this statment does not contradict the Weierstrass approximation theorem ?
-This does not work because $\sigma$ has degree fixed $k$, then any element in the set $\Sigma_n$ has degree at most $k$. Hence, the set $\Sigma_n$ is a finite vector space and can not be dense in $\mathcal{C}(\mathbb{R}^n)$. Not all contiunous functions can be approximated with a polynimial of degree fixed, for example: 
-(comment per afegir : per exemple una funcio que sigui continua que no es pugui approximar per un polinomi de com a molt grau k , una k tingui grau mes gran que k polinomi de k+1 ?? )
+\noindent The theorem \ref{teorema} states that: if $\Sigma_n$ is dense in $\mathcal{C}(\mathbb{R}^n)$ then $\sigma$ is not an algebraic polynomial. But why this statment does not contradict the Weierstrass approximation theorem?
+This does not work because $\sigma$ has degree fixed $k$, then any element in the set $\Sigma_n$ has degree at most $k$. Hence, the set $\Sigma_n$ is a finite vector space and can not be dense in $\mathcal{C}(\mathbb{R}^n)$. Not all contiunous functions can be approximated with a polynimial of degree fixed. We argued this in the proof where with the example of the $cosine$ function. For example, if $k=3$, we cannot approximate the cosine function with linear combinations of polynomials of maximum degree 3.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.6\linewidth]{imgs/cos.png}
+	\caption{\small k=3} 
+\end{figure} \mbox{} \par
 
 \subsection{Conclusions}
 
 
-	\noindent The theorem only requires for the activation function to be nonpolynomial, we do nott need continuity on sigma. For example, let $\sigma$ be continuous with a jump discontinuity at 0 such that: $$\lim_{x\to 0^-} \sigma(x)=0 \qquad \lim_{x \to 0^+} \sigma(x) =1$$
+	\noindent The theorem only requires for the activation function to be nonpolynomial, we do not need continuity on sigma. For example, let $\sigma$ be continuous with a jump discontinuity at 0 such that: $$\lim_{x\to 0^-} \sigma(x)=0 \qquad \lim_{x \to 0^+} \sigma(x) =1$$
 	Given $f \in \mathcal{C}(\mathbb{R})$ and $K \subset \mathbb{R}$ compact, it is possible to approximate $f$ from $\Sigma_1 $ on $K$. Let $h\in \overline{\Sigma_1}$ defined as $\sigma(wx)$ letting $w \rightarrow 0$, the function:
 	
 	\[
@@ -252,7 +258,7 @@ This does not work because $\sigma$ has degree fixed $k$, then any element in th
 	Linear combinations of h and its translates can unifformly approximate any continuous function on any finite interval (and thus an), compact subset of R).
 	\\ \\
 	Our finding that activation function need not be continuous or smooth also has an important biological interpretation, because the activation functions of real neurons may well be discontinuous,or even nonelementary.¡
-\subsection{Results}
+\subsection{Corollaries}
 
 
 \begin{definition} The set $L^{p}(\mu)$ contains all mesurable functions $f$ such that: 

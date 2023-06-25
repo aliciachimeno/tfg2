@@ -35,7 +35,6 @@
 \usepackage[acronym]{glossaries}
 \usepackage[sort,square]{natbib} % numbers
 \bibliographystyle{abbrvnat} %plainnat % unsrtnat % abbrvnat
-
 \graphicspath{{imgs/}{../imgs/}}
 \newcommand{\theversion}{v0}
 
@@ -54,7 +53,6 @@
 
 \settocbibname{References}
 
-\makeglossaries
 
 \newacronym{uab}{UAB}{Universitat Autònoma de Barcelona}
 
@@ -74,23 +72,12 @@
 	
 	\pagestyle{plain}
 	\pagenumbering{roman}
+	
 	\subfile{tex/pre/abstract.tex}
 	
-	%\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
-	
-	
-	%\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
-	\printglossary[type=\acronymtype,title=Glossary,nonumberlist] \addcontentsline{toc}{chapter}{Glossary}
-	
-	%\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
-	\subfile{tex/pre/preface.tex}
-	
-	%\clearpage\pagestyle{empty}\null\newpage\pagestyle{plain}
+
 	
 	\tableofcontents
-	
-	%\clearpage\pagestyle{empty}\null\newpage
-	
 	\pagestyle{fancy}
 	\pagenumbering{arabic}
 	

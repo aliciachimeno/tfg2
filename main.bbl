@@ -5,11 +5,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[196(1967)]{196785}
-Fréchet spaces.
-\newblock volume~25 of \emph{Pure and Applied Mathematics}, pages 85--94.
-  Elsevier, 1967.
-
 \bibitem[Adams et~al.(2003)Adams, Fournier, and Fournier]{adams2003sobolev}
 R.~A. Adams, J.~J.~F. Fournier, and J.~J.~F. Fournier.
 \newblock \emph{Sobolev Spaces}.
@@ -39,5 +34,11 @@ M.~Leshno, V.~Y. Lin, A.~Pinkus, and S.~Schocken.
 \newblock Multilayer feedforward networks with a nonpolynomial activation
   function can approximate any function.
 \newblock \emph{Neural Networks}, 6\penalty0 (6):\penalty0 861--867, 1993.
+
+\bibitem[Treves(1967)]{frech}
+F.~Treves, editor.
+\newblock \emph{Fréchet Spaces}, volume~25 of \emph{Pure and Applied
+  Mathematics}.
+\newblock Elsevier, 1967.
 
 \end{thebibliography}
