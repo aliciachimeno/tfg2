@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {2.2}Multilayer Feedforward Networks}{6}{section.2.2}%
 \contentsline {section}{\numberline {2.3}Architecture of a Multilayer Feedforward Network}{7}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Artificial neuron}{7}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Activation Function}{8}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.2}Activation Function}{7}{subsection.2.3.2}%
 \contentsline {subsection}{\numberline {2.3.3}Def}{8}{subsection.2.3.3}%
 \contentsline {chapter}{\numberline {3}Function Approximation}{10}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Definitions and some results}{10}{section.3.1}%

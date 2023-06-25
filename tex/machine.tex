@@ -24,7 +24,7 @@
 		\toprule
 		\textbf{Player Attributes Last Season:}  \\ 
 		\midrule
-		Age & 23 \\
+		Age & 21 \\
 		Matches Played & 38 \\
 		Goals& 14\\
 		Assists & 11\\
@@ -77,22 +77,23 @@
 	\]
 	
 	\subsection{Linear Regression}
-	\noindent A linear regression algorithm is used to predict numerical values, based on a linear relationship between different values. A simple linear model has an outcome, denoted by $y$, also known as a response variable,  and a predictor, $x$. It is defined by the following equation
-	$$ y_i= w_0 + w_1 x_i + \theta $$
-
-	 \noindent where $ i = 1, ..., n$. $w_i$ intercept vector, $\theta$ error ????? acabaa
-
+	\noindent A linear regression algorithm is used to predict numerical values, based on a linear relationship between different values. A simple linear model is defined by the following equation:
+	$$ y_i=  w_0 +w_1 x_i +\epsilon_i  $$
+	\noindent where $ i = 1, ..., n$.  \\ \\ 
+	Note that y is the dependent variable (response), x is the independent variable (predictor), $w_0$ is the intercept, $w_1$ is the slope coefficient and $\epsilon$ is the error term or the residual. \\ 
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.6\linewidth]{imgs/gdp.png}
 		 \caption{\small $y$ response variable: unemployment rate , $x$ predictor: GDP growth.} 
 	\end{figure} \mbox{} \par
-
+\vspace{\baselineskip} 
+\vspace{\baselineskip} 
+\vspace{\baselineskip} 
 \noindent We can add additional $p$ predictors to a simple linear model, transforming it into a multivariate linear model, which we define as follows:
 
-$$y_i = w_0 + w_1x_{1i} + \ldots + w_px_{pi} + \theta_i. $$
+$$y_i = w_0 + w_1x_{1i} + \ldots + w_px_{pi} + \epsilon_i. $$
 
-\noindent More commonly, the multivariate linear regression equation is expressed in matrix form as: $y = w^T x + \theta$.
+\noindent More commonly, the multivariate linear regression equation is expressed in matrix form as: $y = w^T x + \theta $.
 
 
 
