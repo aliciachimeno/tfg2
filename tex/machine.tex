@@ -15,10 +15,14 @@
 		\item Unsupervised learning, where we have non-feedback signal. For example, deducing which dog belongs to each owner.
 	\end{itemize}
 	Machine learning models simplify reality for the purposes of understanding or prediction. This prediction can be either a numerical prediction or a classification prediction. A number of machine learning algorithms are commonly used, for example to name a few: linear regression, logistic regression, decision trees, random forests...
-	
+	\\ \\ \\ \\ \\ 
 	
 	\subsection{Motivation }
-	\noindent In order to motivate our study of machine learning, let us consider the following hypothetical scenario.  Imagine that we are the Data Scientist of a big football club. The club needs a new main striker for the next season and we are tasked with evaluating each candidate and decide whether to sign them or not. We have loads of data from each player. \\ 
+	\noindent In order to motivate our study of machine learning, we are going to present some examples.  
+	
+	\begin{xmpl}
+	
+	Let us consider the following hypothetical scenario.  Imagine that we are the Data Scientist of a big football club. The club needs a new main striker for the next season and we are tasked with evaluating each candidate and decide whether to sign them or not. We have loads of data from each player. \\ 
 	
 	\begin{tabular}{ll}
 		\toprule
@@ -49,21 +53,19 @@
 	\end{itemize}
 	
 	\noindent We are looking for the function $f$ such that $f(x_c)=y$.
-	\\ \\ 
+	\end{xmpl}
 	\noindent 
-	An important aspect of machine learning is that \textit{many supervised learning tasks are about function learning.} In general, a fundamental problem in machine learning can be defined as follows: given a dataset of the form $\{(x_i,y_i)\}^m_{i=1} \subset \mathbb{R}^n \times \mathbb{R}$, the goal is to find a model $f$ that accurately predicts the output $y$ for a given input $x_i$.
+	An important aspect of machine learning is that \textit{many supervised learning tasks are about function learning.} In general, a fundamental problem in machine learning can be defined as follows: given a dataset of the form $\{(x_i,y_i)\}^m_{i=1} \subset \mathbb{R}^n \times \mathbb{R}$, the goal is to find a model $f$ that accurately predicts the output $y_i$ for a given input $x_i$.
 	
 	\begin{xmpl}
-		\noindent An example of a supervised learning task is digit recognition. The objective is to identify handwritten digits (0-9) based on input images. In this task, we aim to learn a probability distribution function denoted as $f$, which maps a set of pixel values ranging from 0 (black) to 255 (white), representing a 28x28 image, to a probability distribution over the digits 0 to 9, that is
-		
-		$$f: \{0,..., 255\}^{28 \times 28} \longrightarrow \text{probability distribution on } \{0,1,...,9\}.$$
-	Another important principle in machine learning is that sometimes \textit{function learning can be recast as a classification problem}.  
+		\noindent An example of a supervised learning task is digit recognition. The objective is to identify handwritten digits (0-9) based on input images. In this task, we aim to learn a probability distribution function denoted as $f$, which maps a set of pixel values ranging from 0 (black) to 255 (white), representing a 28x28 image, to a probability distribution over the digits 0 to 9. In practice, we often learn the function 
+		$$f: \{0,...,255\}^{28 \times 28} \longrightarrow \mathbb{R}^{10}$$
+		where big values represents that is very likely and small very unlikely. 
 	\end{xmpl}
-	\begin{xmpl} Example of a classification problem. We want to classify if an image is a dog or not a dog. We would like to produce a value which is correlated with the probability of this image being a dog or not a dog.  We can approach the problem in the following way. We want to find a function that takes very high values when dog-image and very low val ues when non dog images and takes the value 0 when its uncertain. 
+	\begin{xmpl} Example of a classification problem. We want to classify if an image is a dog or not a dog. We would like to produce a value which is correlated with the probability of this image being a dog or not a dog.  We can approach the problem in the following way. We want to find a function that takes very high values when dog-image and very low val ues when non dog images and takes the value 0 when its uncertain. That function is
+		$$d: \mathbb{R}^{\# \text{pixels in image}} \rightarrow \mathbb{R}. $$
 		
-		$$d: \mathbb{R}^{\# \text{pixels in image}} \rightarrow \mathbb{R} $$
-		such that $\mathbb{P}(d(\text{image})) = \text{probability that the image is a dog.}$ \\ \\  
-		That is what we mean by many problems can be recast as function learning. Note that there is not a god-given reason why this function should exist. We know that certain points in space, and they have certain values associated to them, but we dont know that there is some function. 
+		\noindent This is what we mean by many problems can be recast as function learning. Note that there is not a god-given reason why this function should exist. We know that certain points in space, and they have certain values associated to them, but we dont know that there is some function. 
 	\end{xmpl}
 
 	
@@ -77,8 +79,6 @@
 		\includegraphics[width=0.6\linewidth]{imgs/gdp.png}
 		 \caption{\small $y$ response variable: unemployment rate , $x$ predictor: GDP growth.} 
 	\end{figure} \mbox{} \par
-\vspace{\baselineskip} 
-\vspace{\baselineskip} 
 \vspace{\baselineskip} 
 \noindent We can add additional $p$ predictors to a simple linear model, transforming it into a multivariate linear model, which we define as follows:
 
@@ -114,7 +114,7 @@ We need to define the concept of sigmoid function that will be important along t
 \noindent The linear predictor, $ w^T x +\theta$, fluctuates between $(-\infty,\infty)$ where $x$ represents all predictors in the model. To address this difference in scale, the outcome variable is transformed using the logit function. The logistic regression model assumes a linear (affine) relationship between the feature vector $x_i$ and the log odds of $p$. Namely,
 $$\text{logit}(p) = w^T x +\theta$$
 
-The logistic model can be alternatively expressed using the inverse logit function:
+\noindent The logistic model can be alternatively expressed using the inverse logit function:
 
 \[
 P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
@@ -126,12 +126,12 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
 \section{Multilayer Feedforward Networks}
 	
 	 
-	 \noindent \textit{Artificial Neural Networks} (ANN) are the quintessential deep learning models, especially \textit{multilayer feedforward networks}. They are widely used for nonlinear function approximation. The goal of a artificial neural network is to approximate some function $f^*$. For example, for a classifier, $y = f^*(x)$ maps an input $x$ to a category $y$.  \\ \\ 
+	 \noindent \textit{Artificial Neural Networks} (ANN) are the quintessential deep learning models, especially \textit{multilayer feedforward networks}. They are widely used for nonlinear function approximation. The goal of an artificial neural network is to approximate some function $f^*$. For example, for a classifier, $y = f^*(x)$ maps an input $x$ to a category $y$.  \\ \\ 
 	 %A feedforward network defines a mapping $y = f(x;\theta)$ and learns the value of the parameters $\theta$ that result in the best function approximation. \\ \\ 
 	 \noindent The term \textit{neural} refers  to the fact that this model was originally inspired by how biological neurons process information. \\ \\ 
 	 \noindent The term \textit{feedforward} indicates the direction of information flow within the network, moving only forward in contraposition to backwards. Each layer processes the input data and passes its output to the next layer, creating a sequence of transformations until the final output is produced. \\ \\
-	 \noindent The term \textit{network} refers to the interconnected structure of artificial neurons. An multilayer network consists of multiple layers, including an input layer, one or more hidden layers, and an output layer. \\ \\ %The neurons within each layer are connected to the neurons in the subsequent layer, forming a network of connections. The connections between neurons are represented by weights, which determine the strength and influence of each neuron's output on the inputs of the subsequent layer. \\ \\ 
-	 \noindent The architecture of the network entails determining its \textit{depth}, \textit{width}, and \textit{activation functions} used. Depth is the number of hidden layers. Width is the number of units (nodes) on each hidden layer. 
+	 \noindent The term \textit{network} refers to the interconnected structure of artificial neurons. A multilayer network consists of multiple layers, including an input layer, one or more hidden layers, and an output layer. \\ \\ %The neurons within each layer are connected to the neurons in the subsequent layer, forming a network of connections. The connections between neurons are represented by weights, which determine the strength and influence of each neuron's output on the inputs of the subsequent layer. \\ \\ 
+	 \noindent The architecture of the network entails determining its \textit{depth}, \textit{width}, and \textit{activation functions} used. Depth is the number of hidden layers. Width is the number of units (nodes) on each hidden layer. The \textit{activation function} defines how the weighted sum of the input is transformed into an output from a node in a layer of the network. Because the activation function plays a crucial role in our work, further details regarding its importance will be provided in the next section.
 	 
 	 
 	 %they are composed of interconnected processing units called artificial neurons, which are organized in layers and are capable of learning and generalizing from data.	
@@ -143,12 +143,12 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
 	  	\label{eq:sig}
 	  \end{equation}
   
-   \noindent represents what we may call a \textit{single layer of a deep learning model}, also called an \textit{artificial neuron}.  Observe that the artificial neuron is composed of an affine transformation $ z=w^Tx + \theta$ followed by a (generally) non-linear transformation $\sigma(z)$. \\ \\ In more detail, $x \in \mathbb{R}^n$ is the input vector and represents a set of $n$ features or predictors, $w\in  \mathbb{R}^n$ is the weights vector where each element of the weights vector $w_i$ corresponds to the importance assigned to the corresponding input feature $x_i$. $\theta$ is the bias and $\sigma$ is the activation function. The result variable is an scalar output $y \in \mathbb{R}$. 
+   \noindent represents what we may call a \textit{single layer of a deep learning model}, also called an \textit{artificial neuron}.  Observe that the artificial neuron is composed of an affine transformation $ z=w^Tx + \theta$ followed by a (generally) non-linear transformation $\sigma(z)$. \\ \\ In more detail, $x \in \mathbb{R}^n$ is the input vector and represents a set of $n$ features or predictors, $w\in  \mathbb{R}^n$ is the weights vector where each element of the weights vector $w_i$ corresponds to the importance assigned to the corresponding input feature $x_i$. $\theta$ is the bias and $\sigma$ is the activation function. The result variable is a scalar output $y \in \mathbb{R}$. 
  
    
    \begin{figure}[h]
    	\centering
-   	\includegraphics[width=0.55\linewidth]{imgs/neu}
+   	\includegraphics[width=0.8\linewidth]{imgs/neu}
    	\caption{\small Artificial neuron} 
    \end{figure} \mbox{} \par
    
@@ -246,5 +246,10 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
 	 \noindent Let $N_{w}$ be the family of all functions that can be describe with a given network architecture.  If we can show that $N_{w}$ is dense in $C(\mathbb{R}^n)$, we can conclude that for every continuous function $g \in C(\mathbb{R}^n) $ and each compact set $K \subset \mathbb{R}^n$, there is a function $f \in N_{w}$ such that $f$ is a good approximation to $g$ on K. \\ \\
 	 \noindent The guiding question of the present work is: under which necessary and sufficient conditions on $\sigma$ will the family of networks $N_w$ be capable of approximating to any desired accuracy any given continuous function?
 	 
+	 	\begin{figure}[h]
+	 	\centering
+	 	\includegraphics[width=0.9\linewidth]{imgs/neural-network-2.jpg}
+	 	\caption{\small Multilayer neural network} 
+	 \end{figure} \mbox{} \par
 	
 \end{document}

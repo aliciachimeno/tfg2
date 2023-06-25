@@ -1,4 +1,4 @@
-\begin{thebibliography}{6}
+\begin{thebibliography}{7}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -9,6 +9,11 @@
 R.~A. Adams, J.~J.~F. Fournier, and J.~J.~F. Fournier.
 \newblock \emph{Sobolev Spaces}.
 \newblock Elsevier, 2003.
+
+\bibitem[Bachman and Narici(1972)]{bach}
+G.~Bachman and L.~Narici.
+\newblock \emph{Functional Analysis}.
+\newblock Dover Publications, 1972.
 
 \bibitem[Chui and Lr(1992)]{chui_approximation}
 C.~K. Chui and X.~Lr.

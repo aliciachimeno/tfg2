@@ -1,11 +1,11 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
 \chapter{Function Approximation} \label{ch:methods}
-\noindent Creating a machine learning model to predict or classify from a given data is a similar process than when we calculate a function from given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial or Chebyshev polynomial or also the splines approximation. 
+\noindent Creating a machine learning model to predict or classify from given data is a similar process than when we calculate a function from given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial and Chebyshev polynomial or also the splines approximation. 
 
 \section{Definitions and some results}
 \noindent In this chapter we present some mathematical definitions and known results of function approximation. 
-If we want to approximate functions, we need to recall the following notions: metric spaces, distance between functions and density. Also we will introduce the Lebesgue space and the Baire's theorem which will be crucial for our understanding of the proof. 
+If we want to approximate functions, we need to recall the following notions: metric spaces, distance between functions and density. Also, we will introduce the Lebesgue space and the Baire's theorem which will be crucial for our understanding of the proof. 
 
 \begin{definition} We dentoe by $\mathcal{C}(\mathbb{R}^n)$ the set of continuous functions defined on $\mathbb{R}^n$.
 \end{definition}
@@ -63,8 +63,8 @@ $$U = \bigcup \{B_x : x \in U, B_x \subseteq U, B_x \in \mathcal{B}\}.$$
 \begin{definition}
 	A set it is said to be category $I$ if it can be written as a countable union of nowhere-dense sets. Otherwise it is said to be of \emph{category $II$.}
 \end{definition}
-\begin{theorem} (Baire's Category Theorem) \label{baire}
-	Any complete metric space is of category $II$.
+\begin{theorem} (Baire's Category Theorem)[\cite{bach}] \label{baire}
+	Any complete metric space is of category $II$. 
 \end{theorem}
 
 
@@ -119,9 +119,6 @@ $$	\|u\|_{L^{\infty}(\Omega)} = \operatorname{ess} \sup_{x\in \Omega} |u(x)|.$$
 
 \begin{definition}We say that a set of functions $F\subset L_{loc}^{\infty}(\mathbb{R})$ is \emph{dense} in $C(\mathbb{R}^n)$ if for every function $g\in C(\mathbb{R}^n)$ and for every compact $K\subset \mathbb{R}^n$, there exist a sequence of functions $f_j\in F$ such that $$\lim_{j\rightarrow\infty} \|g-f_j\|_{L^\infty(K)}=0.$$ 
 \end{definition}
-
-
-
 \begin{definition} 
 	$\varphi$ : $I \rightarrow \mathbb{R}$ is uniformly continuous on $I$ if $\forall \epsilon > 0 \exists \delta >0 $ such that $|\varphi(x)- \varphi(y)| < \epsilon$ whenever $|x-y|< \delta.$
 \end{definition}
@@ -132,13 +129,12 @@ $$	\|u\|_{L^{\infty}(\Omega)} = \operatorname{ess} \sup_{x\in \Omega} |u(x)|.$$
 \end{definition}
 
 
-\begin{propo}
+\begin{propo} [\cite{adams2003sobolev}]
 	If $f$ is a smooth function that is compactly supported and $g$ is a distribution, then $f\ast g$ is a smooth function defined by
 	$${\displaystyle \int _{\mathbb {R} ^{d}}{f}(y)g(x-y)\,dy=(f*g)(x)\in C^{\infty }(\mathbb {R} ^{d}).} $$
-	See \cite{adams2003sobolev}
 	 \label{prop:29}
 \end{propo}
-\begin{propo} \label{prop:2}
+\begin{propo} \label{prop:2} Also we have
 	$${\frac {\partial }{\partial x_{i}}}(f*g)={\frac {\partial f}{\partial x_{i}}}*g=f*{\frac {\partial g}{\partial x_{i}}}.$$
 \end{propo}
 

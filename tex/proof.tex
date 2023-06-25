@@ -13,7 +13,7 @@
 
 
 \subsection{Previous results}
-\noindent  There has been significant research on the approximation capabilities of feedforward networks prior to the proof of this theorem. Previous studies have demonstrated that if the activation functions of the network satisfy certain explicit assumptions, then the network can be proven to be a universal approximator. For instance, \cite{HORNIK1991251} have established two results, which are as follows:
+\noindent  There has been significant research on the approximation capabilities of feedforward networks prior to the proof of this theorem. Previous studies have demonstrated that if the activation functions of the network satisfy certain explicit assumptions, then the network can be proven to be as they call it, a universal approximator. For instance, \cite{HORNIK1991251} have established two results, which are as follows:
 
 \begin{theorem} (Hornik Theorem 1). Multilayer feedforward networks with a bounded and nonconstant activation function can approximate any function in $L^p(\mu)$ arbitrary well, given a sufficiently large number of hidden units. 
 \end{theorem}
@@ -246,18 +246,7 @@ This does not work because $\sigma$ has degree fixed $k$, then any element in th
 \subsection{Conclusions}
 
 
-	\noindent The theorem only requires for the activation function to be nonpolynomial, we do not need continuity on sigma. For example, let $\sigma$ be continuous with a jump discontinuity at 0 such that: $$\lim_{x\to 0^-} \sigma(x)=0 \qquad \lim_{x \to 0^+} \sigma(x) =1$$
-	Given $f \in \mathcal{C}(\mathbb{R})$ and $K \subset \mathbb{R}$ compact, it is possible to approximate $f$ from $\Sigma_1 $ on $K$. Let $h\in \overline{\Sigma_1}$ defined as $\sigma(wx)$ letting $w \rightarrow 0$, the function:
-	
-	\[
-	h(x) = \begin{cases} 
-		0 & \text{for } x < 0 \\
-		1 & \text{for } x > 0 
-	\end{cases}
-	\] \\ \\ 
-	Linear combinations of h and its translates can unifformly approximate any continuous function on any finite interval (and thus an), compact subset of R).
-	\\ \\
-	Our finding that activation function need not be continuous or smooth also has an important biological interpretation, because the activation functions of real neurons may well be discontinuous,or even nonelementary.¡
+	\noindent The theorem only requires the activation function to be non-polynomial; we do not need continuity in sigma. Our finding that the activation function need not be continuous or smooth also has an important biological interpretation because the activation functions of real neurons may well be discontinuous or even non-elementary. Note that the ReLU function mentioned before is commonly regarded as one of the best activation functions in deep learning. We can see that it is non-smooth, and due to the proven theorem, we can still assure that it can be used in any case (because it is non-polynomial)
 \subsection{Corollaries}
 
 
