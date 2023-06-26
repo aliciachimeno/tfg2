@@ -14,7 +14,7 @@
 		\item Reinforcement learning, where we have indirect feedback. For example when we are playing the game of chess.
 		\item Unsupervised learning, where we have non-feedback signal. For example, deducing which dog belongs to each owner.
 	\end{itemize}
-	Machine learning models simplify reality for the purposes of understanding or prediction. This prediction can be either a numerical prediction or a classification prediction. A number of machine learning algorithms are commonly used, for example to name a few: linear regression, logistic regression, decision trees, random forests...
+	Machine learning models simplify reality for the purposes of understanding or prediction. This prediction can be either a numerical prediction or a classification prediction. Several machine learning algorithms are commonly used, for example to name a few: linear regression, logistic regression, decision trees, random forests...
 	\\ \\ \\ \\ \\ 
 	
 	\subsection{Motivation }
@@ -48,7 +48,7 @@
 		\end{cases}
 		\]
 		
-		\item Target funtion: $f$  "ideal player signing formula".
+		\item Target function: $f$  "ideal player signing formula".
 		\item The dataset $\{(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)\}$ consists of historical records of strikers, where $x_i$ represents the player's attributes and $y_i$ indicates the classification of whether they were signed or not.
 	\end{itemize}
 	
@@ -60,12 +60,12 @@
 	\begin{xmpl}
 		\noindent An example of a supervised learning task is digit recognition. The objective is to identify handwritten digits (0-9) based on input images. In this task, we aim to learn a probability distribution function denoted as $f$, which maps a set of pixel values ranging from 0 (black) to 255 (white), representing a 28x28 image, to a probability distribution over the digits 0 to 9. In practice, we often learn the function 
 		$$f: \{0,...,255\}^{28 \times 28} \longrightarrow \mathbb{R}^{10}$$
-		where big values represents that is very likely and small very unlikely. 
+		where big values represent that is very likely and small very unlikely. 
 	\end{xmpl}
-	\begin{xmpl} Example of a classification problem. We want to classify if an image is a dog or not a dog. We would like to produce a value which is correlated with the probability of this image being a dog or not a dog.  We can approach the problem in the following way. We want to find a function that takes very high values when dog-image and very low val ues when non dog images and takes the value 0 when its uncertain. That function is
+	\begin{xmpl} Example of a classification problem. We want to classify if an image is a dog or not a dog. We would like to produce a value which is correlated with the probability of this image being a dog or not a dog.  We can approach the problem in the following way. We want to find a function that takes very high values when dog-image and very low values when non dog images and takes the value 0 when its uncertain. That function is
 		$$d: \mathbb{R}^{\# \text{pixels in image}} \rightarrow \mathbb{R}. $$
 		
-		\noindent This is what we mean by many problems can be recast as function learning. Note that there is not a god-given reason why this function should exist. We know that certain points in space, and they have certain values associated to them, but we dont know that there is some function. 
+		\noindent This is what we mean by many problems can be recast as function learning. Note that there is not a God-given reason why this function should exist. We know that certain points in space, and they have certain values associated to them, but we dont know that there is some function. 
 	\end{xmpl}
 
 	
