@@ -1,5 +1,5 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{Contents}{1}{chapter*.6}%
+\contentsline {chapter}{Contents}{1}{chapter*.5}%
 \contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
 \contentsline {chapter}{\numberline {2}Machine Learning}{4}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Machine Learning Basics}{4}{section.2.1}%
@@ -23,12 +23,12 @@
 \contentsline {subsection}{\numberline {4.1.1}Previous results}{15}{subsection.4.1.1}%
 \contentsline {section}{\numberline {4.2}Proof}{16}{section.4.2}%
 \contentsline {subsection}{\numberline {4.2.1}If $\sigma $ is not a polynomial then $\Sigma _n$ is dense in $\mathcal {C}(\mathbb {R}^n)$ }{16}{subsection.4.2.1}%
-\contentsline {subsubsection}{Step 1}{16}{section*.12}%
-\contentsline {subsubsection}{Step 2}{17}{section*.13}%
-\contentsline {subsubsection}{Step 3}{21}{section*.15}%
+\contentsline {subsubsection}{Step 1}{16}{section*.11}%
+\contentsline {subsubsection}{Step 2}{17}{section*.12}%
+\contentsline {subsubsection}{Step 3}{21}{section*.14}%
 \contentsline {section}{\numberline {4.3}Proof of Theorem \ref {teorema}}{22}{section.4.3}%
 \contentsline {section}{\numberline {4.4}About the theorem}{23}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Why does it not contradict the Weierstrass approximation theorem? }{23}{subsection.4.4.1}%
 \contentsline {subsection}{\numberline {4.4.2}Conclusion}{24}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Corollaries}{24}{subsection.4.4.3}%
-\contentsline {chapter}{\numberline {5}References}{25}{chapter.5}%
+\contentsline {chapter}{\numberline {5}References}{26}{chapter.5}%
