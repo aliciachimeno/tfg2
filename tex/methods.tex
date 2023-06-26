@@ -46,7 +46,7 @@ $$U = \bigcup \{B_x : x \in U, B_x \subseteq U, B_x \in \mathcal{B}\}.$$
 \begin{propo} \label{prop:23} Let $(X, d)$ be a metric space and $A \subseteq X$. Then, $a \in \overline{A}$ if and only if there exists a sequence $(a_n)$ in $A$ such that for every $\epsilon > 0$, there exists $N \in \mathbb{N}$ such that $d(a_n, a) < \epsilon$ for all $n \geq N$.
 \end{propo}
 
-\begin{propo} [Prop. 7][\cite{frech}]
+\begin{propo} [Prop. 7]\cite{frech}
 	Let $\rho$ be a metric defined on the set $\mathcal{C}^\infty_0[a,b]$ as follows:
 	$$\rho(\varphi_1,\varphi_2) = \sum_{n=0}^\infty 2^{-n}  \frac{\|\varphi_1 -\varphi_2\|_n}{1+\|\varphi_1 -\varphi_2\|_n}$$ where $$\|\varphi\|_n= \sum_{j=0}^n \sup_{x\in [a,b]} | \varphi^{(j)}(x)|. $$  Then the metric space $(\mathcal{C}^\infty_0[a,b],\rho)$  is complete, also known as a Fréchet space.
 \end{propo}
@@ -63,8 +63,7 @@ $$U = \bigcup \{B_x : x \in U, B_x \subseteq U, B_x \in \mathcal{B}\}.$$
 \begin{definition}
 	A set it is said to be category $I$ if it can be written as a countable union of nowhere-dense sets. Otherwise it is said to be of \emph{category $II$.}
 \end{definition}
-\begin{theorem} (Baire's Category Theorem)[\cite{bach}] \label{baire}
-	Any complete metric space is of category $II$. 
+\begin{theorem} (Baire's Category Theorem) \cite{bach}. \label{baire}Any complete metric space is of category $II$. 
 \end{theorem}
 
 
@@ -129,7 +128,7 @@ $$	\|u\|_{L^{\infty}(\Omega)} = \operatorname{ess} \sup_{x\in \Omega} |u(x)|.$$
 \end{definition}
 
 
-\begin{propo} [\cite{adams2003sobolev}]
+\begin{propo} \cite{adams2003sobolev}
 	If $f$ is a smooth function that is compactly supported and $g$ is a distribution, then $f\ast g$ is a smooth function defined by
 	$${\displaystyle \int _{\mathbb {R} ^{d}}{f}(y)g(x-y)\,dy=(f*g)(x)\in C^{\infty }(\mathbb {R} ^{d}).} $$
 	 \label{prop:29}

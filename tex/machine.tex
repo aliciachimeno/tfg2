@@ -77,7 +77,7 @@
 	\begin{figure}[h]
 		\centering
 		\includegraphics[width=0.6\linewidth]{imgs/gdp.png}
-		 \caption{\small $y$ response variable: unemployment rate , $x$ predictor: GDP growth.} 
+		 \caption{\small $y$ response variable: unemployment rate , $x$ predictor: GDP growth. \cite{economy2023}} 
 	\end{figure} \mbox{} \par
 \vspace{\baselineskip} 
 \noindent We can add additional $p$ predictors to a simple linear model, transforming it into a multivariate linear model, which we define as follows:
@@ -149,7 +149,7 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
    \begin{figure}[h]
    	\centering
    	\includegraphics[width=0.8\linewidth]{imgs/neu}
-   	\caption{\small Artificial neuron} 
+   	\caption{\small Components of an artificial neuron. \cite{mateng}} 
    \end{figure} \mbox{} \par
    
   
@@ -235,7 +235,26 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
 	 \end{figure}
 	 	
 	 \subsection{Definition}
-	 \noindent  We now get into more details on the precise definition of a deep neural network, which is after all a purely mathematical object. 
+	 \noindent The general architecture of a multilayer feedforward network consists of an input layer with $n$ input-units, an output layer with $m$ output-units, and one or more hidden layers consisting of intermediate processing units. \\ \\ Because a mapping
+	 $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ can be computed by $m$ mappings :
+	 $f_j: \mathbb{R}^n \rightarrow \mathbb{R}$ it is (theoretically) sufficient to focus on networks with one output-unit only. In addition, since our findings require only a single hidden layer, we will assume hereafter that the network consists of three layers only: input, hidden, and output. One more general network is depicted in Figure 2.4 and the one more simplifyed in Figure 2.5. 
+	 
+	 
+	 \begin{figure}[h]
+	 	\begin{minipage}[t]{0.45\textwidth}
+	 		\centering
+	 		\includegraphics[width=\textwidth]{hd1.png}
+	 		\caption{Neural Network with 3 hidden layers and 4 outputs.}
+	 		\label{fig:imagen1}
+	 	\end{minipage}\hfill
+	 	\begin{minipage}[t]{0.45\textwidth}
+	 		\centering
+	 		\includegraphics[width=\textwidth]{hddd.png}
+	 		\caption{Neural Network with 1 hidden layer and 1 output.}
+	 		\label{fig:imagen2}
+	 	\end{minipage}
+	 \end{figure}
+	 
 	 \begin{definition} A \textit{multilayer feedforward network} is the function
 	 	$$f(x)=\sum_{j=1}^k \beta_j \cdot \sigma(w_j \cdot x - \theta_j)$$
 	 	where $x \in \mathbb{R}^n$ is the input vector, $k \in \mathbb{N}$ is the number of processing units in the hidden layer, $w_j \in \mathbb{R}^n$ is the weight vector that connects the input to processing unit $j$ in the hidden layer, $\sigma : \mathbb{R} \rightarrow \mathbb{R}$ is an activation function, $\theta_j \in \mathbb{R}$ is the threshold (or bias) associated with processing unit $j$ in the hidden layer, and $\beta_j \in \mathbb{R}$ is the weight that connects the processing unit $j$ in the hidden layer to the output of the network.
@@ -246,10 +265,7 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
 	 \noindent Let $N_{w}$ be the family of all functions that can be describe with a given network architecture.  If we can show that $N_{w}$ is dense in $C(\mathbb{R}^n)$, we can conclude that for every continuous function $g \in C(\mathbb{R}^n) $ and each compact set $K \subset \mathbb{R}^n$, there is a function $f \in N_{w}$ such that $f$ is a good approximation to $g$ on K. \\ \\
 	 \noindent The guiding question of the present work is: under which necessary and sufficient conditions on $\sigma$ will the family of networks $N_w$ be capable of approximating to any desired accuracy any given continuous function?
 	 
-	 	\begin{figure}[h]
-	 	\centering
-	 	\includegraphics[width=0.9\linewidth]{imgs/neural-network-2.jpg}
-	 	\caption{\small Multilayer neural network} 
-	 \end{figure} \mbox{} \par
+
+ 
 	
 \end{document}

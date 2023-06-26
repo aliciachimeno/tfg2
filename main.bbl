@@ -1,48 +1,59 @@
-\begin{thebibliography}{7}
-\providecommand{\natexlab}[1]{#1}
-\providecommand{\url}[1]{\texttt{#1}}
-\expandafter\ifx\csname urlstyle\endcsname\relax
-  \providecommand{\doi}[1]{doi: #1}\else
-  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+\begin{thebibliography}{LLPS93}
 
-\bibitem[Adams et~al.(2003)Adams, Fournier, and Fournier]{adams2003sobolev}
-R.~A. Adams, J.~J.~F. Fournier, and J.~J.~F. Fournier.
-\newblock \emph{Sobolev Spaces}.
+\bibitem[AFF03]{adams2003sobolev}
+Robert~A. Adams, John J.~F. Fournier, and John J.~F. Fournier.
+\newblock {\em Sobolev Spaces}.
 \newblock Elsevier, 2003.
 
-\bibitem[Bachman and Narici(1972)]{bach}
-G.~Bachman and L.~Narici.
-\newblock \emph{Functional Analysis}.
+\bibitem[BN72]{bach}
+George Bachman and Lawrence Narici.
+\newblock {\em Functional Analysis}.
 \newblock Dover Publications, 1972.
 
-\bibitem[Chui and Lr(1992)]{chui_approximation}
-C.~K. Chui and X.~Lr.
-\newblock Approximation by ridge functions and neural networks with one hidden.
-\newblock \emph{Journal of approximation theory}, 10\penalty0 (2):\penalty0
-  131--141, 1992.
-\newblock \doi{10.1006/acha.2000.0346}.
+\bibitem[BS17]{economy2023}
+Carlin~W. Bowles, S. and M.~Stevens.
+\newblock {\em The Economy}.
+\newblock Electric Book Works, 2017.
 
-\bibitem[Friedman(1963)]{friedman1963generalized}
-A.~Friedman.
-\newblock \emph{Generalized Functions and Partial Differential Equations}.
+\bibitem[CL92]{chui_approximation}
+Charles~K. Chui and Xin Lr.
+\newblock Approximation by ridge functions and neural networks with one hidden.
+\newblock {\em Journal of approximation theory}, pages 131--141, 1992.
+
+\bibitem[Fri63]{friedman1963generalized}
+Avner Friedman.
+\newblock {\em Generalized Functions and Partial Differential Equations}.
 \newblock Englewood Cliffs, 1963.
 
-\bibitem[Hornik(1991)]{HORNIK1991251}
-K.~Hornik.
+\bibitem[Hor91]{HORNIK1991251}
+Kurt Hornik.
 \newblock Approximation capabilities of multilayer feedforward networks.
-\newblock \emph{Neural Networks}, 4\penalty0 (2):\penalty0 251--257, 1991.
-\newblock ISSN 0893-6080.
+\newblock {\em Neural Networks}, 1991.
 
-\bibitem[Leshno et~al.(1993)Leshno, Lin, Pinkus, and
-  Schocken]{leshno1993multilayer}
-M.~Leshno, V.~Y. Lin, A.~Pinkus, and S.~Schocken.
+\bibitem[LLPS93]{leshno1993multilayer}
+Moshe Leshno, Vladimir~Ya. Lin, Allan Pinkus, and Shimon Schocken.
 \newblock Multilayer feedforward networks with a nonpolynomial activation
   function can approximate any function.
-\newblock \emph{Neural Networks}, 6\penalty0 (6):\penalty0 861--867, 1993.
+\newblock {\em Neural Networks}, 1993.
 
-\bibitem[Treves(1967)]{frech}
-F.~Treves, editor.
-\newblock \emph{Fréchet Spaces}, volume~25 of \emph{Pure and Applied
+\bibitem[LMN23]{mateng}
+Benoit Liquet, Sarat Moka, and Yoni Nazarathy.
+\newblock {\em The Mathematical Engineering of Deep Learning}.
+\newblock 2023.
+
+\bibitem[MP43]{McCulloch1943}
+Warren~S. McCulloch and Walter Pitts.
+\newblock A logical calculus of the ideas immanent in nervous activity.
+\newblock {\em Bulletin of Mathematical Biophysics}, pages 115--133, 1943.
+
+\bibitem[Nie15]{photo1}
+Michael Nielsen.
+\newblock {\em Neural Networks and Deep Learning}.
+\newblock Determination Press, 2015.
+
+\bibitem[Tre67]{frech}
+François Treves, editor.
+\newblock {\em Fréchet Spaces}, volume~25 of {\em Pure and Applied
   Mathematics}.
 \newblock Elsevier, 1967.
 
