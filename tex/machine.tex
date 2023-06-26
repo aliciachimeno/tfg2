@@ -129,7 +129,7 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta).
 	 \noindent \textit{Artificial Neural Networks} (ANN) are the quintessential deep learning models, especially \textit{multilayer feedforward networks}. They are widely used for nonlinear function approximation. The goal of an artificial neural network is to approximate some function $f^*$. For example, for a classifier, $y = f^*(x)$ maps an input $x$ to a category $y$.  \\ \\ 
 	 %A feedforward network defines a mapping $y = f(x;\theta)$ and learns the value of the parameters $\theta$ that result in the best function approximation. \\ \\ 
 	 \noindent The term \textit{neural} refers  to the fact that this model was originally inspired by how biological neurons process information. \\ \\ 
-	 \noindent The term \textit{feedforward} indicates the direction of information flow within the network, moving only forward in contraposition to backwards. Each layer processes the input data and passes its output to the next layer, creating a sequence of transformations until the final output is produced. \\ \\
+	 \noindent The term \textit{feedforward} indicates the direction of information flow within the network, moving only forward in contraposition to backwards. Each layer processes the input data and passes its output to the next layer, creating a sequence of transformations until the final output is produced. \\ \\ \\ \\ 
 	 \noindent The term \textit{network} refers to the interconnected structure of artificial neurons. A multilayer network consists of multiple layers, including an input layer, one or more hidden layers, and an output layer. \\ \\ %The neurons within each layer are connected to the neurons in the subsequent layer, forming a network of connections. The connections between neurons are represented by weights, which determine the strength and influence of each neuron's output on the inputs of the subsequent layer. \\ \\ 
 	 \noindent The architecture of the network entails determining its \textit{depth}, \textit{width}, and \textit{activation functions} used. Depth is the number of hidden layers. Width is the number of units (nodes) on each hidden layer. The \textit{activation function} defines how the weighted sum of the input is transformed into an output from a node in a layer of the network. Because the activation function plays a crucial role in our work, further details regarding its importance will be provided in the next section.
 	 
@@ -148,11 +148,9 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta).
    
    \begin{figure}[h]
    	\centering
-   	\includegraphics[width=0.8\linewidth]{imgs/neu}
+   	\includegraphics[width=0.7\linewidth]{imgs/neu}
    	\caption{\small Components of an artificial neuron. \cite{mateng}} 
    \end{figure} \mbox{} \par
-   
-  
  \subsection{Activation Function}
  
  
