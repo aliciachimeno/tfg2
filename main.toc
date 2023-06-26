@@ -29,6 +29,6 @@
 \contentsline {section}{\numberline {4.3}Proof of Theorem \ref {teorema}}{22}{section.4.3}%
 \contentsline {section}{\numberline {4.4}About the theorem}{23}{section.4.4}%
 \contentsline {subsection}{\numberline {4.4.1}Why does it not contradict the Weierstrass approximation theorem? }{23}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Conclusions}{24}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.2}Conclusion}{24}{subsection.4.4.2}%
 \contentsline {subsection}{\numberline {4.4.3}Corollaries}{24}{subsection.4.4.3}%
 \contentsline {chapter}{\numberline {5}References}{25}{chapter.5}%

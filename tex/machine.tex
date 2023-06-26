@@ -112,12 +112,12 @@ We need to define the concept of sigmoid function that will be important along t
 \]
 
 \noindent The linear predictor, $ w^T x +\theta$, fluctuates between $(-\infty,\infty)$ where $x$ represents all predictors in the model. To address this difference in scale, the outcome variable is transformed using the logit function. The logistic regression model assumes a linear (affine) relationship between the feature vector $x_i$ and the log odds of $p$. Namely,
-$$\text{logit}(p) = w^T x +\theta$$
+$$\text{logit}(p) = w^T x +\theta.$$
 
 \noindent The logistic model can be alternatively expressed using the inverse logit function:
 
 \[
-P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
+P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta).
 \]
 
 
@@ -237,7 +237,8 @@ P(y = 1 | X=x) = \text{logit}^{-1}(w^T x +\theta)
 	 \subsection{Definition}
 	 \noindent The general architecture of a multilayer feedforward network consists of an input layer with $n$ input-units, an output layer with $m$ output-units, and one or more hidden layers consisting of intermediate processing units. \\ \\ Because a mapping
 	 $f:\mathbb{R}^n \rightarrow \mathbb{R}^m$ can be computed by $m$ mappings :
-	 $f_j: \mathbb{R}^n \rightarrow \mathbb{R}$ it is (theoretically) sufficient to focus on networks with one output-unit only. In addition, since our findings require only a single hidden layer, we will assume hereafter that the network consists of three layers only: input, hidden, and output. One more general network is depicted in Figure 2.4 and the one more simplifyed in Figure 2.5. 
+	 $f_j: \mathbb{R}^n \rightarrow \mathbb{R}$ it is (theoretically) sufficient to focus on networks with one output-unit only. In addition, since our findings require only a single hidden layer, we will assume hereafter that the network consists of three layers only: input, hidden, and output. \\ \\
+	 The Figure 2.4 show a more general network with several hidden layers and several outputs, meanwhile the Figure 2.4 depricates a simplifyed one with one output and one hidden layer. \\ \\\\\\
 	 
 	 
 	 \begin{figure}[h]
