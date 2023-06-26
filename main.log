@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  26 JUN 2023 14:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.11.6)  26 JUN 2023 17:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1522,7 +1522,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 11--15
 
 [1
 
-] [2]) [3] (./main.toc
+]
+Underfull \hbox (badness 10000) in paragraph at lines 19--23
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 26--29
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--29
+
+ []
+
+) [3] (./main.toc
 LaTeX Font Info:    Trying to load font information for U+msa on input line 5.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -2158,7 +2173,7 @@ xmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb></usr/local/texlive/2022/texm
 f-dist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2022/texmf-
 dist/fonts/type1/public/cm-super/sfti1095.pfb></usr/local/texlive/2022/texmf-di
 st/fonts/type1/public/cm-super/sfti1200.pfb>
-Output written on main.pdf (29 pages, 2740770 bytes).
+Output written on main.pdf (29 pages, 2742269 bytes).
 PDF statistics:
  585 PDF objects out of 1000 (max. 8388607)
  478 compressed objects within 5 object streams
