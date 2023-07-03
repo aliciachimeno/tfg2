@@ -1,11 +1,9 @@
 \documentclass[../main.tex]{subfiles}
 \begin{document}
-\chapter{Function Approximation} \label{ch:methods}
-\noindent Creating a machine learning model to predict or classify from given data is a similar process than when we calculate a function from given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial and Chebyshev polynomial or also the splines approximation. 
-
-\section{Definitions and some results}
+\chapter{Definitions and some results on function approximation} \label{ch:methods}
+\noindent Creating a machine learning model to predict or classify from given data is a similar process than when we calculate a function from given points in the space. This is called function approximation and among the most famous techniques of function approximation, we find interpolation: such as Taylor polynomial and Chebyshev polynomial or also the splines approximation. \\ \\ 
 \noindent In this chapter we present some mathematical definitions and known results of function approximation. 
-If we want to approximate functions, we need to recall the following notions: metric spaces, distance between functions and density. Also, we will introduce the Lebesgue space and the Baire's theorem which will be crucial for our understanding of the proof. 
+If we want to approximate functions, we need to recall the following notions: metric spaces, distance between functions and density. Also, we will introduce the Lebesgue measure and the Baire's theorem which will be crucial for our understanding of the proof. 
 
 \begin{definition} We dentoe by $\mathcal{C}(\mathbb{R}^n)$ the set of continuous functions defined on $\mathbb{R}^n.$
 \end{definition}
@@ -16,7 +14,7 @@ If we want to approximate functions, we need to recall the following notions: me
 	$ \mathcal{C}^\infty_0$ the set of infinitely differentiable functions $\mathcal{C}^\infty$, also called smooth functions, with compact support. 
 \end{definition}
 
-\subsection{Metric spaces}
+\section{Metric spaces}
 \begin{definition}\label{thm:first}
 	A \emph{metric} (or \emph{distance}) on a set $X$ is a function $d:X\times X\rightarrow \mathbb{R} $ such that for all $s,t, u\in X$ the following properties are satisfied:
 	\begin{enumerate}
@@ -54,7 +52,7 @@ $$U = \bigcup \{B_x : x \in U, B_x \subseteq U, B_x \in \mathcal{B}\}.$$
 
 
 
-\subsection{Baire's Theorem}
+\section{Baire's Theorem}
 \noindent The Baire's theorem is used in the proof, which is why we are going to give a brief overview.
 
 \begin{definition} Let $(X,d)$ be a metric space and $A\subseteq X$ subset. $A$ is said to be \emph{nowhere dense} if for every (nonempty) open subset $U\subseteq X$, the intersection $U\cap\overline{A}$ is not dense in $U$, meaning that $U$ contains a point that is not in the closure of $A$.
@@ -67,7 +65,7 @@ $$U = \bigcup \{B_x : x \in U, B_x \subseteq U, B_x \in \mathcal{B}\}.$$
 \end{theorem}
 
 
-\subsection{Lebesgue measure}
+\section{Lebesgue measure}
 
 
 \begin{definition}
@@ -122,7 +120,7 @@ $$	\|u\|_{L^{\infty}(\Omega)} = \operatorname{ess} \sup_{x\in \Omega} |u(x)|.$$
 	$\varphi$ : $I \rightarrow \mathbb{R}$ is uniformly continuous on $I$ if $\forall \epsilon > 0 \exists \delta >0 $ such that $|\varphi(x)- \varphi(y)| < \epsilon$ whenever $|x-y|< \delta.$
 \end{definition}
 
-\subsection{Convolution}
+\section{Convolution}
 \begin{definition}
 	Let $f,g$ be real-valued functions with compact support. We define the \emph{convolution} of $f$ with $g$ as $$(f\ast g)(x)=\int f(x-t)g(t) \, dt.$$
 \end{definition}
@@ -136,8 +134,8 @@ $$	\|u\|_{L^{\infty}(\Omega)} = \operatorname{ess} \sup_{x\in \Omega} |u(x)|.$$
 \begin{propo} \label{prop:2} Also we have
 	$${\frac {\partial }{\partial x_{i}}}(f*g)={\frac {\partial f}{\partial x_{i}}}*g=f*{\frac {\partial g}{\partial x_{i}}}.$$
 \end{propo}
-
-\subsection{Annihilator}
+\newpage
+\section{Annihilator}
 
 \begin{definition}  Let V be a vector space over a field F, and $X\subseteq V$ subset. The \textit{annihilator of X} is defined as the set of all linear functionals $V \rightarrow F$ that evaluate to zero on every element of X:
 	
